@@ -19,8 +19,8 @@ const Footer = () => {
           <div className="footer-section">
             <h4>法人について</h4>
             <ul>
-              <li><Link to="/about">理念・ビジョン</Link></li>
-              <li><Link to="/about">組織概要</Link></li>
+              <li><a href="/#overview">概要</a></li>
+              <li><a href="/#history">沿革</a></li>
               <li><Link to="/news">活動報告</Link></li>
             </ul>
           </div>

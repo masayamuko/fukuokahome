@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const JobsPage = () => {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -125,15 +126,54 @@ const JobsPage = () => {
           <p>「子どもたちが自ら将来の夢や希望をもてるように」<br />何らかの事情で、家庭や学校での居場所をなくした青少年（15～20歳）に<br />安心して生活できる場を提供し、自立を支援するお仕事です。</p>
           <div className="job-highlights">
             <div className="highlight-item">
-              <span className="highlight-icon">✨</span>
+              <div style={{ 
+                width: '40px', 
+                height: '40px', 
+                borderRadius: '50%', 
+                background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                marginRight: '0.5rem'
+              }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.5 16.5c0 0.8 0.7 1.5 1.5 1.5s1.5-0.7 1.5-1.5-0.7-1.5-1.5-1.5-1.5 0.7-1.5 1.5zM6.5 9c0.8 0 1.5-0.7 1.5-1.5S7.3 6 6.5 6 5 6.7 5 7.5 5.7 9 6.5 9zM17 7.5c0-0.8-0.7-1.5-1.5-1.5S14 6.7 14 7.5s0.7 1.5 1.5 1.5S17 8.3 17 7.5zM12 1l3.09 6.26L22 8.27l-5 4.87 1.18 6.88L12 17.77l-6.18 2.25L7 13.14 2 8.27l6.91-1.01L12 1z" fill="white"/>
+                </svg>
+              </div>
               <span>未経験歓迎</span>
             </div>
             <div className="highlight-item">
-              <span className="highlight-icon">📚</span>
+              <div style={{ 
+                width: '40px', 
+                height: '40px', 
+                borderRadius: '50%', 
+                background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                marginRight: '0.5rem'
+              }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z" fill="white"/>
+                </svg>
+              </div>
               <span>研修制度充実</span>
             </div>
             <div className="highlight-item">
-              <span className="highlight-icon">🌟</span>
+              <div style={{ 
+                width: '40px', 
+                height: '40px', 
+                borderRadius: '50%', 
+                background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                marginRight: '0.5rem'
+              }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="white"/>
+                </svg>
+              </div>
               <span>やりがいのある仕事</span>
             </div>
           </div>
@@ -141,116 +181,105 @@ const JobsPage = () => {
       </section>
 
       {/* 私たちの仕事について */}
-      <section className="section" style={{ background: '#FFF9F5' }}>
+      <section style={{ 
+        background: 'linear-gradient(135deg, #FFF9F5 0%, #F8F6F3 100%)', 
+        padding: '60px 0' 
+      }}>
         <div className="container">
-          <h2 className="section-title">ある日の、私たちのストーリー</h2>
-          
-          <div className="about-work-content" style={{ maxWidth: '900px', margin: '0 auto' }}>
-            <div className="work-intro" style={{ marginBottom: '3rem' }}>
-              <h3 style={{ color: 'var(--primary-color)', marginBottom: '1.5rem', fontSize: '1.5rem' }}>
-                ＼5人の青少年と、8人のスタッフの日常／
-              </h3>
-              <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
-                朝7時。「おはよう」の声もあれば、気だるそうに起きてくる子も。<br />
-                15歳から20歳まで、各ホームに平均5人の青少年たちが暮らしています。<br />
-                学校へ急ぐ子、深夜逆転を少しずつ直そうとしている子、バイトの準備をする子。<br />
-                4人の常勤職員と4人の宿直専門スタッフが、それぞれのペースを見守ります。
-              </p>
-            </div>
-
-            <div className="work-details" style={{ marginBottom: '3rem' }}>
-              <h3 style={{ color: 'var(--primary-color)', marginBottom: '1.5rem', fontSize: '1.4rem' }}>
-                ＜決まりはない。あるのは「見守る」こと＞
-              </h3>
-              <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
-                私たちの仕事に、完璧なマニュアルはありません。<br />
-                15歳から20歳、思春期真っ只中。素直じゃない日もあります。<br />
-                でも、大切なのは彼らの「やりたい」が生まれる瞬間を待つこと。<br />
-                時に悩み、時に一緒に考えながら、<br />
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            {/* 哲学セクション */}
+            <div style={{ 
+              background: 'white', 
+              padding: '3rem', 
+              borderRadius: '16px', 
+              marginBottom: '2rem',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
+              borderLeft: '6px solid var(--accent-color)',
+              textAlign: 'center'
+            }}>
+              <h2 style={{ 
+                fontSize: '1.8rem', 
+                fontWeight: '700', 
+                color: 'var(--primary-color)', 
+                marginBottom: '2rem'
+              }}>
+                マニュアルのない「見守る」お仕事
+              </h2>
+              <p style={{ 
+                fontSize: '1.1rem', 
+                lineHeight: '1.8', 
+                color: '#555', 
+                margin: '0 0 2rem 0'
+              }}>
+                私たちの仕事に、完璧なマニュアルはありません。15歳から20歳、思春期真っ只中。素直じゃない日もあります。
+                でも、大切なのは彼らの「やりたい」が生まれる瞬間を待つこと。時に悩み、時に一緒に考えながら、
                 料理の作り方、お金の使い方、人との関わり方を、少しずつ伝えていきます。
               </p>
-
-              <div className="support-examples" style={{ background: 'var(--white)', padding: '2.5rem', borderRadius: '12px', marginBottom: '2rem' }}>
-                <h4 style={{ marginBottom: '2rem', fontSize: '1.3rem', textAlign: 'center' }}>◇ ある日の出来事 ◇</h4>
-                <div className="story-list" style={{ fontSize: '1.05rem', lineHeight: '2' }}>
-                  <div className="story-item" style={{ marginBottom: '2.5rem' }}>
-                    <p style={{ color: 'var(--primary-color)', fontWeight: 'bold', marginBottom: '0.5rem' }}>夕方5時「宿題、ちょっと見てくれる？」</p>
-                    <p style={{ paddingLeft: '1rem' }}>
-                      17歳のAくん、めずらしく自分から声をかけてきました。<br />
-                      「この問題、マジでわからん...」イライラしながらプリントを見せてきます。<br />
-                      一緒にテーブルに向かい、ゆっくりと解き方を確認。<br />
-                      30分後、「あ、わかった」小さくつぶやく声が聞こえました。
-                    </p>
-                  </div>
-                  
-                  <div className="story-item" style={{ marginBottom: '2.5rem' }}>
-                    <p style={{ color: 'var(--primary-color)', fontWeight: 'bold', marginBottom: '0.5rem' }}>週末の午後「カレー作るから、手伝って」</p>
-                    <p style={{ paddingLeft: '1rem' }}>
-                      19歳のBくん、最近料理にハマっています。<br />
-                      一緒にスーパーへ。「この肉高くない？」「でも美味しそうだし...」<br />
-                      予算と相談しながら買い物するのも、大切な学びの時間。<br />
-                      失敗して焦げちゃったけど、「次はもっとうまく作る」と言ってました。
-                    </p>
-                  </div>
-                  
-                  <div className="story-item" style={{ marginBottom: '2.5rem' }}>
-                    <p style={{ color: 'var(--primary-color)', fontWeight: 'bold', marginBottom: '0.5rem' }}>深夜2時「眠れないんだけど...」</p>
-                    <p style={{ paddingLeft: '1rem' }}>
-                      18歳のCくん、また昼夜逆転してしまいました。<br />
-                      「朝起きるの無理...でもバイト行かなきゃ」葛藤している様子。<br />
-                      一緒にお茶を飲みながら、少しずつ生活リズムを戻す計画を立てます。<br />
-                      完璧じゃなくていい。一歩ずつ、彼のペースで。
-                    </p>
-                  </div>
-                  
-                  <div className="story-item">
-                    <p style={{ color: 'var(--primary-color)', fontWeight: 'bold', marginBottom: '0.5rem' }}>月曜日の夜「バイト、もう辞めたい...」</p>
-                    <p style={{ paddingLeft: '1rem' }}>
-                      19歳のDくん、コンビニバイトから帰ってきて、ため息。<br />
-                      「店長がめっちゃ怒るんよ...俺、向いてないのかな」<br />
-                      話を聞くと、レジ打ちのミスで怒られたとのこと。<br />
-                      「でも先月より早くなってるよね」と伝えると、「そうかな...」と少し表情が和らぎました。<br />
-                      ほとんどの子がバイトしながら、社会との接点を少しずつ広げています。
-                    </p>
-                  </div>
-                </div>
-                <p style={{ marginTop: '2.5rem', fontSize: '1rem', color: '#666', textAlign: 'center', fontStyle: 'italic' }}>
-                  各ホーム4人の常勤職員と4人の宿直専門スタッフが<br />
-                  24時間365日、青少年たちの生活を支えています。
+              <div style={{ textAlign: 'center' }}>
+                <p style={{ 
+                  fontSize: '1rem', 
+                  color: 'var(--primary-color)', 
+                  margin: '0 0 1.5rem 0',
+                  fontWeight: '600'
+                }}>
+                  ＼5人の青少年と、8人のスタッフの日常／
                 </p>
+                <Link 
+                  to="/story" 
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.8rem',
+                    padding: '1.2rem 2rem',
+                    background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%)',
+                    color: 'white',
+                    textDecoration: 'none',
+                    borderRadius: '12px',
+                    fontWeight: '700',
+                    fontSize: '1rem',
+                    boxShadow: '0 6px 20px rgba(230, 126, 80, 0.3)',
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 8px 25px rgba(230, 126, 80, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 6px 20px rgba(230, 126, 80, 0.3)';
+                  }}
+                >
+                  <span style={{ fontSize: '1.2rem' }}>📖</span>
+                  ある日の出来事を詳しく見る
+                </Link>
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* 職場紹介 */}
-      <section className="section">
-        <div className="container">
-          <h2 className="section-title">働きがいのある職場</h2>
-          <div className="grid grid-3">
-            <div className="feature-card">
-              <div className="feature-icon">❤️</div>
-              <h3>やりがいのある仕事</h3>
-              <p>青少年の成長を間近で見守り、自立への道のりをサポートする、とてもやりがいのある仕事です。</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🌱</div>
-              <h3>成長できる環境</h3>
-              <p>充実した研修制度とサポート体制で、専門性を高めながら成長することができます。</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🤝</div>
-              <h3>チームワーク</h3>
-              <p>職員同士の連携を大切にし、みんなで支え合いながら働ける環境です。</p>
+            {/* まとめ */}
+            <div style={{ 
+              background: 'rgba(230, 126, 80, 0.1)', 
+              padding: '2rem', 
+              borderRadius: '12px',
+              textAlign: 'center',
+              border: '1px solid rgba(230, 126, 80, 0.2)'
+            }}>
+              <p style={{ 
+                fontSize: '1rem', 
+                color: 'var(--primary-color)', 
+                margin: '0',
+                fontWeight: '600',
+                lineHeight: '1.6'
+              }}>
+                各ホーム4人の常勤職員と4人の宿直専門スタッフが<br />
+                24時間365日、青少年たちの生活を支えています。
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* 募集職種 */}
-      <section className="section" style={{ background: 'var(--light-gray)' }}>
+      <section className="section">
         <div className="container">
           <h2 className="section-title">募集職種</h2>
           <div className="jobs-list">
@@ -343,6 +372,31 @@ const JobsPage = () => {
             ))}
           </div>
           
+        </div>
+      </section>
+
+      {/* 職場紹介 */}
+      <section className="section" style={{ background: 'var(--light-gray)' }}>
+        <div className="container">
+          <h2 className="section-title">働きがいのある職場</h2>
+          <div className="grid grid-3">
+            <div className="feature-card">
+              <div className="feature-icon">❤️</div>
+              <h3>やりがいのある仕事</h3>
+              <p>青少年の成長を間近で見守り、自立への道のりをサポートする、とてもやりがいのある仕事です。</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🌱</div>
+              <h3>成長できる環境</h3>
+              <p>充実した研修制度とサポート体制で、専門性を高めながら成長することができます。</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🤝</div>
+              <h3>チームワーク</h3>
+              <p>職員同士の連携を大切にし、みんなで支え合いながら働ける環境です。</p>
+            </div>
+          </div>
+
           {/* 仕事のポイント */}
           <div className="job-points" style={{ marginTop: '4rem' }}>
             <h3 style={{ color: 'var(--primary-color)', marginBottom: '2rem', fontSize: '1.4rem', textAlign: 'center' }}>
@@ -379,7 +433,7 @@ const JobsPage = () => {
           </div>
         </div>
       </section>
-
+      
       {/* 法人の特徴 */}
       <section className="section">
         <div className="container">
