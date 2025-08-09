@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import PasswordProtect from './components/PasswordProtect';
 import HomePage from './pages/HomePage';
 import HomesPage from './pages/HomesPage';
 import HomeDetailPage from './pages/HomeDetailPage';
@@ -17,27 +18,29 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <ScrollToTop />
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/homes" element={<HomesPage />} />
-            <Route path="/homes/:homeId" element={<HomeDetailPage />} />
-            <Route path="/jobs" element={<JobsPage />} />
-            <Route path="/donation" element={<DonationPage />} />
-            <Route path="/news" element={<NewsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/story" element={<StoryPage />} />
-            <Route path="/admission-flow" element={<AdmissionFlowPage />} />
-            <Route path="/social-care-evolution" element={<SocialCareEvolutionPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <PasswordProtect>
+      <Router>
+        <div className="App">
+          <ScrollToTop />
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/homes" element={<HomesPage />} />
+              <Route path="/homes/:homeId" element={<HomeDetailPage />} />
+              <Route path="/jobs" element={<JobsPage />} />
+              <Route path="/donation" element={<DonationPage />} />
+              <Route path="/news" element={<NewsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/story" element={<StoryPage />} />
+              <Route path="/admission-flow" element={<AdmissionFlowPage />} />
+              <Route path="/social-care-evolution" element={<SocialCareEvolutionPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </PasswordProtect>
   );
 }
 

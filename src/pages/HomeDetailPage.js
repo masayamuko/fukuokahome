@@ -10,26 +10,18 @@ const HomeDetailPage = () => {
       hero: '/kanransya.jpg',
       gallery: [
         { src: '/kanransya.jpg', caption: 'かんらん舎外観' },
-        { src: '/kanransya-entrance.jpg', caption: '玄関の様子' },
-        { src: '/kanransya-living.jpg', caption: '温かいリビングルーム' },
-        { src: '/kanransya-study.jpg', caption: '学習スペース' },
-        { src: '/kanransya-dining.jpg', caption: 'みんなで囲む食卓' },
-        { src: '/kanransya-room.jpg', caption: '個室の様子' }
+        { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845607/CleanShot_2025-07-30_at_09.19.38_2x_gvgcu8.png', caption: '玄関の様子' }
       ]
     },
     yui: {
-      hero: '/yui.jpg',
+      hero: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753862039/yui_home_hhnpkz.jpg',
       gallery: [
         { src: '/yui.jpg', caption: '結ホーム外観' },
-        { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833847/CleanShot_2025-07-30_at_08.16.17_2x_hodwe5.png', caption: '玄関の様子' },
-        { src: '/yui-living.jpg', caption: '明るいリビング' },
-        { src: '/yui-room.jpg', caption: '個室の様子' },
-        { src: '/yui-kitchen.jpg', caption: 'キッチンスペース' },
-        { src: '/yui-garden.jpg', caption: '庭園' }
+        { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833847/CleanShot_2025-07-30_at_08.16.17_2x_hodwe5.png', caption: '玄関の様子' }
       ]
     },
     leap: {
-      hero: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845644/LEAP%E3%83%9B%E3%83%BC%E3%83%A0_%E5%A4%96%E8%A6%B3_lhwyyb.jpg',
+      hero: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753862039/LEAP_home_vkrmua.jpg',
       gallery: [
         { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845644/LEAP%E3%83%9B%E3%83%BC%E3%83%A0_%E5%A4%96%E8%A6%B3_lhwyyb.jpg', caption: 'LEAP外観' },
         { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845643/%E7%9C%8B%E6%9D%BF-1-1152x1536_vbsiun.jpg', caption: '玄関の様子' },
@@ -40,12 +32,7 @@ const HomeDetailPage = () => {
     switch: {
       hero: '/switch.jpg',
       gallery: [
-        { src: '/switch.jpg', caption: 'スイッチ外観' },
-        { src: '/switch-entrance.jpg', caption: '玄関の様子' },
-        { src: '/switch-library.jpg', caption: '充実した学習室' },
-        { src: '/switch-pc.jpg', caption: 'PCルーム' },
-        { src: '/switch-lounge.jpg', caption: 'くつろぎスペース' },
-        { src: '/switch-study.jpg', caption: '学習スペース' }
+        { src: '/switch.jpg', caption: 'スイッチ外観' }
       ]
     },
     ties: {
@@ -54,9 +41,6 @@ const HomeDetailPage = () => {
         { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833761/IMG_2693_xt2vc1.jpg', caption: 'TIES外観' },
         { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833759/IMG_2691_wsdtvt.jpg', caption: '玄関の様子' },
         { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833755/IMG_2689_v0mkzz.jpg', caption: '施設内部' },
-        { src: '/ties-plan1.jpg', caption: '完成イメージ（リビング）' },
-        { src: '/ties-plan2.jpg', caption: '完成イメージ（個室）' },
-        { src: '/ties-plan3.jpg', caption: '完成イメージ（共用部）' }
       ]
     }
   };
@@ -73,12 +57,12 @@ const HomeDetailPage = () => {
       facilities: ['学習室', 'リビング', 'キッチン', '浴室', '洗濯室'],
       manager: '施設長 山田 花子',
       phone: '092-XXX-XXXX',
-      address: '福岡市南区○○○○○○',
+      address: '福岡市南区大平寺2丁目10-1',
       managerProfile: {
         name: '山田 花子',
         title: '施設長',
         experience: '社会福祉士として15年の経験',
-        photo: '/manager-kanransya.jpg',
+        photo: null,
         message: '一人ひとりの女性が自分らしく生きていけるよう、温かい環境でサポートしています。何でも気軽にご相談ください。'
       },
       entrancePhoto: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845607/CleanShot_2025-07-30_at_09.19.38_2x_gvgcu8.png',
@@ -142,12 +126,12 @@ const HomeDetailPage = () => {
       facilities: ['個室6室', '共用リビング', 'キッチン', '浴室', '洗濯室'],
       manager: '施設長 年徳',
       phone: '092-XXX-XXXX',
-      address: '福岡市南区○○○○○○',
+      address: '福岡市南区皿山2丁目1-58',
       managerProfile: {
         name: '年徳',
         title: '施設長',
         experience: '精神保健福祉士として12年の経験',
-        photo: '/manager-yui.jpg',
+        photo: null,
         message: '男性の若者たちが人との絆を大切にしながら、自分らしい人生を歩めるようサポートしています。'
       },
       entrancePhoto: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833847/CleanShot_2025-07-30_at_08.16.17_2x_hodwe5.png',
@@ -212,7 +196,7 @@ const HomeDetailPage = () => {
       facilities: ['運動スペース', '学習室', 'リビング', 'キッチン', '浴室'],
       manager: '施設長 中嶋',
       phone: '092-XXX-XXXX',
-      address: '筑紫野市○○○○○○',
+      address: '福岡県筑紫野市紫6丁目25-5',
       managerProfile: {
         name: '中嶋',
         title: '施設長',
@@ -283,15 +267,15 @@ const HomeDetailPage = () => {
       facilities: ['学習室（24時間利用可）', '図書コーナー', 'PCルーム', 'リビング', 'キッチン'],
       manager: '施設長 鈴木 一郎',
       phone: '092-XXX-XXXX',
-      address: '太宰府市○○○○○○',
+      address: '福岡県太宰府市通古賀3丁目13-6',
       managerProfile: {
         name: '鈴木 一郎',
         title: '施設長',
         experience: '元高校教員・社会福祉士',
-        photo: '/manager-switch.jpg',
+        photo: null,
         message: '学びたいという気持ちを大切に、一人ひとりのペースに合わせた教育支援を行っています。'
       },
-      entrancePhoto: '/switch-entrance.jpg',
+      entrancePhoto: '/switch.jpg',
       description: '心の変化と選択をサポート。高卒資格取得や進学を目指す青年の就学支援に積極的に取り組む新しいホームです。',
       philosophy: '教育の力を信じ、学習を通じた自己実現を支援します。一人ひとりの学習ペースに合わせた環境で、将来への可能性を広げるお手伝いをします。',
       features: [
@@ -354,12 +338,12 @@ const HomeDetailPage = () => {
       facilities: ['交流スペース', 'クリエイティブルーム', '個室6室', 'キッチン', 'テラス'],
       manager: '施設長 柴田',
       phone: '092-XXX-XXXX',
-      address: '福岡市南区○○○○○○',
+      address: '福岡市南区若久4丁目2-3（地域福祉拠点「五福の家」敷地内）',
       managerProfile: {
         name: '柴田',
         title: '施設長',
         experience: '社会福祉士・ケアマネージャーとして8年の経験',
-        photo: '/manager-ties.jpg',
+        photo: null,
         message: '最新の支援理論を取り入れながら、一人ひとりの個性を大切に温かい支援を行っています。',
         isPreparation: false
       },
@@ -482,19 +466,6 @@ const HomeDetailPage = () => {
           />
         )}
         {/* デバッグ表示：実際のパス */}
-        <div style={{
-          position: 'absolute',
-          top: '10px',
-          left: '10px',
-          background: 'rgba(0,0,0,0.8)',
-          color: 'white',
-          padding: '0.5rem',
-          fontSize: '0.8rem',
-          zIndex: 10,
-          borderRadius: '4px'
-        }}>
-          Debug: {images?.hero || 'No hero image'}
-        </div>
         <div 
           style={{
             position: 'absolute',
@@ -515,12 +486,46 @@ const HomeDetailPage = () => {
             padding: '2rem'
           }}
         >
-          <h1 style={{
-            fontSize: '3.5rem',
-            fontWeight: '700',
-            marginBottom: '1rem',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
-          }}>{home.name}</h1>
+          {(() => {
+            const logoData = {
+              yui: { src: '/自立援助ホーム 結ホーム.png', alt: '結ホームロゴ' },
+              kanransya: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753847928/%E8%87%AA%E7%AB%8B%E6%8F%B4%E5%8A%A9%E3%83%9B%E3%83%BC%E3%83%A0_%E3%81%8B%E3%82%93%E3%82%89%E3%82%93%E8%88%8E_%E3%83%AD%E3%82%B4%E3%82%99_ltzptu.png', alt: 'かんらん舎ロゴ' },
+              leap: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753864549/LEAP_logo_kmcgjk.png', alt: 'LEAPロゴ' },
+              switch: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753889235/Switch_logo_zy5kus.png', alt: 'スイッチロゴ' },
+              ties: null
+            };
+            const logoInfo = logoData[homeId];
+            
+            if (logoInfo) {
+              return (
+                <div style={{
+                  marginBottom: '1rem',
+                  display: 'flex',
+                  justifyContent: 'center'
+                }}>
+                  <img 
+                    src={logoInfo.src} 
+                    alt={logoInfo.alt}
+                    style={{
+                      maxHeight: '120px',
+                      maxWidth: '300px',
+                      objectFit: 'contain',
+                      filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.5))'
+                    }}
+                  />
+                </div>
+              );
+            } else {
+              return (
+                <h1 style={{
+                  fontSize: '3.5rem',
+                  fontWeight: '700',
+                  marginBottom: '1rem',
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                }}>{home.name}</h1>
+              );
+            }
+          })()}
           <p style={{
             fontSize: '1.5rem',
             marginBottom: '2rem',
@@ -539,7 +544,7 @@ const HomeDetailPage = () => {
               borderRadius: '20px',
               fontSize: '0.9rem'
             }}>
-              🏠 {home.location}
+              <span style={{ display: 'inline-block', width: '16px', height: '16px', marginRight: '8px', background: 'currentColor', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>{home.location}
             </span>
             <span style={{
               background: 'rgba(255, 255, 255, 0.2)',
@@ -547,7 +552,7 @@ const HomeDetailPage = () => {
               borderRadius: '20px',
               fontSize: '0.9rem'
             }}>
-              🕐 {home.established}設立
+              <span style={{ display: 'inline-block', width: '16px', height: '16px', marginRight: '8px', background: 'currentColor', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>{home.established}設立
             </span>
             <span style={{
               background: 'rgba(255, 255, 255, 0.2)',
@@ -555,7 +560,7 @@ const HomeDetailPage = () => {
               borderRadius: '20px',
               fontSize: '0.9rem'
             }}>
-              👥 {home.capacity}
+              <span style={{ display: 'inline-block', width: '16px', height: '16px', marginRight: '8px', background: 'currentColor', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>{home.capacity}
             </span>
           </div>
         </div>
@@ -626,8 +631,8 @@ const HomeDetailPage = () => {
                   const logoData = {
                     yui: { src: '/自立援助ホーム 結ホーム.png', alt: '結ホームロゴ' },
                     kanransya: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753847928/%E8%87%AA%E7%AB%8B%E6%8F%B4%E5%8A%A9%E3%83%9B%E3%83%BC%E3%83%A0_%E3%81%8B%E3%82%93%E3%82%89%E3%82%93%E8%88%8E_%E3%83%AD%E3%82%B4%E3%82%99_ltzptu.png', alt: 'かんらん舎ロゴ' },
-                    leap: { src: '/LEAPLOGO.jpg', alt: 'LEAPロゴ' },
-                    switch: null,
+                    leap: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753864549/LEAP_logo_kmcgjk.png', alt: 'LEAPロゴ' },
+                    switch: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753889235/Switch_logo_zy5kus.png', alt: 'スイッチロゴ' },
                     ties: null
                   };
                   const logoInfo = logoData[homeId];
@@ -793,7 +798,7 @@ const HomeDetailPage = () => {
                       color: 'white',
                       flexShrink: 0
                     }}>
-                      {!home.managerProfile.photo && '👤'}
+                      {!home.managerProfile.photo && <span style={{ display: 'inline-block', width: '24px', height: '24px', background: 'currentColor', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>}
                     </div>
                     
                     {/* シンプルなプロフィール情報 */}
@@ -826,10 +831,10 @@ const HomeDetailPage = () => {
               <div className="staff-scroll" style={{
                 display: 'flex',
                 gap: '2rem',
-                animation: 'slide 40s linear infinite',
+                animation: 'staffSlide 30s linear infinite',
                 width: 'fit-content'
               }}>
-                {/* 職員データ */}
+                {/* 職員データ - 2回繰り返してシームレスループを実現 */}
                 {(() => {
                   const staffData = {
                     yui: [
@@ -860,7 +865,9 @@ const HomeDetailPage = () => {
                       { name: '石川', role: '宿直', message: '夜の学習時間もサポートします', personality: ['夜遅くまで学習に付き合う', '集中力を大切にする', '静かで落ち着いている'] }
                     ]
                   };
-                  return staffData[homeId] || staffData.yui;
+                  const currentStaffData = staffData[homeId] || staffData.yui;
+                  // 同じデータを2回繰り返してシームレスループを作成
+                  return [...currentStaffData, ...currentStaffData];
                 })().map((staff, index) => (
                   <div key={index} className="staff-card" style={{
                     minWidth: '250px',
@@ -1100,7 +1107,7 @@ const HomeDetailPage = () => {
             </div>
 
             {/* 間取り */}
-            {homeId === 'leap' && (
+            {(homeId === 'leap' || homeId === 'kanransya') && (
               <div className="card" style={{
                 background: 'white',
                 padding: '2rem',
@@ -1113,8 +1120,8 @@ const HomeDetailPage = () => {
                 </h3>
                 <div style={{ textAlign: 'center' }}>
                   <img 
-                    src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845642/1662468405_kp3xo3.jpg"
-                    alt="LEAP間取り図"
+                    src={homeId === 'leap' ? 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753862038/%E3%83%9B%E3%83%BC%E3%83%A0%E6%A6%82%E8%A6%81_y9nfbb.jpg' : 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845642/1662468405_kp3xo3.jpg'}
+                    alt={`${home.name}間取り図`}
                     style={{
                       maxWidth: '100%',
                       height: 'auto',
@@ -1175,7 +1182,7 @@ const HomeDetailPage = () => {
                     justifyContent: 'center'
                   }}>
                     {!img.src && (
-                      <div style={{ fontSize: '3rem', color: '#ccc' }}>🏠</div>
+                      <div style={{ fontSize: '3rem', color: '#ccc' }}><span style={{ display: 'inline-block', width: '48px', height: '48px', background: 'currentColor', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span></div>
                     )}
                   </div>
                   {img.caption && (
@@ -1236,7 +1243,7 @@ const HomeDetailPage = () => {
                   fontSize: '1.5rem',
                   color: 'var(--accent-color)',
                   flexShrink: 0
-                }}>✓</div>
+                }}><span style={{ display: 'inline-block', width: '24px', height: '24px', background: 'currentColor', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M5 13l4 4L19 7\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M5 13l4 4L19 7\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span></div>
                 <p style={{
                   margin: 0,
                   fontSize: '1rem',

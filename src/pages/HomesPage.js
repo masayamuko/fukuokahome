@@ -25,9 +25,20 @@ const HomesPage = () => {
       capacity: '男性6名',
       features: ['絆を重視した支援', '男性専用ホーム', 'きめ細かなケア'],
       status: '福岡市管轄',
-      image: '/自立援助ホーム 結ホーム.jpg',
+      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753862039/yui_home_hhnpkz.jpg',
       logo: '/自立援助ホーム 結ホーム.png',
       website: 'https://yuihome.jimdofree.com/'
+    },
+    {
+      id: 'ties',
+      name: 'TIES',
+      description: '新しいつながりを創造するホーム。2025年に開設しました。最新の支援理論を取り入れた次世代型ホームとして運営しています。',
+      established: '2025年',
+      location: '福岡市南区',
+      capacity: '男性6名',
+      features: ['最新の支援理論', '地域連携強化', '新しいつながり創造'],
+      status: '福岡市管轄',
+      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833761/IMG_2693_xt2vc1.jpg'
     },
     {
       id: 'leap',
@@ -38,8 +49,8 @@ const HomesPage = () => {
       capacity: '男性6名',
       features: ['可能性重視の支援', '男性専用ホーム', '個性を活かす環境'],
       status: '福岡県管轄',
-      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845644/LEAP%E3%83%9B%E3%83%BC%E3%83%A0_%E5%A4%96%E8%A6%B3_lhwyyb.jpg',
-      logo: '/LEAPLOGO.jpg',
+      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753862039/LEAP_home_vkrmua.jpg',
+      logo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753864549/LEAP_logo_kmcgjk.png',
       website: 'https://leap-chikushino.jimdofree.com/',
       interview: 'https://smileyflowers.site/leap/'
     },
@@ -53,18 +64,8 @@ const HomesPage = () => {
       features: ['進学支援特化', '男性専用ホーム', '学習環境充実'],
       status: '福岡県管轄',
       image: '/自立援助ホーム スイッチ.jpg',
+      logo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753889235/Switch_logo_zy5kus.png',
       website: 'https://switch05.jimdofree.com/'
-    },
-    {
-      id: 'ties',
-      name: 'TIES',
-      description: '新しいつながりを創造するホーム。2024年4月に開設しました。最新の支援理論を取り入れた次世代型ホームとして運営しています。',
-      established: '2024年4月',
-      location: '福岡市南区',
-      capacity: '男性6名',
-      features: ['最新の支援理論', '地域連携強化', '新しいつながり創造'],
-      status: '福岡市管轄',
-      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833761/IMG_2693_xt2vc1.jpg'
     }
   ];
 
@@ -74,7 +75,7 @@ const HomesPage = () => {
       <section className="page-header">
         <div className="container">
           <h1>自立援助ホーム</h1>
-          <p>家庭の事情により家族と暮らせない、児童養護施設等を退所した、<br />そんな15歳から20歳までのユースが生活し、自立に向けた支援を受ける施設です。</p>
+          <p>家庭の事情により家族と暮らせない、児童養護施設等を退所した、<br />そんな15歳から20歳までの青少年が生活し、自立に向けた支援を受ける施設です。</p>
         </div>
       </section>
 
@@ -93,18 +94,35 @@ const HomesPage = () => {
                 
                 {home.image && (
                   <div className="home-card-image">
-                    <img src={home.image} alt={home.name} />
+                    <img src={home.image} alt={`自立援助ホーム${home.name}の外観`} />
                   </div>
                 )}
                 
-                {home.logo && (
-                  <div className="home-logo-section">
+                <div className="home-logo-section">
+                  {home.logo ? (
                     <img src={home.logo} alt={`${home.name}ロゴ`} className="home-logo-large" />
-                    <h3 className="home-name-beside-logo">{home.name}</h3>
-                  </div>
-                )}
+                  ) : (
+                    <div className="home-logo-placeholder" style={{
+                      width: '120px',
+                      height: '120px',
+                      border: '2px dashed #ccc',
+                      borderRadius: '12px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#999',
+                      fontSize: '0.9rem',
+                      backgroundColor: 'white',
+                      padding: '1rem',
+                      boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)'
+                    }}>
+                      ロゴ未登録
+                    </div>
+                  )}
+                  <h3 className="home-name-beside-logo">{home.name}</h3>
+                </div>
                 
-                <p className="home-description" style={{ marginTop: home.logo ? '80px' : '1rem' }}>{home.description}</p>
+                <p className="home-description" style={{ marginTop: '80px' }}>{home.description}</p>
                 
                 <div className="home-info">
                   <div className="info-item">
@@ -128,11 +146,6 @@ const HomesPage = () => {
                 </div>
 
                 <div className="home-actions">
-                  {home.interview && (
-                    <a href={home.interview} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
-                      インタビュー記事
-                    </a>
-                  )}
                   <Link to={`/homes/${home.id}`} className="btn">詳細を見る</Link>
                 </div>
                 
@@ -160,7 +173,7 @@ const HomesPage = () => {
       <section className="section" style={{ background: '#FFF9F5' }}>
         <div className="container">
           <div className="social-care-background" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="section-title">小規模ホームで育む、若者の「生きる力」</h2>
+            <h2 className="section-title">小規模ホームで育む、青少年の「生きる力」</h2>
             
             <div style={{ textAlign: 'left', marginBottom: '3rem' }}>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '1.5rem' }}>
@@ -168,7 +181,7 @@ const HomesPage = () => {
               </p>
               
               <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
-                地域に根差した<strong>「もう一つの家庭」</strong>として、若者の自立を支える役割を担うのが私たち自立援助ホームです。
+                地域に根差した<strong>「もう一つの家庭」</strong>として、青少年の自立を支える役割を担うのが私たち自立援助ホームです。
               </p>
             </div>
 
@@ -210,7 +223,7 @@ const HomesPage = () => {
                     </svg>
                   </div>
                   <h4>一人ひとりに寄り添う個別支援</h4>
-                  <p>それぞれの若者の個性と夢に合わせた、オーダーメイドの支援計画</p>
+                  <p>それぞれの青少年の個性と夢に合わせた、オーダーメイドの支援計画</p>
                 </div>
                 <div className="feature-card" style={{ background: 'white', padding: '1.5rem', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
                   <div style={{ 
@@ -236,7 +249,7 @@ const HomesPage = () => {
 
             <div style={{ textAlign: 'center' }}>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
-                若者の多様なニーズへの対応など、現代の課題に挑戦しながら、子どもたちが未来に希望を持って羽ばたけるよう、温かい支援を提供し続けます。
+                青少年の多様なニーズへの対応など、現代の課題に挑戦しながら、子どもたちが未来に希望を持って羽ばたけるよう、温かい支援を提供し続けます。
               </p>
               <Link to="/social-care-evolution" className="btn btn-large">
                 詳しく見る

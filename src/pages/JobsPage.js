@@ -52,9 +52,9 @@ const JobsPage = () => {
       location: 'TIES（福岡市南区若久4丁目33番1）',
       salary: '月給 200,000円以上',
       annualSalary: '年収 300万円〜350万円',
-      description: '2025年2月開設予定の新しい自立援助ホーム「TIES」での勤務です。15〜20歳の青少年の生活支援を通じて、彼らの自立をサポートします。新しい施設で一緒にホームを作り上げていく仲間を募集しています。',
+      description: '2025年開設予定の新しい自立援助ホーム「TIES」での勤務です。15〜20歳の青少年の生活支援を通じて、彼らの自立をサポートします。新しい施設で一緒にホームを作り上げていく仲間を募集しています。',
       features: ['新規開設', '未経験OK', '完全週休2日制', '残業なし'],
-      image: null,
+      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833761/IMG_2693_xt2vc1.jpg',
       requirements: [
         '以下のいずれかの資格をお持ちの方',
         '・社会福祉士、精神保健福祉士',
@@ -281,12 +281,12 @@ const JobsPage = () => {
       {/* 募集職種 */}
       <section className="section">
         <div className="container">
-          <h2 className="section-title">募集職種</h2>
+          <h2 className="section-title">求人情報</h2>
           <div className="jobs-list">
             {jobs.map((job) => (
               <div key={job.id} className="job-card-enhanced">
                 <div className="job-card-image">
-                  {job.image && <img src={job.image} alt={job.title} />}
+                  {job.image && <img src={job.image} alt={`${job.title}勤務地の外観`} />}
                   <div className="job-features">
                     {job.features.map((feature, index) => (
                       <span key={index} className="feature-tag">{feature}</span>
@@ -307,7 +307,7 @@ const JobsPage = () => {
                   )}
                   
                   <div className="job-location">
-                    <span className="location-icon">📍</span>
+                    <span className="location-icon" style={{ display: 'inline-block', width: '16px', height: '16px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\' /%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M15 11a3 3 0 11-6 0 3 3 0 016 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\' /%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M15 11a3 3 0 11-6 0 3 3 0 016 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>
                     {job.location}
                   </div>
                   
@@ -327,7 +327,7 @@ const JobsPage = () => {
                     <div className="job-details-expanded">
                       <div className="job-detail-grid">
                         <div className="job-detail-section">
-                          <h4>📋 応募要件</h4>
+                          <h4><span style={{ display: 'inline-block', width: '20px', height: '20px', marginRight: '8px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>応募要件</h4>
                           <ul>
                             {job.requirements.map((req, index) => (
                               <li key={index}>{req}</li>
@@ -336,7 +336,7 @@ const JobsPage = () => {
                         </div>
                         
                         <div className="job-detail-section">
-                          <h4>💰 待遇・福利厚生</h4>
+                          <h4><span style={{ display: 'inline-block', width: '20px', height: '20px', marginRight: '8px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>待遇・福利厚生</h4>
                           <ul>
                             {job.benefits.map((benefit, index) => (
                               <li key={index}>{benefit}</li>
@@ -345,7 +345,7 @@ const JobsPage = () => {
                         </div>
                         
                         <div className="job-detail-section">
-                          <h4>⏰ 働き方</h4>
+                          <h4><span style={{ display: 'inline-block', width: '20px', height: '20px', marginRight: '8px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>働き方</h4>
                           <ul>
                             {job.workStyle.map((style, index) => (
                               <li key={index}>{style}</li>
@@ -375,66 +375,7 @@ const JobsPage = () => {
         </div>
       </section>
 
-      {/* 職場紹介 */}
-      <section className="section" style={{ background: 'var(--light-gray)' }}>
-        <div className="container">
-          <h2 className="section-title">働きがいのある職場</h2>
-          <div className="grid grid-3">
-            <div className="feature-card">
-              <div className="feature-icon">❤️</div>
-              <h3>やりがいのある仕事</h3>
-              <p>青少年の成長を間近で見守り、自立への道のりをサポートする、とてもやりがいのある仕事です。</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🌱</div>
-              <h3>成長できる環境</h3>
-              <p>充実した研修制度とサポート体制で、専門性を高めながら成長することができます。</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🤝</div>
-              <h3>チームワーク</h3>
-              <p>職員同士の連携を大切にし、みんなで支え合いながら働ける環境です。</p>
-            </div>
-          </div>
-
-          {/* 仕事のポイント */}
-          <div className="job-points" style={{ marginTop: '4rem' }}>
-            <h3 style={{ color: 'var(--primary-color)', marginBottom: '2rem', fontSize: '1.4rem', textAlign: 'center' }}>
-              ＜仕事のポイント＞
-            </h3>
-            <div className="point-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
-              <div className="point-card" style={{ background: 'var(--white)', padding: '2rem', borderRadius: '12px', border: '2px solid var(--primary-color)' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>👥</div>
-                <p style={{ lineHeight: '1.7' }}>
-                  子どもたちと深く関わる仕事です！子どもたちには無限の可能性があるので、
-                  成長を間近で見ることができます。
-                </p>
-              </div>
-              <div className="point-card" style={{ background: 'var(--white)', padding: '2rem', borderRadius: '12px', border: '2px solid var(--primary-color)' }}>
-                <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>📚</div>
-                <p style={{ lineHeight: '1.7' }}>
-                  資格を取得するために、働きながら通信制大学に通う職員もいます。
-                  その場合は、シフトを調整するなどサポートを行ないます。
-                  また、残業は、ほとんどありませんので、プライベートも充実させることができます。
-                </p>
-              </div>
-            </div>
-
-            <div className="onboarding-flow" style={{ background: 'var(--white)', padding: '2.5rem', borderRadius: '12px' }}>
-              <h3 style={{ color: 'var(--primary-color)', marginBottom: '1.5rem', fontSize: '1.4rem' }}>
-                ＜入社後の流れ＞
-              </h3>
-              <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-                入社後は、実務に携わりながら仕事を覚えていきましょう。
-                分からないことがあれば、周りの先輩に相談できる環境があるので、
-                未経験の方もご安心くださいね。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* 法人の特徴 */}
+      {/* 私たちが大切にしていること */}
       <section className="section">
         <div className="container">
           <h2 className="section-title">私たちが大切にしていること</h2>
@@ -458,6 +399,253 @@ const JobsPage = () => {
           </div>
         </div>
       </section>
+
+      {/* スタッフの声 */}
+      <section className="section" style={{ background: 'linear-gradient(135deg, #f0f8ff 0%, #e8f4f8 100%)', padding: '4rem 0' }}>
+        <div className="container">
+          <h2 className="section-title">スタッフの声</h2>
+          <p style={{ textAlign: 'center', fontSize: '1.1rem', color: '#666', marginBottom: '3rem' }}>
+            実際に働くスタッフの生の声をお聞きください
+          </p>
+          
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
+            gap: '2rem',
+            maxWidth: '1000px',
+            margin: '0 auto'
+          }}>
+            {(() => {
+              const staffVoices = [
+                {
+                  initial: 'A.S',
+                  career: '社会福祉士・3年目',
+                  voice: '成長を見守れる、やりがいのある職場です',
+                  color: '#4f46e5'
+                },
+                {
+                  initial: 'M.T',
+                  career: '保育士・1年目',
+                  voice: '温かい雰囲気で、安心して働ける職場です',
+                  color: '#059669'
+                },
+                {
+                  initial: 'K.Y',
+                  career: '精神保健福祉士・5年目',
+                  voice: '一人ひとりに寄り添える、深いやりがいがある仕事です',
+                  color: '#dc2626'
+                },
+                {
+                  initial: 'H.N',
+                  career: '教員免許・2年目',
+                  voice: 'チームワークが良く、学び合える職場です',
+                  color: '#7c3aed'
+                },
+                {
+                  initial: 'R.I',
+                  career: '社会福祉士・4年目',
+                  voice: '未経験でも丁寧に教えてもらえる、成長できる職場です',
+                  color: '#ea580c'
+                },
+                {
+                  initial: 'Y.K',
+                  career: '宿直専門・6年目',
+                  voice: '夜勤も安心、サポート体制が整った職場です',
+                  color: '#0891b2'
+                },
+                {
+                  initial: 'S.M',
+                  career: '保育士・3年目',
+                  voice: '子どもたちの笑顔が何よりの励みになる仕事です',
+                  color: '#be185d'
+                },
+                {
+                  initial: 'T.F',
+                  career: '社会福祉士・7年目',
+                  voice: '長く続けられる、働きやすい職場です',
+                  color: '#166534'
+                }
+              ];
+              
+              return staffVoices.map((staff, index) => (
+                <div 
+                  key={index}
+                  className="staff-voice-item"
+                  style={{
+                    position: 'relative',
+                    textAlign: 'center',
+                    cursor: 'pointer',
+                    transition: 'transform 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-5px)';
+                    e.currentTarget.querySelector('.voice-bubble').style.opacity = '1';
+                    e.currentTarget.querySelector('.voice-bubble').style.transform = 'translateY(-10px) scale(1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.querySelector('.voice-bubble').style.opacity = '0';
+                    e.currentTarget.querySelector('.voice-bubble').style.transform = 'translateY(0) scale(0.8)';
+                  }}
+                >
+                  {/* 吹き出し */}
+                  <div 
+                    className="voice-bubble"
+                    style={{
+                      position: 'absolute',
+                      bottom: '100%',
+                      left: '50%',
+                      transform: 'translateX(-50%) translateY(0) scale(0.8)',
+                      background: 'white',
+                      padding: '1rem',
+                      borderRadius: '12px',
+                      boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
+                      minWidth: '200px',
+                      maxWidth: '250px',
+                      marginBottom: '15px',
+                      opacity: '0',
+                      transition: 'all 0.3s ease',
+                      zIndex: '10',
+                      border: `2px solid ${staff.color}`
+                    }}
+                  >
+                    <p style={{ 
+                      margin: '0', 
+                      fontSize: '0.9rem', 
+                      fontWeight: '600',
+                      color: '#333',
+                      lineHeight: '1.4'
+                    }}>
+                      「{staff.voice}」
+                    </p>
+                    {/* 吹き出しの矢印 */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '100%',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      width: '0',
+                      height: '0',
+                      borderLeft: '8px solid transparent',
+                      borderRight: '8px solid transparent',
+                      borderTop: `8px solid ${staff.color}`
+                    }}></div>
+                  </div>
+                  
+                  {/* スタッフアイコン */}
+                  <div style={{
+                    width: '80px',
+                    height: '80px',
+                    borderRadius: '50%',
+                    background: staff.color,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 1rem',
+                    color: 'white',
+                    fontSize: '1.2rem',
+                    fontWeight: '700',
+                    boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+                    border: '3px solid white'
+                  }}>
+                    {staff.initial}
+                  </div>
+                  
+                  {/* 経歴 */}
+                  <p style={{
+                    margin: '0',
+                    fontSize: '0.85rem',
+                    color: '#666',
+                    fontWeight: '500'
+                  }}>
+                    {staff.career}
+                  </p>
+                </div>
+              ));
+            })()}
+          </div>
+          
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <p style={{ 
+              fontSize: '0.9rem', 
+              color: '#888',
+              fontStyle: 'italic'
+            }}>
+              ※アイコンにマウスを合わせると、スタッフの声が表示されます
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 職場紹介 */}
+      <section className="section" style={{ background: 'var(--light-gray)' }}>
+        <div className="container">
+          <h2 className="section-title">働きがいのある職場</h2>
+          <div className="grid grid-3">
+            <div className="feature-card">
+              <div className="feature-icon">
+                <span style={{ display: 'inline-block', width: '24px', height: '24px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>
+              </div>
+              <h3>やりがいのある仕事</h3>
+              <p>青少年の成長を間近で見守り、自立への道のりをサポートする、とてもやりがいのある仕事です。</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <span style={{ display: 'inline-block', width: '24px', height: '24px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>
+              </div>
+              <h3>成長できる環境</h3>
+              <p>充実した研修制度とサポート体制で、専門性を高めながら成長することができます。</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <span style={{ display: 'inline-block', width: '24px', height: '24px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>
+              </div>
+              <h3>チームワーク</h3>
+              <p>職員同士の連携を大切にし、みんなで支え合いながら働ける環境です。</p>
+            </div>
+          </div>
+
+          {/* 仕事のポイント */}
+          <div className="job-points" style={{ marginTop: '4rem' }}>
+            <h3 style={{ color: 'var(--primary-color)', marginBottom: '2rem', fontSize: '1.4rem', textAlign: 'center' }}>
+              ＜仕事のポイント＞
+            </h3>
+            <div className="point-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
+              <div className="point-card" style={{ background: 'var(--white)', padding: '2rem', borderRadius: '12px', border: '2px solid var(--primary-color)' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
+                  <span style={{ display: 'inline-block', width: '32px', height: '32px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>
+                </div>
+                <p style={{ lineHeight: '1.7' }}>
+                  子どもたちと深く関わる仕事です！子どもたちには無限の可能性があるので、
+                  成長を間近で見ることができます。
+                </p>
+              </div>
+              <div className="point-card" style={{ background: 'var(--white)', padding: '2rem', borderRadius: '12px', border: '2px solid var(--primary-color)' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
+                  <span style={{ display: 'inline-block', width: '32px', height: '32px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>
+                </div>
+                <p style={{ lineHeight: '1.7' }}>
+                  資格を取得するために、働きながら通信制大学に通う職員もいます。
+                  その場合は、シフトを調整するなどサポートを行ないます。
+                  また、残業は、ほとんどありませんので、プライベートも充実させることができます。
+                </p>
+              </div>
+            </div>
+
+            <div className="onboarding-flow" style={{ background: 'var(--white)', padding: '2.5rem', borderRadius: '12px' }}>
+              <h3 style={{ color: 'var(--primary-color)', marginBottom: '1.5rem', fontSize: '1.4rem' }}>
+                ＜入社後の流れ＞
+              </h3>
+              <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+                入社後は、実務に携わりながら仕事を覚えていきましょう。
+                分からないことがあれば、周りの先輩に相談できる環境があるので、
+                未経験の方もご安心くださいね。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
 
       {/* 研修制度 */}
       <section className="section" style={{ background: 'var(--light-gray)' }}>

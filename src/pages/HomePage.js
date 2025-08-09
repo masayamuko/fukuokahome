@@ -8,11 +8,10 @@ const HomePage = () => {
       name: 'かんらん舎',
       description: '福岡市として初めての自立援助ホーム。2008年の開設以来、青少年の自立を支援しています。',
       established: '2008年',
-      location: '福岡市南区',
       image: '/自立援助ホーム かんらん舎.jpg',
       logo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753847928/%E8%87%AA%E7%AB%8B%E6%8F%B4%E5%8A%A9%E3%83%9B%E3%83%BC%E3%83%A0_%E3%81%8B%E3%82%93%E3%82%89%E3%82%93%E8%88%8E_%E3%83%AD%E3%82%B3%E3%82%99_ltzptu.png',
       url: 'https://kanransya-fukuoka.jimdofree.com/',
-      feature: '福岡市初のホーム',
+      feature: '福岡市南区',
       gender: '女子ホーム'
     },
     {
@@ -20,11 +19,21 @@ const HomePage = () => {
       name: '結ホーム',
       description: '絆を大切にする支援方針で、青少年一人ひとりの成長を丁寧にサポートします。',
       established: '2015年',
-      location: '福岡市南区',
-      image: '/自立援助ホーム 結ホーム.jpg',
+      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753862039/yui_home_hhnpkz.jpg',
       logo: '/自立援助ホーム 結ホーム.png',
       url: 'https://yuihome.jimdofree.com/',
-      feature: '絆を大切にする',
+      feature: '福岡市南区',
+      gender: '男子ホーム'
+    },
+    {
+      id: 'ties',
+      name: 'TIES',
+      description: '2025年に開設した最新の自立援助ホーム。最新の支援理論を取り入れた次世代型ホームです。',
+      established: '2025年',
+      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833761/IMG_2693_xt2vc1.jpg',
+      logo: null,
+      url: null,
+      feature: '福岡市南区',
       gender: '男子ホーム'
     },
     {
@@ -32,11 +41,10 @@ const HomePage = () => {
       name: 'LEAP',
       description: '「飛び越える、上昇する」という意味を持つホーム。青少年の可能性を信じて支援します。',
       established: '2019年',
-      location: '筑紫野市',
-      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845644/LEAP%E3%83%9B%E3%83%BC%E3%83%A0_%E5%A4%96%E8%A6%B3_lhwyyb.jpg',
-      logo: '/LEAPLOGO.jpg',
+      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753862039/LEAP_home_vkrmua.jpg',
+      logo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753864549/LEAP_logo_kmcgjk.png',
       url: 'https://leap-chikushino.jimdofree.com/',
-      feature: '可能性を重視',
+      feature: '筑紫野市',
       gender: '男子ホーム'
     },
     {
@@ -44,30 +52,17 @@ const HomePage = () => {
       name: 'スイッチ',
       description: 'HIGH SCHOOL DIPLOMA（高校卒業資格取得）を目指す青年の就学支援に積極的に取り組みます。',
       established: '2023年',
-      location: '太宰府市',
       image: '/自立援助ホーム スイッチ.jpg',
-      logo: null,
+      logo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753889235/Switch_logo_zy5kus.png',
       url: 'https://switch05.jimdofree.com/',
-      feature: '進学支援特化',
-      gender: '男子ホーム'
-    },
-    {
-      id: 'ties',
-      name: 'TIES',
-      description: '2024年4月に開設した最新の自立援助ホーム。最新の支援理論を取り入れた次世代型ホームです。',
-      established: '2024年4月',
-      location: '福岡市南区',
-      image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833761/IMG_2693_xt2vc1.jpg',
-      logo: null,
-      url: null,
-      feature: '次世代型ホーム',
+      feature: '太宰府市',
       gender: '男子ホーム'
     }
   ];
 
   const stats = [
     { number: '16', unit: '年', label: '運営実績', description: '2008年設立以来の実績' },
-    { number: '150', unit: '人', label: '支援実績', description: 'これまでに関わったユース総数' },
+    { number: '150', unit: '人', label: '支援実績', description: 'これまでに関わった青少年総数' },
     { number: '5', unit: '施設', label: '自立援助ホーム', description: '福岡市及び福岡県より委託運営' },
     { number: '30', unit: '人', label: '定員数', description: '各ホーム合計定員数' }
   ];
@@ -144,21 +139,23 @@ const HomePage = () => {
                 <div className="home-visual-content">
                   {home.image ? (
                     <div className="home-visual-image">
-                      <img src={home.image} alt={home.name} />
+                      <img src={home.image} alt={`自立援助ホーム${home.name}の外観`} />
                       <div className="home-visual-overlay">
                         {home.logo ? (
                           <img src={home.logo} alt={`${home.name}ロゴ`} style={{ 
                             maxWidth: '180px', 
                             maxHeight: '80px',
                             objectFit: 'contain',
-                            marginBottom: '0.5rem'
+                            marginBottom: '1rem',
+                            display: 'block'
                           }} />
                         ) : (
-                          <h3>{home.name}</h3>
+                          <h3 style={{ marginBottom: '1rem' }}>{home.name}</h3>
                         )}
-                        <p>{home.location}</p>
-                        <span className="home-feature-tag">{home.feature}</span>
-                        {home.gender && <span className="home-gender-tag">{home.gender}</span>}
+                        <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                          <span className="home-feature-tag">{home.feature}</span>
+                          {home.gender && <span className="home-gender-tag">{home.gender}</span>}
+                        </div>
                       </div>
                       <div className="home-hover-link">
                         {home.logo && (
@@ -169,7 +166,7 @@ const HomePage = () => {
                             marginRight: '0.8rem'
                           }} />
                         )}
-                        <span>詳細ページへ →</span>
+                        <span>詳細ページへ</span>
                       </div>
                     </div>
                   ) : (
@@ -177,12 +174,13 @@ const HomePage = () => {
                       {home.logo ? (
                         <img src={home.logo} alt={`${home.name}ロゴ`} className="home-visual-logo-only" />
                       ) : (
-                        <div className="home-visual-icon">🏠</div>
+                        <div className="home-visual-icon"><span style={{ display: 'inline-block', width: '24px', height: '24px', background: 'currentColor', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span></div>
                       )}
-                      {!home.logo && <h3>{home.name}</h3>}
-                      <p>{home.location}</p>
-                      <span className="home-feature-tag">{home.feature}</span>
-                      {home.gender && <span className="home-gender-tag">{home.gender}</span>}
+                      {!home.logo && <h3 style={{ marginBottom: '1rem' }}>{home.name}</h3>}
+                      <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1rem' }}>
+                        <span className="home-feature-tag">{home.feature}</span>
+                        {home.gender && <span className="home-gender-tag">{home.gender}</span>}
+                      </div>
                       <div className="placeholder-notice">※写真準備中</div>
                       <div className="home-hover-link">
                         {home.logo && (
@@ -193,7 +191,7 @@ const HomePage = () => {
                             marginRight: '0.8rem'
                           }} />
                         )}
-                        <span>詳細ページへ →</span>
+                        <span>詳細ページへ</span>
                       </div>
                     </div>
                   )}
@@ -206,6 +204,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
 
       {/* 沿革 */}
       <section id="history" className="section">
@@ -237,6 +236,14 @@ const HomePage = () => {
             </div>
             
             <div className="timeline-item">
+              <div className="timeline-year">2021年</div>
+              <div className="timeline-content">
+                <h3>かんらん舎移転・事務所設置</h3>
+                <p>かんらん舎を現住所（〇〇）に引っ越し、旧かんらん舎物件は事務所専用に用途変更。</p>
+              </div>
+            </div>
+            
+            <div className="timeline-item">
               <div className="timeline-year">2023年</div>
               <div className="timeline-content">
                 <h3>スイッチ開設</h3>
@@ -245,7 +252,7 @@ const HomePage = () => {
             </div>
             
             <div className="timeline-item">
-              <div className="timeline-year">2024年</div>
+              <div className="timeline-year">2025年</div>
               <div className="timeline-content">
                 <h3>TIES開設</h3>
                 <p>福岡市南区に5つ目のホーム「TIES」を開設。新しいつながりを創造する次世代型ホーム。</p>
@@ -276,7 +283,7 @@ const HomePage = () => {
             }}>
               
               <div className="info-summary" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
-                <div className="info-main-card" style={{ 
+                <div id="basic-info" className="info-main-card" style={{ 
                   padding: '2rem', 
                   borderRadius: '12px', 
                   background: 'linear-gradient(135deg, #fff9f5 0%, #fefefe 100%)', 
