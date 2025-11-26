@@ -17,7 +17,7 @@ const AdmissionFlowPage = () => {
               <h2 style={{ color: 'var(--primary-color)', marginBottom: '1rem' }}>自立援助ホームとは</h2>
               <p style={{ lineHeight: '1.8', marginBottom: '1rem' }}>
                 自立援助ホームは、児童福祉法に基づく「児童自立生活援助事業」として運営されています。
-                15歳から20歳までの、何らかの理由で家庭での生活が困難な青少年に、
+                何らかの理由で家庭での生活が困難な15歳以上の青少年に、
                 安心して暮らせる場所と自立に向けた支援を提供しています。
               </p>
               <p style={{ lineHeight: '1.8' }}>
@@ -42,7 +42,7 @@ const AdmissionFlowPage = () => {
                   <div style={{ background: '#f5f5f5', padding: '1rem', borderRadius: '4px', marginTop: '1rem' }}>
                     <p style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>福岡市の方は</p>
                     <p>福岡市こども総合相談センター<br />
-                    （児童相談所機能を持つ機関です）</p>
+                      （児童相談所機能を持つ機関です）</p>
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@ const AdmissionFlowPage = () => {
                   <div style={{ background: '#FFF9F5', padding: '1rem', borderRadius: '4px' }}>
                     <p style={{ fontWeight: 'bold' }}>体験入居について</p>
                     <p>ケースによっては、数日〜数週間の体験入居を行うことがあります。
-                    実際の生活を体験し、ホームが自分に合うか確認できます。</p>
+                      実際の生活を体験し、ホームが自分に合うか確認できます。</p>
                   </div>
                 </div>
               </div>
