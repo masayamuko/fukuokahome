@@ -58,6 +58,7 @@ const HomeDetailPage = () => {
       manager: 'ホーム長 平田 幸',
       phone: '092-555-2355',
       address: '福岡市南区大平寺2丁目10-1',
+      mapUrl: 'https://maps.google.com/maps?q=福岡市南区大平寺2丁目10-1&t=&z=15&ie=UTF8&iwloc=&output=embed',
       managerProfile: {
         name: '平田 幸',
         title: 'ホーム長',
@@ -127,6 +128,7 @@ const HomeDetailPage = () => {
       manager: 'ホーム長 年徳',
       phone: '092−555−6792',
       address: '福岡市南区皿山2丁目1-58',
+      mapUrl: 'https://maps.google.com/maps?q=福岡市南区皿山2丁目1-58&t=&z=15&ie=UTF8&iwloc=&output=embed',
       managerProfile: {
         name: '年徳',
         title: 'ホーム長',
@@ -198,6 +200,7 @@ const HomeDetailPage = () => {
       manager: 'ホーム長 鶴田',
       phone: '092-408-5778',
       address: '福岡県筑紫野市紫6丁目25-5',
+      mapUrl: 'https://maps.google.com/maps?q=福岡県筑紫野市紫6丁目25-5&t=&z=15&ie=UTF8&iwloc=&output=embed',
       managerProfile: {
         name: '鶴田',
         title: 'ホーム長',
@@ -262,6 +265,7 @@ const HomeDetailPage = () => {
       manager: 'ホーム長 中嶋',
       phone: '092-555-8622',
       address: '福岡県太宰府市通古賀3丁目13-6',
+      mapUrl: 'https://maps.google.com/maps?q=福岡県太宰府市通古賀3丁目13-6&t=&z=15&ie=UTF8&iwloc=&output=embed',
       managerProfile: {
         name: '中嶋',
         title: 'ホーム長',
@@ -333,6 +337,7 @@ const HomeDetailPage = () => {
       manager: 'ホーム長 柴田 亮',
       phone: '092-555-7090',
       address: '福岡市南区若久4丁目2-2',
+      mapUrl: 'https://maps.google.com/maps?q=福岡市南区若久4丁目2-2&t=&z=15&ie=UTF8&iwloc=&output=embed',
       managerProfile: {
         name: '柴田 亮',
         title: 'ホーム長',
@@ -812,8 +817,8 @@ const HomeDetailPage = () => {
         </section>
       )}
 
-      {/* 職員紹介セクション */}
-      {(homeId === 'yui' || homeId === 'kanransya' || homeId === 'leap' || homeId === 'switch') && (
+      {/* 職員紹介セクション - 一時的に非表示 */}
+      {false && (homeId === 'yui' || homeId === 'kanransya' || homeId === 'leap' || homeId === 'switch') && (
         <section className="section staff-section" style={{ background: 'linear-gradient(135deg, #f0f8ff 0%, #e8f4f8 100%)', padding: '3rem 0', overflow: 'hidden' }}>
           {/* 流れるスタッフカード */}
           <div style={{
@@ -1319,11 +1324,30 @@ const HomeDetailPage = () => {
             <div className="card">
               <h3>アクセス</h3>
               <div className="access-info">
+                {/* Google Maps Embed */}
+                {home.mapUrl && (
+                  <div style={{
+                    marginBottom: '1.5rem',
+                    borderRadius: '12px',
+                    overflow: 'hidden',
+                    height: '250px',
+                    border: '1px solid #eee',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
+                  }}>
+                    <iframe
+                      src={home.mapUrl}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title={`${home.name}の地図`}
+                    ></iframe>
+                  </div>
+                )}
                 <p>詳細なアクセス方法については、お問い合わせ時にご案内いたします。</p>
                 <p>公共交通機関をご利用の場合は、最寄りの駅やバス停からの経路をお教えします。</p>
-              </div>
-              <div style={{ marginTop: '1.5rem' }}>
-                <Link to="/contact" className="btn">お問い合わせ</Link>
               </div>
             </div>
           </div>

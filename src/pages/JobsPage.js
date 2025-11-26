@@ -120,58 +120,62 @@ const JobsPage = () => {
   return (
     <div className="jobs-page">
       {/* ページヘッダー */}
-      <section className="page-header job-hero">
+      <section className="page-header job-hero" style={{
+        background: 'linear-gradient(135deg, rgba(230, 126, 80, 0.4) 0%, rgba(244, 164, 96, 0.4) 100%), url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        padding: '4rem 0'
+      }}>
         <div className="container">
-          <h1>私たちと一緒に<br />青少年の未来を支えませんか</h1>
-          <p>「子どもたちが自ら将来の夢や希望をもてるように」<br />何らかの事情で、家庭や学校での居場所をなくした青少年（15～20歳）に<br />安心して生活できる場を提供し、自立を支援するお仕事です。</p>
+          <h1 style={{ color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>私たちと一緒に<br />青少年の未来を支えませんか</h1>
           <div className="job-highlights">
             <div className="highlight-item">
-              <div style={{ 
-                width: '40px', 
-                height: '40px', 
-                borderRadius: '50%', 
-                background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
-                display: 'flex', 
-                alignItems: 'center', 
+              <div style={{
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))',
+                display: 'flex',
+                alignItems: 'center',
                 justifyContent: 'center',
                 marginRight: '0.5rem'
               }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.5 16.5c0 0.8 0.7 1.5 1.5 1.5s1.5-0.7 1.5-1.5-0.7-1.5-1.5-1.5-1.5 0.7-1.5 1.5zM6.5 9c0.8 0 1.5-0.7 1.5-1.5S7.3 6 6.5 6 5 6.7 5 7.5 5.7 9 6.5 9zM17 7.5c0-0.8-0.7-1.5-1.5-1.5S14 6.7 14 7.5s0.7 1.5 1.5 1.5S17 8.3 17 7.5zM12 1l3.09 6.26L22 8.27l-5 4.87 1.18 6.88L12 17.77l-6.18 2.25L7 13.14 2 8.27l6.91-1.01L12 1z" fill="white"/>
+                  <path d="M9.5 16.5c0 0.8 0.7 1.5 1.5 1.5s1.5-0.7 1.5-1.5-0.7-1.5-1.5-1.5-1.5 0.7-1.5 1.5zM6.5 9c0.8 0 1.5-0.7 1.5-1.5S7.3 6 6.5 6 5 6.7 5 7.5 5.7 9 6.5 9zM17 7.5c0-0.8-0.7-1.5-1.5-1.5S14 6.7 14 7.5s0.7 1.5 1.5 1.5S17 8.3 17 7.5zM12 1l3.09 6.26L22 8.27l-5 4.87 1.18 6.88L12 17.77l-6.18 2.25L7 13.14 2 8.27l6.91-1.01L12 1z" fill="white" />
                 </svg>
               </div>
               <span>未経験歓迎</span>
             </div>
             <div className="highlight-item">
-              <div style={{ 
-                width: '40px', 
-                height: '40px', 
-                borderRadius: '50%', 
-                background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
-                display: 'flex', 
-                alignItems: 'center', 
+              <div style={{
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))',
+                display: 'flex',
+                alignItems: 'center',
                 justifyContent: 'center',
                 marginRight: '0.5rem'
               }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z" fill="white"/>
+                  <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z" fill="white" />
                 </svg>
               </div>
               <span>研修制度充実</span>
             </div>
             <div className="highlight-item">
-              <div style={{ 
-                width: '40px', 
-                height: '40px', 
-                borderRadius: '50%', 
-                background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
-                display: 'flex', 
-                alignItems: 'center', 
+              <div style={{
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))',
+                display: 'flex',
+                alignItems: 'center',
                 justifyContent: 'center',
                 marginRight: '0.5rem'
               }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="white"/>
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="white" />
                 </svg>
               </div>
               <span>やりがいのある仕事</span>
@@ -181,34 +185,34 @@ const JobsPage = () => {
       </section>
 
       {/* 私たちの仕事について */}
-      <section style={{ 
-        background: 'linear-gradient(135deg, #FFF9F5 0%, #F8F6F3 100%)', 
-        padding: '60px 0' 
+      <section style={{
+        background: 'linear-gradient(135deg, #FFF9F5 0%, #F8F6F3 100%)',
+        padding: '60px 0'
       }}>
         <div className="container">
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             {/* 哲学セクション */}
-            <div style={{ 
-              background: 'white', 
-              padding: '3rem', 
-              borderRadius: '16px', 
+            <div style={{
+              background: 'white',
+              padding: '3rem',
+              borderRadius: '16px',
               marginBottom: '2rem',
               boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
               borderLeft: '6px solid var(--accent-color)',
               textAlign: 'center'
             }}>
-              <h2 style={{ 
-                fontSize: '1.8rem', 
-                fontWeight: '700', 
-                color: 'var(--primary-color)', 
+              <h2 style={{
+                fontSize: '1.8rem',
+                fontWeight: '700',
+                color: 'var(--primary-color)',
                 marginBottom: '2rem'
               }}>
                 マニュアルのない「見守る」お仕事
               </h2>
-              <p style={{ 
-                fontSize: '1.1rem', 
-                lineHeight: '1.8', 
-                color: '#555', 
+              <p style={{
+                fontSize: '1.1rem',
+                lineHeight: '1.8',
+                color: '#555',
                 margin: '0 0 2rem 0'
               }}>
                 私たちの仕事に、完璧なマニュアルはありません。15歳から20歳、思春期真っ只中。素直じゃない日もあります。
@@ -216,16 +220,16 @@ const JobsPage = () => {
                 料理の作り方、お金の使い方、人との関わり方を、少しずつ伝えていきます。
               </p>
               <div style={{ textAlign: 'center' }}>
-                <p style={{ 
-                  fontSize: '1rem', 
-                  color: 'var(--primary-color)', 
+                <p style={{
+                  fontSize: '1rem',
+                  color: 'var(--primary-color)',
                   margin: '0 0 1.5rem 0',
                   fontWeight: '600'
                 }}>
                   ＼5人の青少年と、8人のスタッフの日常／
                 </p>
-                <Link 
-                  to="/story" 
+                <Link
+                  to="/story"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -256,16 +260,16 @@ const JobsPage = () => {
             </div>
 
             {/* まとめ */}
-            <div style={{ 
-              background: 'rgba(230, 126, 80, 0.1)', 
-              padding: '2rem', 
+            <div style={{
+              background: 'rgba(230, 126, 80, 0.1)',
+              padding: '2rem',
               borderRadius: '12px',
               textAlign: 'center',
               border: '1px solid rgba(230, 126, 80, 0.2)'
             }}>
-              <p style={{ 
-                fontSize: '1rem', 
-                color: 'var(--primary-color)', 
+              <p style={{
+                fontSize: '1rem',
+                color: 'var(--primary-color)',
                 margin: '0',
                 fontWeight: '600',
                 lineHeight: '1.6'
@@ -293,28 +297,28 @@ const JobsPage = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="job-content">
                   <div className="job-header">
                     <h3>{job.title}</h3>
                     <div className="job-salary">{job.salary}</div>
                   </div>
-                  
+
                   {job.annualSalary && (
                     <div className="job-annual-salary" style={{ color: '#666', marginBottom: '0.5rem' }}>
                       {job.annualSalary}
                     </div>
                   )}
-                  
+
                   <div className="job-location">
                     <span className="location-icon" style={{ display: 'inline-block', width: '16px', height: '16px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\' /%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M15 11a3 3 0 11-6 0 3 3 0 016 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\' /%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M15 11a3 3 0 11-6 0 3 3 0 016 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>
                     {job.location}
                   </div>
-                  
+
                   <p className="job-description">{job.description}</p>
-                  
+
                   <div className="job-actions">
-                    <button 
+                    <button
                       className="btn btn-outline"
                       onClick={() => setSelectedJob(selectedJob === job.id ? null : job.id)}
                     >
@@ -322,7 +326,7 @@ const JobsPage = () => {
                     </button>
                     <button className="btn btn-primary">応募する</button>
                   </div>
-                  
+
                   {selectedJob === job.id && (
                     <div className="job-details-expanded">
                       <div className="job-detail-grid">
@@ -334,7 +338,7 @@ const JobsPage = () => {
                             ))}
                           </ul>
                         </div>
-                        
+
                         <div className="job-detail-section">
                           <h4><span style={{ display: 'inline-block', width: '20px', height: '20px', marginRight: '8px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>待遇・福利厚生</h4>
                           <ul>
@@ -343,7 +347,7 @@ const JobsPage = () => {
                             ))}
                           </ul>
                         </div>
-                        
+
                         <div className="job-detail-section">
                           <h4><span style={{ display: 'inline-block', width: '20px', height: '20px', marginRight: '8px', background: 'var(--primary-color)', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>働き方</h4>
                           <ul>
@@ -353,12 +357,12 @@ const JobsPage = () => {
                           </ul>
                         </div>
                       </div>
-                      
+
                       <div className="job-apply-link" style={{ marginTop: '2rem', textAlign: 'center' }}>
-                        <a 
-                          href="https://en-gage.net/nifty_saiyo428/" 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
+                        <a
+                          href="https://en-gage.net/nifty_saiyo428/"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="btn"
                           style={{ fontSize: '1.1rem', padding: '1rem 2rem' }}
                         >
@@ -371,7 +375,7 @@ const JobsPage = () => {
               </div>
             ))}
           </div>
-          
+
         </div>
       </section>
 
@@ -407,10 +411,10 @@ const JobsPage = () => {
           <p style={{ textAlign: 'center', fontSize: '1.1rem', color: '#666', marginBottom: '3rem' }}>
             実際に働くスタッフの生の声をお聞きください
           </p>
-          
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '2rem',
             maxWidth: '1000px',
             margin: '0 auto'
@@ -466,9 +470,9 @@ const JobsPage = () => {
                   color: '#166534'
                 }
               ];
-              
+
               return staffVoices.map((staff, index) => (
-                <div 
+                <div
                   key={index}
                   className="staff-voice-item"
                   style={{
@@ -489,7 +493,7 @@ const JobsPage = () => {
                   }}
                 >
                   {/* 吹き出し */}
-                  <div 
+                  <div
                     className="voice-bubble"
                     style={{
                       position: 'absolute',
@@ -509,9 +513,9 @@ const JobsPage = () => {
                       border: `2px solid ${staff.color}`
                     }}
                   >
-                    <p style={{ 
-                      margin: '0', 
-                      fontSize: '0.9rem', 
+                    <p style={{
+                      margin: '0',
+                      fontSize: '0.9rem',
                       fontWeight: '600',
                       color: '#333',
                       lineHeight: '1.4'
@@ -531,7 +535,7 @@ const JobsPage = () => {
                       borderTop: `8px solid ${staff.color}`
                     }}></div>
                   </div>
-                  
+
                   {/* スタッフアイコン */}
                   <div style={{
                     width: '80px',
@@ -550,7 +554,7 @@ const JobsPage = () => {
                   }}>
                     {staff.initial}
                   </div>
-                  
+
                   {/* 経歴 */}
                   <p style={{
                     margin: '0',
@@ -564,10 +568,10 @@ const JobsPage = () => {
               ));
             })()}
           </div>
-          
+
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <p style={{ 
-              fontSize: '0.9rem', 
+            <p style={{
+              fontSize: '0.9rem',
               color: '#888',
               fontStyle: 'italic'
             }}>
@@ -645,7 +649,7 @@ const JobsPage = () => {
           </div>
         </div>
       </section>
-      
+
 
       {/* 研修制度 */}
       <section className="section" style={{ background: 'var(--light-gray)' }}>
@@ -706,7 +710,7 @@ const JobsPage = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="grid grid-2">
                 <div className="form-group">
                   <label htmlFor="phone">電話番号 *</label>

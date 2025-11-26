@@ -40,9 +40,11 @@ const ContactPage = () => {
       <section
         className="hero-section"
         style={{
-          background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%)',
+          background: 'linear-gradient(135deg, rgba(230, 126, 80, 0.4) 0%, rgba(244, 164, 96, 0.4) 100%), url("https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=2071&auto=format&fit=crop")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           color: 'white',
-          padding: '6rem 0',
+          padding: '4rem 0',
           textAlign: 'center',
           position: 'relative',
           overflow: 'hidden'
@@ -65,21 +67,12 @@ const ContactPage = () => {
             fontSize: '3rem',
             fontWeight: '700',
             marginBottom: '1.5rem',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+            textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+            color: 'white'
           }}>
             お問い合わせ
           </h1>
-          <p style={{
-            fontSize: '1.3rem',
-            marginBottom: '3rem',
-            opacity: '0.95',
-            textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
-            maxWidth: '600px',
-            margin: '0 auto 3rem'
-          }}>
-            ご質問やご相談がございましたら、お気軽にお問い合わせください。<br />
-            一人ひとりのお悩みに丁寧にお答えいたします。
-          </p>
+
           <div style={{
             display: 'flex',
             gap: '1rem',
