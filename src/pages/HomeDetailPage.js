@@ -53,17 +53,17 @@ const HomeDetailPage = () => {
       established: '2008年',
       location: '福岡市南区',
       capacity: '女性6名',
-      roomLayout: '個室4室、2人部屋1室',
+      roomLayout: '個室６部屋',
       facilities: ['学習室', 'リビング', 'キッチン', '浴室', '洗濯室'],
-      manager: '施設長 山田 花子',
-      phone: '092-XXX-XXXX',
+      manager: 'ホーム長 平田 幸',
+      phone: '092-555-2355',
       address: '福岡市南区大平寺2丁目10-1',
       managerProfile: {
-        name: '山田 花子',
-        title: '施設長',
+        name: '平田 幸',
+        title: 'ホーム長',
         experience: '社会福祉士として15年の経験',
         photo: null,
-        message: '一人ひとりの女性が自分らしく生きていけるよう、温かい環境でサポートしています。何でも気軽にご相談ください。'
+        message: '家庭的な温かい雰囲気の中で、「当たり前の生活」を実感しながら、次のステップに進めるよう支援を行います。'
       },
       entrancePhoto: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845607/CleanShot_2025-07-30_at_09.19.38_2x_gvgcu8.png',
       description: '2008年に福岡市として初めて開設された自立援助ホーム。長年の実績と経験を活かし、青少年一人ひとりの個性と状況に応じた丁寧な支援を行っています。',
@@ -99,11 +99,11 @@ const HomeDetailPage = () => {
       support: [
         {
           title: '生活支援',
-          content: '基本的な生活習慣の確立、金銭管理、健康管理など、女性として自立した生活に必要なスキルを身につけるサポート'
+          content: '基本的な生活習慣の確立、金銭管理、健康管理など、自立した生活に必要なスキルを身につけるサポート'
         },
         {
           title: '就労支援',
-          content: '就職活動の支援、職場との連携、仕事上の悩み相談など、女性が安定した就労を継続するためのサポート'
+          content: '就職活動の支援、職場との連携、仕事上の悩み相談など、安定した就労を継続するためのサポート'
         },
         {
           title: '精神的支援',
@@ -111,7 +111,7 @@ const HomeDetailPage = () => {
         },
         {
           title: 'アフターケア',
-          content: '退所後も継続的な相談支援を行い、女性として地域での自立生活を長期的にサポート'
+          content: '退所後も継続的な相談支援を行い、地域での自立生活を長期的にサポート'
         }
       ]
     },
@@ -124,12 +124,12 @@ const HomeDetailPage = () => {
       capacity: '男性6名',
       roomLayout: '全室個室',
       facilities: ['個室6室', '共用リビング', 'キッチン', '浴室', '洗濯室'],
-      manager: '施設長 年徳',
-      phone: '092-XXX-XXXX',
+      manager: 'ホーム長 年徳',
+      phone: '092−555−6792',
       address: '福岡市南区皿山2丁目1-58',
       managerProfile: {
         name: '年徳',
-        title: '施設長',
+        title: 'ホーム長',
         experience: '精神保健福祉士として12年の経験',
         photo: null,
         message: '男性の若者たちが人との絆を大切にしながら、自分らしい人生を歩めるようサポートしています。'
@@ -151,7 +151,7 @@ const HomeDetailPage = () => {
           { time: '18:00', activity: '帰宅' },
           { time: '19:00', activity: '夕食' },
           { time: '20:00', activity: '自由時間・勉強' },
-          { time: '22:00', activity: '入浴' },
+          { time: '22:00', activity: '門限' },
           { time: '23:00', activity: '消灯' }
         ],
         holiday: [
@@ -163,6 +163,7 @@ const HomeDetailPage = () => {
           { time: '18:00', activity: '帰宅' },
           { time: '19:00', activity: '夕食' },
           { time: '21:00', activity: '入浴・自由時間' },
+          { time: '22:00', activity: '門限' },
           { time: '23:00', activity: '消灯' }
         ]
       },
@@ -189,17 +190,17 @@ const HomeDetailPage = () => {
       name: 'LEAP',
       subtitle: '飛躍と成長をテーマとしたホーム',
       nameOrigin: 'ホーム名の「LEAP」とは、英語で『飛び越える、上昇する』というような意味があり、ホームに来る子どもたちに、困難を乗り越え社会へ大きく飛び立ってほしいという思いを込めて名付けました。',
-      established: '2019年',
+      established: '2019年7月',
       location: '筑紫野市',
       capacity: '男性6名',
-      roomLayout: '個室3室、2人部屋2室',
+      roomLayout: '個室６部屋',
       facilities: ['運動スペース', '学習室', 'リビング', 'キッチン', '浴室'],
-      manager: '施設長 中嶋',
-      phone: '092-XXX-XXXX',
+      manager: 'ホーム長 鶴田',
+      phone: '092-408-5778',
       address: '福岡県筑紫野市紫6丁目25-5',
       managerProfile: {
-        name: '中嶋',
-        title: '施設長',
+        name: '鶴田',
+        title: 'ホーム長',
         experience: 'スポーツインストラクター兼社会福祉士',
         photo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845642/%E4%B8%AD%E5%B6%8B-scaled-e1655458526756-150x150_nyz7pl.jpg',
         message: '若者たちの無限の可能性を信じて、一緒に大きく飛躍していきましょう！',
@@ -207,7 +208,7 @@ const HomeDetailPage = () => {
       },
       entrancePhoto: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845643/%E7%9C%8B%E6%9D%BF-1-1152x1536_vbsiun.jpg',
       description: 'LEAPは「飛び越える、上昇する」という意味を持ちます。青少年の可能性を信じ、それぞれの夢や目標に向かって大きく飛躍できるよう支援します。',
-      philosophy: '一人ひとりの可能性を最大限に引き出し、自分らしい人生を歩むための力を育てます。挑戦する気持ちを大切にし、失敗を恐れずに成長できる環境を提供します。',
+      philosophy: '一人ひとりの可能性を最大限に引き出し、自分らしい人生を歩むための力を育てます。挑戦する気持ちを大切にし、様々な経験を得られる環境を提供します。',
       features: [
         '個性を活かした支援プログラム',
         '新しい支援理論の積極的な導入',
@@ -216,24 +217,21 @@ const HomeDetailPage = () => {
       ],
       dailySchedule: {
         weekday: [
-          { time: '6:30', activity: '起床・朝の運動' },
+          { time: '6:30', activity: '起床' },
           { time: '7:00', activity: '朝食' },
           { time: '8:00', activity: '出勤・通学' },
           { time: '18:00', activity: '帰宅' },
-          { time: '19:00', activity: '夕食' },
-          { time: '20:00', activity: '学習・技能習得時間' },
-          { time: '22:00', activity: '入浴・自由時間' },
+          { time: '19:30', activity: '入浴・自由時間' },
+          { time: '22:00', activity: '門限' },
           { time: '23:00', activity: '消灯' }
         ],
         holiday: [
-          { time: '7:00', activity: '起床・朝の運動' },
+          { time: '7:30', activity: '起床' },
           { time: '8:00', activity: '朝食' },
-          { time: '10:00', activity: '清掃・洗濯' },
-          { time: '12:00', activity: '昼食' },
-          { time: '13:00', activity: 'スポーツ・レクリエーション' },
-          { time: '18:00', activity: '帰宅' },
-          { time: '19:00', activity: '夕食' },
-          { time: '21:00', activity: '入浴・自由時間' },
+          { time: '9:00', activity: '自由時間' },
+          { time: '18:30', activity: '夕食' },
+          { time: '19:00', activity: '入浴・自由時間' },
+          { time: '22:00', activity: '門限' },
           { time: '23:00', activity: '消灯' }
         ]
       },
@@ -245,10 +243,6 @@ const HomeDetailPage = () => {
         {
           title: '就労支援',
           content: '就職活動の支援、職場との連携、仕事上の悩み相談など、男性が安定した就労を継続するためのサポート'
-        },
-        {
-          title: 'チャレンジ支援',
-          content: '新しいことへの挑戦を奨励し、失敗を成長の機会として捉える支援体制。スポーツや特技を通じた自己表現の支援'
         },
         {
           title: 'アフターケア',
@@ -263,14 +257,14 @@ const HomeDetailPage = () => {
       established: '2023年',
       location: '太宰府市',
       capacity: '男性6名',
-      roomLayout: '個室4室、2人部屋1室',
+      roomLayout: '個室６部屋',
       facilities: ['学習室（24時間利用可）', '図書コーナー', 'PCルーム', 'リビング', 'キッチン'],
-      manager: '施設長 鈴木 一郎',
+      manager: 'ホーム長 鈴木 一郎',
       phone: '092-XXX-XXXX',
       address: '福岡県太宰府市通古賀3丁目13-6',
       managerProfile: {
         name: '鈴木 一郎',
-        title: '施設長',
+        title: 'ホーム長',
         experience: '元高校教員・社会福祉士',
         photo: null,
         message: '学びたいという気持ちを大切に、一人ひとりのペースに合わせた教育支援を行っています。'
@@ -331,29 +325,29 @@ const HomeDetailPage = () => {
       name: 'TIES',
       subtitle: '新しいつながりを創造するホーム',
       nameOrigin: 'TIESは「絆」「つながり」を意味する英語。人と人、過去と未来、地域と青少年をつなぐ架け橋となるホームを目指します。新しい関係性の中で、自分らしい人生を歩み始める場所です。',
-      established: '2024年4月',
+      established: '2025年2月',
       location: '福岡市南区',
       capacity: '男性6名',
       roomLayout: '全室個室',
       facilities: ['交流スペース', 'クリエイティブルーム', '個室6室', 'キッチン', 'テラス'],
-      manager: '施設長 柴田',
-      phone: '092-XXX-XXXX',
-      address: '福岡市南区若久4丁目2-3（地域福祉拠点「五福の家」敷地内）',
+      manager: 'ホーム長 柴田 亮',
+      phone: '092-555-7090',
+      address: '福岡市南区若久4丁目2-2',
       managerProfile: {
-        name: '柴田',
-        title: '施設長',
+        name: '柴田 亮',
+        title: 'ホーム長',
         experience: '社会福祉士・ケアマネージャーとして8年の経験',
         photo: null,
-        message: '最新の支援理論を取り入れながら、一人ひとりの個性を大切に温かい支援を行っています。',
+        message: '一人ひとりにあった自立に向けて模索し、行動していこうという目標を大事に支援を行っています。',
         isPreparation: false
       },
       entrancePhoto: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833759/IMG_2691_wsdtvt.jpg',
       description: '2024年4月に開設した最新の自立援助ホーム。「TIES」は「つながり」を意味し、青少年と地域、青少年同士、そして過去・現在・未来をつなぐ支援を実践しています。',
       philosophy: '最新の支援理論と豊富な経験を融合させ、一人ひとりの青少年が新しい人生のステージへと歩み出せるよう、革新的で温かい支援を提供しています。',
       features: [
-        '最新の支援理論を取り入れた新しいアプローチ',
+        '一人ひとりの自立に向けた支援アプローチ',
         '地域との連携を重視したコミュニティ支援',
-        'デジタル技術を活用した支援プログラム',
+        '実家的存在でアットホームな環境',
         '卒業生ネットワークとの強いつながり'
       ],
       dailySchedule: {
@@ -382,11 +376,11 @@ const HomeDetailPage = () => {
       support: [
         {
           title: '生活支援',
-          content: '基本的な生活習慣の確立、金銭管理、健康管理など、男性として自立した生活に必要なスキルを身につけるサポート'
+          content: '基本的な生活習慣の確立、金銭管理、健康管理など、自立した生活に必要なスキルを身につけるサポート'
         },
         {
           title: '就労支援',
-          content: '就職活動の支援、職場との連携、仕事上の悩み相談など、男性が安定した就労を継続するためのサポート'
+          content: '就職活動の支援、職場との連携、仕事上の悩み相談など、安定した就労を継続するためのサポート'
         },
         {
           title: '次世代型支援',
@@ -394,7 +388,7 @@ const HomeDetailPage = () => {
         },
         {
           title: 'アフターケア',
-          content: '退所後も継続的な相談支援を行い、男性として地域での自立生活を長期的にサポート'
+          content: '退所後も継続的な相談支援を行い、地域での自立生活を長期的にサポート'
         }
       ]
     }
@@ -422,8 +416,8 @@ const HomeDetailPage = () => {
   return (
     <div className="home-detail-page">
       {/* Heroセクション */}
-      <section 
-        className="home-hero" 
+      <section
+        className="home-hero"
         style={{
           position: 'relative',
           height: '60vh',
@@ -437,7 +431,7 @@ const HomeDetailPage = () => {
       >
         {/* 背景画像をimgタグで表示 - デバッグ情報付き */}
         {images?.hero && (
-          <img 
+          <img
             src={images.hero}
             alt={`${home.name}の背景`}
             style={{
@@ -466,7 +460,7 @@ const HomeDetailPage = () => {
           />
         )}
         {/* デバッグ表示：実際のパス */}
-        <div 
+        <div
           style={{
             position: 'absolute',
             top: 0,
@@ -476,8 +470,8 @@ const HomeDetailPage = () => {
             background: 'rgba(0, 0, 0, 0.4)'
           }}
         />
-        <div 
-          className="hero-content" 
+        <div
+          className="hero-content"
           style={{
             position: 'relative',
             zIndex: 1,
@@ -490,12 +484,12 @@ const HomeDetailPage = () => {
             const logoData = {
               yui: { src: '/自立援助ホーム 結ホーム.png', alt: '結ホームロゴ' },
               kanransya: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753847928/%E8%87%AA%E7%AB%8B%E6%8F%B4%E5%8A%A9%E3%83%9B%E3%83%BC%E3%83%A0_%E3%81%8B%E3%82%93%E3%82%89%E3%82%93%E8%88%8E_%E3%83%AD%E3%82%B4%E3%82%99_ltzptu.png', alt: 'かんらん舎ロゴ' },
-              leap: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753864549/LEAP_logo_kmcgjk.png', alt: 'LEAPロゴ' },
+              leap: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1764125655/leap_lg_ys15mu.png', alt: 'LEAPロゴ' },
               switch: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753889235/Switch_logo_zy5kus.png', alt: 'スイッチロゴ' },
-              ties: null
+              ties: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1764125654/IMG_4468_hq9coa.png', alt: 'TIESロゴ' }
             };
             const logoInfo = logoData[homeId];
-            
+
             if (logoInfo) {
               return (
                 <div style={{
@@ -503,8 +497,8 @@ const HomeDetailPage = () => {
                   display: 'flex',
                   justifyContent: 'center'
                 }}>
-                  <img 
-                    src={logoInfo.src} 
+                  <img
+                    src={logoInfo.src}
                     alt={logoInfo.alt}
                     style={{
                       maxHeight: '120px',
@@ -631,13 +625,13 @@ const HomeDetailPage = () => {
                   const logoData = {
                     yui: { src: '/自立援助ホーム 結ホーム.png', alt: '結ホームロゴ' },
                     kanransya: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753847928/%E8%87%AA%E7%AB%8B%E6%8F%B4%E5%8A%A9%E3%83%9B%E3%83%BC%E3%83%A0_%E3%81%8B%E3%82%93%E3%82%89%E3%82%93%E8%88%8E_%E3%83%AD%E3%82%B4%E3%82%99_ltzptu.png', alt: 'かんらん舎ロゴ' },
-                    leap: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753864549/LEAP_logo_kmcgjk.png', alt: 'LEAPロゴ' },
+                    leap: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1764125655/leap_lg_ys15mu.png', alt: 'LEAPロゴ' },
                     switch: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753889235/Switch_logo_zy5kus.png', alt: 'スイッチロゴ' },
-                    ties: null
+                    ties: { src: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1764125654/IMG_4468_hq9coa.png', alt: 'TIESロゴ' }
                   };
                   const logoInfo = logoData[homeId];
                   if (!logoInfo) return null;
-                  
+
                   return (
                     <div style={{
                       flexShrink: 0,
@@ -651,8 +645,8 @@ const HomeDetailPage = () => {
                       padding: '1rem',
                       boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
                     }}>
-                      <img 
-                        src={logoInfo.src} 
+                      <img
+                        src={logoInfo.src}
                         alt={logoInfo.alt}
                         style={{
                           width: '100%',
@@ -691,8 +685,8 @@ const HomeDetailPage = () => {
                     padding: '1rem',
                     position: 'relative'
                   }}>
-                    <img 
-                      src={home.entrancePhoto} 
+                    <img
+                      src={home.entrancePhoto}
                       alt={`${home.name}の玄関`}
                       style={{
                         width: '100%',
@@ -739,9 +733,9 @@ const HomeDetailPage = () => {
                       {home.managerProfile.interviewLink && (
                         <>
                           <br /><br />
-                          <a 
-                            href={home.managerProfile.interviewLink} 
-                            target="_blank" 
+                          <a
+                            href={home.managerProfile.interviewLink}
+                            target="_blank"
                             rel="noopener noreferrer"
                             style={{
                               color: 'var(--primary-color)',
@@ -775,7 +769,7 @@ const HomeDetailPage = () => {
                       </div>
                     )}
                   </div>
-                  
+
                   {/* ホーム長プロフィール（吹き出しの下） - シンプル版 */}
                   <div style={{
                     display: 'flex',
@@ -800,7 +794,7 @@ const HomeDetailPage = () => {
                     }}>
                       {!home.managerProfile.photo && <span style={{ display: 'inline-block', width: '24px', height: '24px', background: 'currentColor', WebkitMask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z\' /%3E%3C/svg%3E") center/contain no-repeat', mask: 'url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z\' /%3E%3C/svg%3E") center/contain no-repeat' }}></span>}
                     </div>
-                    
+
                     {/* シンプルなプロフィール情報 */}
                     <p style={{
                       fontSize: '1.2rem',
@@ -821,255 +815,255 @@ const HomeDetailPage = () => {
       {/* 職員紹介セクション */}
       {(homeId === 'yui' || homeId === 'kanransya' || homeId === 'leap' || homeId === 'switch') && (
         <section className="section staff-section" style={{ background: 'linear-gradient(135deg, #f0f8ff 0%, #e8f4f8 100%)', padding: '3rem 0', overflow: 'hidden' }}>
-            {/* 流れるスタッフカード */}
-            <div style={{
-              position: 'relative',
-              width: '100%',
-              overflow: 'hidden',
-              padding: '1rem 0'
+          {/* 流れるスタッフカード */}
+          <div style={{
+            position: 'relative',
+            width: '100%',
+            overflow: 'hidden',
+            padding: '1rem 0'
+          }}>
+            <div className="staff-scroll" style={{
+              display: 'flex',
+              gap: '2rem',
+              animation: 'staffSlide 30s linear infinite',
+              width: 'fit-content'
             }}>
-              <div className="staff-scroll" style={{
-                display: 'flex',
-                gap: '2rem',
-                animation: 'staffSlide 30s linear infinite',
-                width: 'fit-content'
-              }}>
-                {/* 職員データ - 2回繰り返してシームレスループを実現 */}
-                {(() => {
-                  const staffData = {
-                    yui: [
-                      { name: '田中', role: '職員', message: '一緒に料理を作るのが好きです！', personality: ['料理が上手で優しい', 'いつも笑顔で話しやすい', '困った時に頼りになる'] },
-                      { name: '山田', role: '職員', message: 'スポーツで一緒に汗を流しましょう', personality: ['体力があって元気', 'スポーツを教えるのが得意', '明るくて盛り上げ上手'] },
-                      { name: '鈴木', role: '職員', message: '読書の楽しさを伝えたいです', personality: ['物知りで勉強熱心', '静かで落ち着いている', '本の相談に乗ってくれる'] },
-                      { name: '伊藤', role: '職員', message: 'みんなの相談相手になります', personality: ['話を聞くのが上手', 'ゲームが好きで親しみやすい', '悩み事を相談しやすい'] },
-                      { name: '高橋', role: '宿直', message: '夜も安心して過ごせるよう見守ります', personality: ['夜中でも気にかけてくれる', 'コーヒーの淹れ方を教えてくれる', '写真が趣味で記録を大切にする'] },
-                      { name: '渡辺', role: '宿直', message: '何でも気軽に話しかけてください', personality: ['アニメの話で盛り上がる', 'お菓子作りが上手', '夜遅くまで話を聞いてくれる'] },
-                      { name: '小林', role: '宿直', message: 'みんなが安眠できるようサポートします', personality: ['温泉の知識が豊富', 'ドライブに誘ってくれる', 'のんびりした性格で癒し系'] }
-                    ],
-                    kanransya: [
-                      { name: '佐々木', role: '職員', message: '一緒にお料理を学びましょう', personality: ['家庭的で温かい', '女性の悩みを理解してくれる', 'お母さんのような存在'] },
-                      { name: '木村', role: '職員', message: '美容やファッションのことも相談してください', personality: ['おしゃれでセンスが良い', '美容に詳しい', '女性らしさを大切にする'] },
-                      { name: '加藤', role: '職員', message: '就職活動を一緒に頑張りましょう', personality: ['キャリア相談が得意', '社会経験が豊富', 'しっかりとサポートしてくれる'] },
-                      { name: '中村', role: '宿直', message: '夜間も安心して過ごせるようサポートします', personality: ['夜勤でも気配りを忘れない', '読書が好きで落ち着いている', '優しく見守ってくれる'] }
-                    ],
-                    leap: [
-                      { name: '森田', role: '職員', message: 'スポーツで心と体を鍛えましょう！', personality: ['体育会系で元気', 'スポーツ指導が得意', '挑戦を応援してくれる'] },
-                      { name: '井上', role: '職員', message: '新しいことにチャレンジしてみませんか', personality: ['アクティブで前向き', '冒険心がある', '可能性を信じてくれる'] },
-                      { name: '松本', role: '職員', message: 'IT技術も一緒に学びましょう', personality: ['技術に詳しい', '最新トレンドに敏感', '未来志向'] },
-                      { name: '橋本', role: '宿直', message: '困ったことがあればいつでも相談を', personality: ['夜も頼りになる', 'ゲームが好き', 'のんびりした性格'] }
-                    ],
-                    switch: [
-                      { name: '藤田', role: '職員', message: '勉強のことなら何でも聞いてください', personality: ['勉強を教えるのが上手', '学習計画作りが得意', '忍耐強くサポート'] },
-                      { name: '吉田', role: '職員', message: '進路について一緒に考えましょう', personality: ['進路相談のプロ', '将来設計が得意', '的確なアドバイスをくれる'] },
-                      { name: '清水', role: '職員', message: '図書館や資料探しもお手伝いします', personality: ['本が大好き', '調べ物が得意', '静かで集中できる環境を作る'] },
-                      { name: '石川', role: '宿直', message: '夜の学習時間もサポートします', personality: ['夜遅くまで学習に付き合う', '集中力を大切にする', '静かで落ち着いている'] }
-                    ]
-                  };
-                  const currentStaffData = staffData[homeId] || staffData.yui;
-                  // 同じデータを2回繰り返してシームレスループを作成
-                  return [...currentStaffData, ...currentStaffData];
-                })().map((staff, index) => (
-                  <div key={index} className="staff-card" style={{
-                    minWidth: '250px',
-                    background: 'rgba(255, 255, 255, 0.9)',
-                    borderRadius: '12px',
-                    padding: '1.2rem',
-                    boxShadow: '0 3px 12px rgba(0,0,0,0.1)',
-                    border: '1px solid rgba(255,255,255,0.8)',
-                    position: 'relative',
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                    backdropFilter: 'blur(10px)'
+              {/* 職員データ - 2回繰り返してシームレスループを実現 */}
+              {(() => {
+                const staffData = {
+                  yui: [
+                    { name: '田中', role: '職員', message: '一緒に料理を作るのが好きです！', personality: ['料理が上手で優しい', 'いつも笑顔で話しやすい', '困った時に頼りになる'] },
+                    { name: '山田', role: '職員', message: 'スポーツで一緒に汗を流しましょう', personality: ['体力があって元気', 'スポーツを教えるのが得意', '明るくて盛り上げ上手'] },
+                    { name: '鈴木', role: '職員', message: '読書の楽しさを伝えたいです', personality: ['物知りで勉強熱心', '静かで落ち着いている', '本の相談に乗ってくれる'] },
+                    { name: '伊藤', role: '職員', message: 'みんなの相談相手になります', personality: ['話を聞くのが上手', 'ゲームが好きで親しみやすい', '悩み事を相談しやすい'] },
+                    { name: '高橋', role: '宿直', message: '夜も安心して過ごせるよう見守ります', personality: ['夜中でも気にかけてくれる', 'コーヒーの淹れ方を教えてくれる', '写真が趣味で記録を大切にする'] },
+                    { name: '渡辺', role: '宿直', message: '何でも気軽に話しかけてください', personality: ['アニメの話で盛り上がる', 'お菓子作りが上手', '夜遅くまで話を聞いてくれる'] },
+                    { name: '小林', role: '宿直', message: 'みんなが安眠できるようサポートします', personality: ['温泉の知識が豊富', 'ドライブに誘ってくれる', 'のんびりした性格で癒し系'] }
+                  ],
+                  kanransya: [
+                    { name: '佐々木', role: '職員', message: '一緒にお料理を学びましょう', personality: ['家庭的で温かい', '女性の悩みを理解してくれる', 'お母さんのような存在'] },
+                    { name: '木村', role: '職員', message: '美容やファッションのことも相談してください', personality: ['おしゃれでセンスが良い', '美容に詳しい', '女性らしさを大切にする'] },
+                    { name: '加藤', role: '職員', message: '就職活動を一緒に頑張りましょう', personality: ['キャリア相談が得意', '社会経験が豊富', 'しっかりとサポートしてくれる'] },
+                    { name: '中村', role: '宿直', message: '夜間も安心して過ごせるようサポートします', personality: ['夜勤でも気配りを忘れない', '読書が好きで落ち着いている', '優しく見守ってくれる'] }
+                  ],
+                  leap: [
+                    { name: '森田', role: '職員', message: 'スポーツで心と体を鍛えましょう！', personality: ['体育会系で元気', 'スポーツ指導が得意', '挑戦を応援してくれる'] },
+                    { name: '井上', role: '職員', message: '新しいことにチャレンジしてみませんか', personality: ['アクティブで前向き', '冒険心がある', '可能性を信じてくれる'] },
+                    { name: '松本', role: '職員', message: 'IT技術も一緒に学びましょう', personality: ['技術に詳しい', '最新トレンドに敏感', '未来志向'] },
+                    { name: '橋本', role: '宿直', message: '困ったことがあればいつでも相談を', personality: ['夜も頼りになる', 'ゲームが好き', 'のんびりした性格'] }
+                  ],
+                  switch: [
+                    { name: '藤田', role: '職員', message: '勉強のことなら何でも聞いてください', personality: ['勉強を教えるのが上手', '学習計画作りが得意', '忍耐強くサポート'] },
+                    { name: '吉田', role: '職員', message: '進路について一緒に考えましょう', personality: ['進路相談のプロ', '将来設計が得意', '的確なアドバイスをくれる'] },
+                    { name: '清水', role: '職員', message: '図書館や資料探しもお手伝いします', personality: ['本が大好き', '調べ物が得意', '静かで集中できる環境を作る'] },
+                    { name: '石川', role: '宿直', message: '夜の学習時間もサポートします', personality: ['夜遅くまで学習に付き合う', '集中力を大切にする', '静かで落ち着いている'] }
+                  ]
+                };
+                const currentStaffData = staffData[homeId] || staffData.yui;
+                // 同じデータを2回繰り返してシームレスループを作成
+                return [...currentStaffData, ...currentStaffData];
+              })().map((staff, index) => (
+                <div key={index} className="staff-card" style={{
+                  minWidth: '250px',
+                  background: 'rgba(255, 255, 255, 0.9)',
+                  borderRadius: '12px',
+                  padding: '1.2rem',
+                  boxShadow: '0 3px 12px rgba(0,0,0,0.1)',
+                  border: '1px solid rgba(255,255,255,0.8)',
+                  position: 'relative',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  backdropFilter: 'blur(10px)'
+                }}>
+                  {/* 名前と役職 - 横並び */}
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.5rem',
+                    marginBottom: '1rem'
                   }}>
-                    {/* 名前と役職 - 横並び */}
-                    <div style={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      justifyContent: 'center',
-                      gap: '0.5rem',
-                      marginBottom: '1rem'
+                    <span style={{
+                      fontSize: '0.7rem',
+                      color: 'white',
+                      background: staff.role === '職員' ? 'var(--primary-color)' : 'var(--accent-color)',
+                      padding: '0.2rem 0.6rem',
+                      borderRadius: '10px',
+                      fontWeight: '600'
                     }}>
-                      <span style={{
-                        fontSize: '0.7rem',
-                        color: 'white',
-                        background: staff.role === '職員' ? 'var(--primary-color)' : 'var(--accent-color)',
-                        padding: '0.2rem 0.6rem',
-                        borderRadius: '10px',
-                        fontWeight: '600'
-                      }}>
-                        {staff.role}
-                      </span>
-                      <h4 style={{
-                        fontSize: '1.1rem',
-                        fontWeight: '700',
-                        color: 'var(--primary-color)',
-                        margin: '0'
-                      }}>
-                        {staff.name}
-                      </h4>
-                    </div>
-                    
-                    {/* メッセージ */}
+                      {staff.role}
+                    </span>
+                    <h4 style={{
+                      fontSize: '1.1rem',
+                      fontWeight: '700',
+                      color: 'var(--primary-color)',
+                      margin: '0'
+                    }}>
+                      {staff.name}
+                    </h4>
+                  </div>
+
+                  {/* メッセージ */}
+                  <p style={{
+                    fontSize: '0.85rem',
+                    lineHeight: '1.5',
+                    color: '#555',
+                    margin: '0 0 0.8rem 0',
+                    fontStyle: 'italic',
+                    textAlign: 'center'
+                  }}>
+                    「{staff.message}」
+                  </p>
+
+                  {/* こんな人 */}
+                  <div style={{
+                    background: 'rgba(248,249,250,0.8)',
+                    borderRadius: '6px',
+                    padding: '0.6rem',
+                    textAlign: 'left'
+                  }}>
                     <p style={{
-                      fontSize: '0.85rem',
-                      lineHeight: '1.5',
-                      color: '#555',
-                      margin: '0 0 0.8rem 0',
-                      fontStyle: 'italic',
+                      fontSize: '0.7rem',
+                      color: '#666',
+                      margin: '0 0 0.4rem 0',
+                      fontWeight: '600',
                       textAlign: 'center'
                     }}>
-                      「{staff.message}」
+                      こんな人
                     </p>
-                    
-                    {/* こんな人 */}
-                    <div style={{
-                      background: 'rgba(248,249,250,0.8)',
-                      borderRadius: '6px',
-                      padding: '0.6rem',
-                      textAlign: 'left'
-                    }}>
-                      <p style={{
+                    {staff.personality.map((trait, i) => (
+                      <p key={i} style={{
                         fontSize: '0.7rem',
-                        color: '#666',
-                        margin: '0 0 0.4rem 0',
-                        fontWeight: '600',
-                        textAlign: 'center'
+                        color: '#888',
+                        margin: '0 0 0.2rem 0',
+                        paddingLeft: '0.5rem',
+                        position: 'relative'
                       }}>
-                        こんな人
+                        <span style={{
+                          position: 'absolute',
+                          left: '0',
+                          color: 'var(--accent-color)',
+                          fontWeight: 'bold'
+                        }}>・</span>
+                        {trait}
                       </p>
-                      {staff.personality.map((trait, i) => (
-                        <p key={i} style={{
-                          fontSize: '0.7rem',
-                          color: '#888',
-                          margin: '0 0 0.2rem 0',
-                          paddingLeft: '0.5rem',
-                          position: 'relative'
-                        }}>
-                          <span style={{
-                            position: 'absolute',
-                            left: '0',
-                            color: 'var(--accent-color)',
-                            fontWeight: 'bold'
-                          }}>・</span>
-                          {trait}
-                        </p>
-                      ))}
-                    </div>
+                    ))}
                   </div>
-                ))}
-                
-                {/* 繰り返し表示用のコピー */}
-                {(() => {
-                  const staffData = {
-                    yui: [
-                      { name: '田中', role: '職員', message: '一緒に料理を作るのが好きです！', personality: ['料理が上手で優しい', 'いつも笑顔で話しやすい', '困った時に頼りになる'] },
-                      { name: '山田', role: '職員', message: 'スポーツで一緒に汗を流しましょう', personality: ['体力があって元気', 'スポーツを教えるのが得意', '明るくて盛り上げ上手'] },
-                      { name: '鈴木', role: '職員', message: '読書の楽しさを伝えたいです', personality: ['物知りで勉強熱心', '静かで落ち着いている', '本の相談に乗ってくれる'] },
-                      { name: '伊藤', role: '職員', message: 'みんなの相談相手になります', personality: ['話を聞くのが上手', 'ゲームが好きで親しみやすい', '悩み事を相談しやすい'] }
-                    ],
-                    kanransya: [
-                      { name: '佐々木', role: '職員', message: '一緒にお料理を学びましょう', personality: ['家庭的で温かい', '女性の悩みを理解してくれる', 'お母さんのような存在'] },
-                      { name: '木村', role: '職員', message: '美容やファッションのことも相談してください', personality: ['おしゃれでセンスが良い', '美容に詳しい', '女性らしさを大切にする'] }
-                    ],
-                    leap: [
-                      { name: '森田', role: '職員', message: 'スポーツで心と体を鍛えましょう！', personality: ['体育会系で元気', 'スポーツ指導が得意', '挑戦を応援してくれる'] },
-                      { name: '井上', role: '職員', message: '新しいことにチャレンジしてみませんか', personality: ['アクティブで前向き', '冒険心がある', '可能性を信じてくれる'] }
-                    ],
-                    switch: [
-                      { name: '藤田', role: '職員', message: '勉強のことなら何でも聞いてください', personality: ['勉強を教えるのが上手', '学習計画作りが得意', '忍耐強くサポート'] },
-                      { name: '吉田', role: '職員', message: '進路について一緒に考えましょう', personality: ['進路相談のプロ', '将来設計が得意', '的確なアドバイスをくれる'] }
-                    ]
-                  };
-                  return (staffData[homeId] || staffData.yui).slice(0, 4);
-                })().map((staff, index) => (
-                  <div key={`copy-${index}`} className="staff-card" style={{
-                    minWidth: '250px',
-                    background: 'rgba(255, 255, 255, 0.9)',
-                    borderRadius: '12px',
-                    padding: '1.2rem',
-                    boxShadow: '0 3px 12px rgba(0,0,0,0.1)',
-                    border: '1px solid rgba(255,255,255,0.8)',
-                    position: 'relative',
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                    backdropFilter: 'blur(10px)'
+                </div>
+              ))}
+
+              {/* 繰り返し表示用のコピー */}
+              {(() => {
+                const staffData = {
+                  yui: [
+                    { name: '田中', role: '職員', message: '一緒に料理を作るのが好きです！', personality: ['料理が上手で優しい', 'いつも笑顔で話しやすい', '困った時に頼りになる'] },
+                    { name: '山田', role: '職員', message: 'スポーツで一緒に汗を流しましょう', personality: ['体力があって元気', 'スポーツを教えるのが得意', '明るくて盛り上げ上手'] },
+                    { name: '鈴木', role: '職員', message: '読書の楽しさを伝えたいです', personality: ['物知りで勉強熱心', '静かで落ち着いている', '本の相談に乗ってくれる'] },
+                    { name: '伊藤', role: '職員', message: 'みんなの相談相手になります', personality: ['話を聞くのが上手', 'ゲームが好きで親しみやすい', '悩み事を相談しやすい'] }
+                  ],
+                  kanransya: [
+                    { name: '佐々木', role: '職員', message: '一緒にお料理を学びましょう', personality: ['家庭的で温かい', '女性の悩みを理解してくれる', 'お母さんのような存在'] },
+                    { name: '木村', role: '職員', message: '美容やファッションのことも相談してください', personality: ['おしゃれでセンスが良い', '美容に詳しい', '女性らしさを大切にする'] }
+                  ],
+                  leap: [
+                    { name: '森田', role: '職員', message: 'スポーツで心と体を鍛えましょう！', personality: ['体育会系で元気', 'スポーツ指導が得意', '挑戦を応援してくれる'] },
+                    { name: '井上', role: '職員', message: '新しいことにチャレンジしてみませんか', personality: ['アクティブで前向き', '冒険心がある', '可能性を信じてくれる'] }
+                  ],
+                  switch: [
+                    { name: '藤田', role: '職員', message: '勉強のことなら何でも聞いてください', personality: ['勉強を教えるのが上手', '学習計画作りが得意', '忍耐強くサポート'] },
+                    { name: '吉田', role: '職員', message: '進路について一緒に考えましょう', personality: ['進路相談のプロ', '将来設計が得意', '的確なアドバイスをくれる'] }
+                  ]
+                };
+                return (staffData[homeId] || staffData.yui).slice(0, 4);
+              })().map((staff, index) => (
+                <div key={`copy-${index}`} className="staff-card" style={{
+                  minWidth: '250px',
+                  background: 'rgba(255, 255, 255, 0.9)',
+                  borderRadius: '12px',
+                  padding: '1.2rem',
+                  boxShadow: '0 3px 12px rgba(0,0,0,0.1)',
+                  border: '1px solid rgba(255,255,255,0.8)',
+                  position: 'relative',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  backdropFilter: 'blur(10px)'
+                }}>
+                  {/* 名前と役職 - 横並び */}
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.5rem',
+                    marginBottom: '1rem'
                   }}>
-                    {/* 名前と役職 - 横並び */}
-                    <div style={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      justifyContent: 'center',
-                      gap: '0.5rem',
-                      marginBottom: '1rem'
+                    <span style={{
+                      fontSize: '0.7rem',
+                      color: 'white',
+                      background: staff.role === '職員' ? 'var(--primary-color)' : 'var(--accent-color)',
+                      padding: '0.2rem 0.6rem',
+                      borderRadius: '10px',
+                      fontWeight: '600'
                     }}>
-                      <span style={{
-                        fontSize: '0.7rem',
-                        color: 'white',
-                        background: staff.role === '職員' ? 'var(--primary-color)' : 'var(--accent-color)',
-                        padding: '0.2rem 0.6rem',
-                        borderRadius: '10px',
-                        fontWeight: '600'
-                      }}>
-                        {staff.role}
-                      </span>
-                      <h4 style={{
-                        fontSize: '1.1rem',
-                        fontWeight: '700',
-                        color: 'var(--primary-color)',
-                        margin: '0'
-                      }}>
-                        {staff.name}
-                      </h4>
-                    </div>
-                    
-                    {/* メッセージ */}
+                      {staff.role}
+                    </span>
+                    <h4 style={{
+                      fontSize: '1.1rem',
+                      fontWeight: '700',
+                      color: 'var(--primary-color)',
+                      margin: '0'
+                    }}>
+                      {staff.name}
+                    </h4>
+                  </div>
+
+                  {/* メッセージ */}
+                  <p style={{
+                    fontSize: '0.85rem',
+                    lineHeight: '1.5',
+                    color: '#555',
+                    margin: '0 0 0.8rem 0',
+                    fontStyle: 'italic',
+                    textAlign: 'center'
+                  }}>
+                    「{staff.message}」
+                  </p>
+
+                  {/* こんな人 */}
+                  <div style={{
+                    background: 'rgba(248,249,250,0.8)',
+                    borderRadius: '6px',
+                    padding: '0.6rem',
+                    textAlign: 'left'
+                  }}>
                     <p style={{
-                      fontSize: '0.85rem',
-                      lineHeight: '1.5',
-                      color: '#555',
-                      margin: '0 0 0.8rem 0',
-                      fontStyle: 'italic',
+                      fontSize: '0.7rem',
+                      color: '#666',
+                      margin: '0 0 0.4rem 0',
+                      fontWeight: '600',
                       textAlign: 'center'
                     }}>
-                      「{staff.message}」
+                      こんな人
                     </p>
-                    
-                    {/* こんな人 */}
-                    <div style={{
-                      background: 'rgba(248,249,250,0.8)',
-                      borderRadius: '6px',
-                      padding: '0.6rem',
-                      textAlign: 'left'
-                    }}>
-                      <p style={{
+                    {staff.personality.map((trait, i) => (
+                      <p key={i} style={{
                         fontSize: '0.7rem',
-                        color: '#666',
-                        margin: '0 0 0.4rem 0',
-                        fontWeight: '600',
-                        textAlign: 'center'
+                        color: '#888',
+                        margin: '0 0 0.2rem 0',
+                        paddingLeft: '0.5rem',
+                        position: 'relative'
                       }}>
-                        こんな人
+                        <span style={{
+                          position: 'absolute',
+                          left: '0',
+                          color: 'var(--accent-color)',
+                          fontWeight: 'bold'
+                        }}>・</span>
+                        {trait}
                       </p>
-                      {staff.personality.map((trait, i) => (
-                        <p key={i} style={{
-                          fontSize: '0.7rem',
-                          color: '#888',
-                          margin: '0 0 0.2rem 0',
-                          paddingLeft: '0.5rem',
-                          position: 'relative'
-                        }}>
-                          <span style={{
-                            position: 'absolute',
-                            left: '0',
-                            color: 'var(--accent-color)',
-                            fontWeight: 'bold'
-                          }}>・</span>
-                          {trait}
-                        </p>
-                      ))}
-                    </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
+          </div>
         </section>
       )}
 
@@ -1119,7 +1113,7 @@ const HomeDetailPage = () => {
                   間取り
                 </h3>
                 <div style={{ textAlign: 'center' }}>
-                  <img 
+                  <img
                     src={homeId === 'leap' ? 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753862038/%E3%83%9B%E3%83%BC%E3%83%A0%E6%A6%82%E8%A6%81_y9nfbb.jpg' : 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845642/1662468405_kp3xo3.jpg'}
                     alt={`${home.name}間取り図`}
                     style={{
@@ -1259,10 +1253,10 @@ const HomeDetailPage = () => {
         </div>
       </section>
 
-      {/* 一日の流れ */}
+      {/* 一日の流れ(例) */}
       <section className="section">
         <div className="container">
-          <h2 className="section-title">一日の流れ</h2>
+          <h2 className="section-title">一日の流れ(例)</h2>
           <div className="grid grid-2">
             <div className="card">
               <h3>平日のスケジュール</h3>

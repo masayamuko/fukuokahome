@@ -72,7 +72,7 @@ const HomesPage = () => {
           <div className="card">
             <p>
               自立援助ホームは、児童養護施設等を退所した青少年や、家庭の事情により家族と暮らすことができない
-              15歳から20歳までの青少年が生活し、自立に向けた支援を受けることができる施設です。
+              15歳以上の青少年が生活し、自立に向けた支援を受けることができる施設です。
             </p>
             <p>
               青少年が安心して生活できる環境を提供し、就労や就学を通じて社会で自立して生活していくための
@@ -114,7 +114,7 @@ const HomesPage = () => {
                 </div>
                 <h3>{home.name}</h3>
                 <p className="home-description">{home.description}</p>
-                
+
                 <div className="home-info">
                   <div className="info-item">
                     <strong>設立:</strong> {home.established}

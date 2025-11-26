@@ -31,7 +31,7 @@ const HomePage = () => {
       description: '2025年に開設した最新の自立援助ホーム。最新の支援理論を取り入れた次世代型ホームです。',
       established: '2025年',
       image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753833761/IMG_2693_xt2vc1.jpg',
-      logo: null,
+      logo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1764125654/IMG_4468_hq9coa.png',
       url: null,
       feature: '福岡市南区',
       gender: '男子ホーム'
@@ -42,7 +42,7 @@ const HomePage = () => {
       description: '「飛び越える、上昇する」という意味を持つホーム。青少年の可能性を信じて支援します。',
       established: '2019年',
       image: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753862039/LEAP_home_vkrmua.jpg',
-      logo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753864549/LEAP_logo_kmcgjk.png',
+      logo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1764125655/leap_lg_ys15mu.png',
       url: 'https://leap-chikushino.jimdofree.com/',
       feature: '筑紫野市',
       gender: '男子ホーム'
@@ -142,8 +142,8 @@ const HomePage = () => {
                       <img src={home.image} alt={`自立援助ホーム${home.name}の外観`} />
                       <div className="home-visual-overlay">
                         {home.logo ? (
-                          <img src={home.logo} alt={`${home.name}ロゴ`} style={{ 
-                            maxWidth: '180px', 
+                          <img src={home.logo} alt={`${home.name}ロゴ`} style={{
+                            maxWidth: '180px',
                             maxHeight: '80px',
                             objectFit: 'contain',
                             marginBottom: '1rem',
@@ -159,7 +159,7 @@ const HomePage = () => {
                       </div>
                       <div className="home-hover-link">
                         {home.logo && (
-                          <img src={home.logo} alt={`${home.name}ロゴ`} style={{ 
+                          <img src={home.logo} alt={`${home.name}ロゴ`} style={{
                             height: '30px',
                             width: 'auto',
                             objectFit: 'contain',
@@ -184,7 +184,7 @@ const HomePage = () => {
                       <div className="placeholder-notice">※写真準備中</div>
                       <div className="home-hover-link">
                         {home.logo && (
-                          <img src={home.logo} alt={`${home.name}ロゴ`} style={{ 
+                          <img src={home.logo} alt={`${home.name}ロゴ`} style={{
                             height: '30px',
                             width: 'auto',
                             objectFit: 'contain',
@@ -218,7 +218,7 @@ const HomePage = () => {
                 <p>特定非営利活動法人として設立。福岡市初の自立援助ホーム「かんらん舎」を開設。</p>
               </div>
             </div>
-            
+
             <div className="timeline-item">
               <div className="timeline-year">2015年</div>
               <div className="timeline-content">
@@ -226,7 +226,7 @@ const HomePage = () => {
                 <p>福岡市2番目の自立援助ホーム「結ホーム」を開設。絆を大切にする支援を開始。</p>
               </div>
             </div>
-            
+
             <div className="timeline-item">
               <div className="timeline-year">2019年</div>
               <div className="timeline-content">
@@ -234,15 +234,15 @@ const HomePage = () => {
                 <p>筑紫野市に「LEAP」を開設。飛躍をテーマとした新しい支援モデルを導入。</p>
               </div>
             </div>
-            
+
             <div className="timeline-item">
               <div className="timeline-year">2021年</div>
               <div className="timeline-content">
                 <h3>かんらん舎移転・事務所設置</h3>
-                <p>かんらん舎を現住所（〇〇）に引っ越し、旧かんらん舎物件は事務所専用に用途変更。</p>
+                <p>かんらん舎を現住所に引っ越し、旧かんらん舎物件は事務所専用に用途変更。</p>
               </div>
             </div>
-            
+
             <div className="timeline-item">
               <div className="timeline-year">2023年</div>
               <div className="timeline-content">
@@ -250,7 +250,7 @@ const HomePage = () => {
                 <p>太宰府市に「スイッチ」を開設。進学支援に特化した新たな取り組みを開始。</p>
               </div>
             </div>
-            
+
             <div className="timeline-item">
               <div className="timeline-year">2025年</div>
               <div className="timeline-content">
@@ -269,24 +269,24 @@ const HomePage = () => {
             法人概要
             <div style={{ width: '60px', height: '4px', background: 'var(--accent-color)', margin: '1rem auto', borderRadius: '2px' }}></div>
           </h2>
-          
+
           <div className="organization-summary" style={{ maxWidth: '1200px', margin: '0 auto' }}>
             {/* 基本情報カード */}
-            <div className="basic-info-card" style={{ 
-              background: 'white', 
-              padding: '3rem', 
-              borderRadius: '16px', 
-              marginBottom: '2.5rem', 
-              boxShadow: '0 8px 32px rgba(0,0,0,0.08)', 
+            <div className="basic-info-card" style={{
+              background: 'white',
+              padding: '3rem',
+              borderRadius: '16px',
+              marginBottom: '2.5rem',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
               border: '1px solid #f0f0f0',
               position: 'relative'
             }}>
-              
+
               <div className="info-summary" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
-                <div id="basic-info" className="info-main-card" style={{ 
-                  padding: '2rem', 
-                  borderRadius: '12px', 
-                  background: 'linear-gradient(135deg, #fff9f5 0%, #fefefe 100%)', 
+                <div id="basic-info" className="info-main-card" style={{
+                  padding: '2rem',
+                  borderRadius: '12px',
+                  background: 'linear-gradient(135deg, #fff9f5 0%, #fefefe 100%)',
                   border: '1px solid #e0e0e0',
                   position: 'relative'
                 }}>
@@ -317,10 +317,10 @@ const HomePage = () => {
                   </div>
                 </div>
 
-                <div className="info-sub-card" style={{ 
-                  padding: '2rem', 
-                  borderRadius: '12px', 
-                  background: 'linear-gradient(135deg, #f0f8ff 0%, #fefefe 100%)', 
+                <div className="info-sub-card" style={{
+                  padding: '2rem',
+                  borderRadius: '12px',
+                  background: 'linear-gradient(135deg, #f0f8ff 0%, #fefefe 100%)',
                   border: '1px solid #e0e0e0',
                   position: 'relative'
                 }}>
@@ -343,13 +343,13 @@ const HomePage = () => {
                       <strong style={{ color: 'var(--primary-color)', minWidth: '80px' }}>運営許可：</strong>
                       <span>福岡県・福岡市<br /><span style={{ color: '#000', fontWeight: '600' }}>第二種社会福祉事業認可</span></span>
                     </p>
-                    <div style={{ 
-                      marginTop: '1.5rem', 
-                      padding: '1rem', 
-                      background: '#f8f9fa', 
-                      borderRadius: '8px', 
+                    <div style={{
+                      marginTop: '1.5rem',
+                      padding: '1rem',
+                      background: '#f8f9fa',
+                      borderRadius: '8px',
                       borderLeft: '4px solid var(--accent-color)',
-                      fontSize: '0.9rem', 
+                      fontSize: '0.9rem',
                       lineHeight: '1.6'
                     }}>
                       <p style={{ margin: '0', color: '#555' }}>
@@ -364,61 +364,61 @@ const HomePage = () => {
             </div>
 
             {/* 青少年自立支援サービス */}
-            <div className="services-card" style={{ 
-              background: 'white', 
-              padding: '3rem', 
-              borderRadius: '16px', 
-              marginBottom: '2.5rem', 
-              boxShadow: '0 8px 32px rgba(0,0,0,0.08)', 
+            <div className="services-card" style={{
+              background: 'white',
+              padding: '3rem',
+              borderRadius: '16px',
+              marginBottom: '2.5rem',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
               border: '1px solid #f0f0f0',
               position: 'relative'
             }}>
               <div className="services-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                <h3 style={{ 
-                  color: 'var(--primary-color)', 
-                  margin: '0', 
-                  fontSize: '1.8rem', 
-                  fontWeight: '700', 
+                <h3 style={{
+                  color: 'var(--primary-color)',
+                  margin: '0',
+                  fontSize: '1.8rem',
+                  fontWeight: '700',
                   letterSpacing: '0.02em',
                   position: 'relative'
                 }}>
                   青少年自立支援サービス
-                  <span style={{ 
-                    position: 'absolute', 
-                    bottom: '-8px', 
-                    left: '50%', 
-                    transform: 'translateX(-50%)', 
-                    width: '40px', 
-                    height: '3px', 
-                    background: 'var(--accent-color)', 
-                    borderRadius: '2px' 
+                  <span style={{
+                    position: 'absolute',
+                    bottom: '-8px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '40px',
+                    height: '3px',
+                    background: 'var(--accent-color)',
+                    borderRadius: '2px'
                   }}></span>
                 </h3>
               </div>
-              
+
               <div className="service-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
-                <div className="service-item" style={{ 
-                  padding: '2rem 1.5rem', 
-                  background: 'white', 
+                <div className="service-item" style={{
+                  padding: '2rem 1.5rem',
+                  background: 'white',
                   borderRadius: '12px',
                   border: '1px solid #e0e0e0',
                   boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
                   position: 'relative',
                   textAlign: 'center'
                 }}>
-                  <div style={{ 
-                    width: '60px', 
-                    height: '60px', 
-                    borderRadius: '50%', 
-                    background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
+                  <div style={{
+                    width: '60px',
+                    height: '60px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                     marginBottom: '1rem',
                     margin: '0 auto 1rem auto'
                   }}>
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="white"/>
+                      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="white" />
                     </svg>
                   </div>
                   <h5 style={{ color: 'var(--primary-color)', fontSize: '1.2rem', fontWeight: '700', margin: '0 0 1rem 0' }}>生活支援</h5>
@@ -427,28 +427,28 @@ const HomePage = () => {
                     健康管理・居住環境整備
                   </p>
                 </div>
-                
-                <div className="service-item" style={{ 
-                  padding: '2rem 1.5rem', 
-                  background: 'white', 
+
+                <div className="service-item" style={{
+                  padding: '2rem 1.5rem',
+                  background: 'white',
                   borderRadius: '12px',
                   border: '1px solid #e0e0e0',
                   boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
                   textAlign: 'center'
                 }}>
-                  <div style={{ 
-                    width: '60px', 
-                    height: '60px', 
-                    borderRadius: '50%', 
-                    background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
+                  <div style={{
+                    width: '60px',
+                    height: '60px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                     marginBottom: '1rem',
                     margin: '0 auto 1rem auto'
                   }}>
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5,13.18V4H4A2,2 0 0,0 2,6V17A2,2 0 0,0 4,19H20A2,2 0 0,0 22,17V8A2,2 0 0,0 20,6H19V13.18L14.5,9.18L13.09,10.59L10,7.5L7.91,9.59L5,13.18M13,12A1,1 0 0,1 12,11A1,1 0 0,1 13,10A1,1 0 0,1 14,11A1,1 0 0,1 13,12Z" fill="white"/>
+                      <path d="M5,13.18V4H4A2,2 0 0,0 2,6V17A2,2 0 0,0 4,19H20A2,2 0 0,0 22,17V8A2,2 0 0,0 20,6H19V13.18L14.5,9.18L13.09,10.59L10,7.5L7.91,9.59L5,13.18M13,12A1,1 0 0,1 12,11A1,1 0 0,1 13,10A1,1 0 0,1 14,11A1,1 0 0,1 13,12Z" fill="white" />
                     </svg>
                   </div>
                   <h5 style={{ color: 'var(--primary-color)', fontSize: '1.2rem', fontWeight: '700', margin: '0 0 1rem 0' }}>就学・就労支援</h5>
@@ -457,28 +457,28 @@ const HomePage = () => {
                     職業紹介・就労準備・職場定着・キャリア形成
                   </p>
                 </div>
-                
-                <div className="service-item" style={{ 
-                  padding: '2rem 1.5rem', 
-                  background: 'white', 
+
+                <div className="service-item" style={{
+                  padding: '2rem 1.5rem',
+                  background: 'white',
                   borderRadius: '12px',
                   border: '1px solid #e0e0e0',
                   boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
                   textAlign: 'center'
                 }}>
-                  <div style={{ 
-                    width: '60px', 
-                    height: '60px', 
-                    borderRadius: '50%', 
-                    background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
+                  <div style={{
+                    width: '60px',
+                    height: '60px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, var(--primary-color), var(--accent-color))',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                     marginBottom: '1rem',
                     margin: '0 auto 1rem auto'
                   }}>
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13,14C9.64,14 8.54,15.35 8.18,16.24C9.25,16.7 10.61,17 12,17C13.39,17 14.75,16.7 15.82,16.24C15.46,15.35 14.36,14 11,14H13M12,13C14.21,13 16,11.21 16,9C16,6.79 14.21,5 12,5C9.79,5 8,6.79 8,9C8,11.21 9.79,13 12,13M20,19C20,20.5 18.5,22 17,22H7C5.5,22 4,20.5 4,19V18C4,15.88 5.88,14 8,14H16C18.12,14 20,15.88 20,18V19Z" fill="white"/>
+                      <path d="M13,14C9.64,14 8.54,15.35 8.18,16.24C9.25,16.7 10.61,17 12,17C13.39,17 14.75,16.7 15.82,16.24C15.46,15.35 14.36,14 11,14H13M12,13C14.21,13 16,11.21 16,9C16,6.79 14.21,5 12,5C9.79,5 8,6.79 8,9C8,11.21 9.79,13 12,13M20,19C20,20.5 18.5,22 17,22H7C5.5,22 4,20.5 4,19V18C4,15.88 5.88,14 8,14H16C18.12,14 20,15.88 20,18V19Z" fill="white" />
                     </svg>
                   </div>
                   <h5 style={{ color: 'var(--primary-color)', fontSize: '1.2rem', fontWeight: '700', margin: '0 0 1rem 0' }}>アフターケア</h5>
@@ -492,14 +492,14 @@ const HomePage = () => {
             </div>
 
             {/* 認可・連携情報 */}
-            <div className="certification-card" style={{ 
-              background: 'linear-gradient(135deg, #e8f4f8 0%, #f0faff 100%)', 
-              padding: '2.5rem', 
-              borderRadius: '16px', 
+            <div className="certification-card" style={{
+              background: 'linear-gradient(135deg, #e8f4f8 0%, #f0faff 100%)',
+              padding: '2.5rem',
+              borderRadius: '16px',
               border: '1px solid #b8daed',
               position: 'relative'
             }}>
-              
+
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem', alignItems: 'center' }}>
                 <div>
                   <h4 style={{ color: 'var(--primary-color)', fontSize: '1.3rem', fontWeight: '700', margin: '0 0 1.5rem 0' }}>
@@ -514,24 +514,24 @@ const HomePage = () => {
                     <p style={{ margin: '0 0 0.8rem 0', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <span style={{ width: '6px', height: '6px', background: 'var(--primary-color)', borderRadius: '50%' }}></span>
                       <strong style={{ color: 'var(--primary-color)' }}>監督機関：</strong>
-                      <span>福岡県・福岡市 子ども家庭支援課</span>
+                      <span>福岡市こども家庭課、福岡県こども福祉課</span>
                     </p>
                     <p style={{ margin: '0', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <span style={{ width: '6px', height: '6px', background: 'var(--primary-color)', borderRadius: '50%' }}></span>
                       <strong style={{ color: 'var(--primary-color)' }}>連携機関：</strong>
-                      <span>中央児童相談所・福岡市こども総合相談センター</span>
+                      <span>福岡市こども総合相談センター・福岡県域の児童相談所など</span>
                     </p>
                   </div>
                 </div>
                 <div style={{ textAlign: 'center' }}>
-                  <a href="https://www.npo-homepage.go.jp/npoportal/detail/119300364" target="_blank" rel="noopener noreferrer" style={{ 
-                    display: 'inline-block', 
-                    padding: '1.2rem 2rem', 
-                    background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%)', 
-                    color: 'white', 
-                    textDecoration: 'none', 
-                    borderRadius: '12px', 
-                    fontWeight: '700', 
+                  <a href="https://www.npo-homepage.go.jp/npoportal/detail/119300364" target="_blank" rel="noopener noreferrer" style={{
+                    display: 'inline-block',
+                    padding: '1.2rem 2rem',
+                    background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%)',
+                    color: 'white',
+                    textDecoration: 'none',
+                    borderRadius: '12px',
+                    fontWeight: '700',
                     fontSize: '1rem',
                     boxShadow: '0 4px 15px rgba(230, 126, 80, 0.3)',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease'
@@ -548,40 +548,40 @@ const HomePage = () => {
       </section>
 
       {/* CTAセクション */}
-      <section style={{ 
-        background: 'white', 
+      <section style={{
+        background: 'white',
         padding: '100px 0',
         position: 'relative'
       }}>
-        
+
         <div className="container">
-          <div style={{ 
-            background: 'white', 
-            padding: '4rem 3rem', 
-            borderRadius: '20px', 
-            boxShadow: '0 12px 40px rgba(0,0,0,0.1)', 
+          <div style={{
+            background: 'white',
+            padding: '4rem 3rem',
+            borderRadius: '20px',
+            boxShadow: '0 12px 40px rgba(0,0,0,0.1)',
             border: '1px solid #f0f0f0',
             maxWidth: '900px',
             margin: '0 auto',
             textAlign: 'center',
             position: 'relative'
           }}>
-            
-            
-            <h2 style={{ 
-              color: 'var(--primary-color)', 
-              fontSize: '2.2rem', 
-              fontWeight: '700', 
+
+
+            <h2 style={{
+              color: 'var(--primary-color)',
+              fontSize: '2.2rem',
+              fontWeight: '700',
               margin: '0 0 2rem 0',
               lineHeight: '1.3'
             }}>
               私たちの活動を支援してください
             </h2>
-            
-            <p style={{ 
-              fontSize: '1.2rem', 
-              lineHeight: '1.8', 
-              color: '#555', 
+
+            <p style={{
+              fontSize: '1.2rem',
+              lineHeight: '1.8',
+              color: '#555',
               margin: '0 0 3rem 0',
               maxWidth: '600px',
               marginLeft: 'auto',
@@ -590,24 +590,24 @@ const HomePage = () => {
               青少年の自立を支援するため、様々な形でのご支援をお待ちしています。<br />
               あなたのご支援が、青少年の未来を変える力になります。
             </p>
-            
-            <div style={{ 
-              display: 'flex', 
-              gap: '2rem', 
+
+            <div style={{
+              display: 'flex',
+              gap: '2rem',
               justifyContent: 'center',
               flexWrap: 'wrap',
               alignItems: 'center'
             }}>
-              <Link to="/donation" style={{ 
+              <Link to="/donation" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.8rem',
-                padding: '1.2rem 2.5rem', 
-                background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%)', 
-                color: 'white', 
-                textDecoration: 'none', 
-                borderRadius: '12px', 
-                fontWeight: '700', 
+                padding: '1.2rem 2.5rem',
+                background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%)',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: '12px',
+                fontWeight: '700',
                 fontSize: '1.1rem',
                 boxShadow: '0 6px 20px rgba(230, 126, 80, 0.3)',
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
@@ -616,17 +616,17 @@ const HomePage = () => {
               }}>
                 寄付で支援
               </Link>
-              
-              <Link to="/jobs" style={{ 
+
+              <Link to="/jobs" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.8rem',
-                padding: '1.2rem 2.5rem', 
-                background: 'white', 
-                color: 'var(--primary-color)', 
-                textDecoration: 'none', 
-                borderRadius: '12px', 
-                fontWeight: '700', 
+                padding: '1.2rem 2.5rem',
+                background: 'white',
+                color: 'var(--primary-color)',
+                textDecoration: 'none',
+                borderRadius: '12px',
+                fontWeight: '700',
                 fontSize: '1.1rem',
                 border: '2px solid var(--primary-color)',
                 boxShadow: '0 6px 20px rgba(230, 126, 80, 0.15)',
@@ -637,17 +637,17 @@ const HomePage = () => {
                 職員として参加
               </Link>
             </div>
-            
-            <div style={{ 
-              marginTop: '3rem', 
-              padding: '1.5rem', 
-              background: '#f8f9fa', 
+
+            <div style={{
+              marginTop: '3rem',
+              padding: '1.5rem',
+              background: '#f8f9fa',
               borderRadius: '12px',
               border: '1px solid #e9ecef'
             }}>
-              <p style={{ 
-                margin: '0', 
-                fontSize: '0.95rem', 
+              <p style={{
+                margin: '0',
+                fontSize: '0.95rem',
                 color: '#666',
                 lineHeight: '1.6'
               }}>
