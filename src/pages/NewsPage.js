@@ -7,6 +7,25 @@ const NewsPage = () => {
   const news = [
     {
       id: 1,
+      date: '2025-02-28',
+      category: 'お知らせ',
+      title: 'WEBサイトを公開しました',
+      summary: '法人公式サイトをリニューアルオープンしました。最新情報や各ホームの紹介を本サイトでご確認いただけます。',
+      image: null,
+      content: `
+        「特定非営利活動法人 青少年の自立を支える福岡の会」の公式サイトを新しく公開しました。
+
+        主なポイント：
+        - トップページを中心に法人情報を整理し、見やすさを向上
+        - 各ホームの詳細ページを追加し、写真や特徴を分かりやすく掲載
+        - 求人情報やお問い合わせをオンラインから確認できるよう改善
+
+        今後も活動報告やお知らせを随時更新してまいります。引き続きご支援・ご関心のほどよろしくお願いいたします。
+      `,
+      isNew: true
+    },
+    {
+      id: 2,
       date: '2024-12-15',
       category: 'お知らせ',
       title: 'TIES開設準備進行中',
@@ -23,10 +42,11 @@ const NewsPage = () => {
         TIESでは最新の支援理論を取り入れつつ、一人ひとりの青少年に寄り添った
         丁寧な支援を提供していく予定です。
       `,
-      isNew: true
+      isNew: true,
+      hidden: true
     },
     {
-      id: 2,
+      id: 3,
       date: '2024-11-20',
       category: '活動報告',
       title: '秋の職員研修を実施しました',
@@ -43,10 +63,11 @@ const NewsPage = () => {
         参加した職員からは「日々の支援に活かせる具体的な技術を学べた」
         「他の職員との情報交換も有意義だった」といった感想が寄せられました。
       `,
-      isNew: false
+      isNew: false,
+      hidden: true
     },
     {
-      id: 3,
+      id: 4,
       date: '2024-10-05',
       title: '令和6年度上半期活動報告書を公開',
       category: '報告書',
@@ -67,10 +88,11 @@ const NewsPage = () => {
 
         詳細な報告書は当法人までお問い合わせください。
       `,
-      isNew: false
+      isNew: false,
+      hidden: true
     },
     {
-      id: 4,
+      id: 5,
       date: '2024-09-12',
       category: 'イベント',
       title: '地域交流バーベキュー大会を開催',
@@ -90,10 +112,11 @@ const NewsPage = () => {
         このような地域との連携こそが、青少年の健全な成長につながると
         改めて実感した一日でした。
       `,
-      isNew: false
+      isNew: false,
+      hidden: true
     },
     {
-      id: 5,
+      id: 6,
       date: '2024-08-01',
       category: 'お知らせ',
       title: '夏季休業のお知らせ',
@@ -112,7 +135,8 @@ const NewsPage = () => {
         ご不便をおかけいたしますが、何卒ご理解のほどよろしくお願いいたします。
         8月19日（月）より通常業務を再開いたします。
       `,
-      isNew: false
+      isNew: false,
+      hidden: true
     }
   ];
 
@@ -147,7 +171,7 @@ const NewsPage = () => {
               gap: '2rem',
               marginBottom: '3rem'
             }}>
-              {news.map((item) => (
+              {news.filter((item) => !item.hidden).map((item) => (
                 <article
                   key={item.id}
                   className="news-card"
