@@ -87,36 +87,6 @@ const JobsPage = () => {
     }
   ];
 
-  const [applicationData, setApplicationData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    position: '',
-    experience: '',
-    motivation: '',
-    file: null
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setApplicationData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleFileChange = (e) => {
-    setApplicationData(prev => ({
-      ...prev,
-      file: e.target.files[0]
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('応募ありがとうございます。担当者より後日ご連絡いたします。');
-  };
-
   return (
     <div className="jobs-page">
       {/* ページヘッダー */}
@@ -404,7 +374,7 @@ const JobsPage = () => {
         </div>
       </section>
 
-      {/* スタッフの声 */}
+      {/* スタッフの声（将来再利用用にコメントアウト）
       <section className="section" style={{ background: 'linear-gradient(135deg, #f0f8ff 0%, #e8f4f8 100%)', padding: '4rem 0' }}>
         <div className="container">
           <h2 className="section-title">スタッフの声</h2>
@@ -580,6 +550,7 @@ const JobsPage = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* 職場紹介 */}
       <section className="section" style={{ background: 'var(--light-gray)' }}>
@@ -680,105 +651,29 @@ const JobsPage = () => {
         </div>
       </section>
 
-      {/* 応募フォーム */}
+      {/* 応募フォーム（外部フォームへ誘導） */}
       <section className="section">
-        <div className="container">
+        <div className="container" style={{ textAlign: 'center' }}>
           <h2 className="section-title">応募フォーム</h2>
-          <div className="card">
-            <form onSubmit={handleSubmit}>
-              <div className="grid grid-2">
-                <div className="form-group">
-                  <label htmlFor="name">お名前 *</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={applicationData.name}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">メールアドレス *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={applicationData.email}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-2">
-                <div className="form-group">
-                  <label htmlFor="phone">電話番号 *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={applicationData.phone}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="position">希望職種 *</label>
-                  <select
-                    id="position"
-                    name="position"
-                    value={applicationData.position}
-                    onChange={handleInputChange}
-                    required
-                  >
-                    <option value="">選択してください</option>
-                    <option value="青少年の生活支援相談員（スイッチ）">青少年の生活支援相談員（スイッチ）</option>
-                    <option value="青少年の生活支援相談員（TIES）">青少年の生活支援相談員（TIES）</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="experience">関連経験・資格</label>
-                <textarea
-                  id="experience"
-                  name="experience"
-                  value={applicationData.experience}
-                  onChange={handleInputChange}
-                  placeholder="関連する職歴や保有資格についてお書きください"
-                ></textarea>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="motivation">志望動機 *</label>
-                <textarea
-                  id="motivation"
-                  name="motivation"
-                  value={applicationData.motivation}
-                  onChange={handleInputChange}
-                  placeholder="当法人を志望する理由をお書きください"
-                  required
-                ></textarea>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="file">履歴書・職務経歴書</label>
-                <input
-                  type="file"
-                  id="file"
-                  name="file"
-                  onChange={handleFileChange}
-                  accept=".pdf,.doc,.docx"
-                />
-                <small>PDF、Word形式でお送りください（任意）</small>
-              </div>
-
-              <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-                <button type="submit" className="btn">応募する</button>
-              </div>
-            </form>
-          </div>
+          <p style={{ fontSize: '1.05rem', color: '#555', marginBottom: '2rem' }}>
+            応募・お問い合わせは専用フォームからお願いいたします。
+          </p>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSesxmpBY_pJT_UwmBe5gcCvPTQQdCSvXq_xNG85mRRavD2MzA/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.5rem',
+              padding: '1.1rem 2.4rem',
+              fontSize: '1.1rem'
+            }}
+          >
+            応募フォームを開く
+          </a>
         </div>
       </section>
     </div>

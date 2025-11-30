@@ -6,7 +6,7 @@ const ContactPage = () => {
       name: 'かんらん舎',
       address: '福岡市南区大平寺2丁目10-1',
       phone: '092-555-2355',
-      manager: 'ホーム長 平田 幸'
+      manager: 'ホーム長 平田'
     },
     {
       name: '結ホーム',
@@ -30,7 +30,7 @@ const ContactPage = () => {
       name: 'TIES',
       address: '福岡市南区若久4丁目2-2',
       phone: '092-555-7090',
-      manager: 'ホーム長 柴田 亮'
+      manager: 'ホーム長 柴田'
     }
   ];
 

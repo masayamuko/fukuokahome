@@ -55,7 +55,7 @@ const HomeDetailPage = () => {
       capacity: '女性6名',
       roomLayout: '個室６部屋',
       facilities: ['学習室', 'リビング', 'キッチン', '浴室', '洗濯室'],
-      manager: 'ホーム長 平田 幸',
+      manager: 'ホーム長 平田',
       phone: '092-555-2355',
       address: '福岡市南区大平寺2丁目10-1',
       mapUrl: 'https://maps.google.com/maps?q=福岡市南区大平寺2丁目10-1&t=&z=15&ie=UTF8&iwloc=&output=embed',
@@ -83,6 +83,7 @@ const HomeDetailPage = () => {
           { time: '18:00', activity: '帰宅' },
           { time: '19:00', activity: '夕食' },
           { time: '21:00', activity: '入浴・自由時間' },
+          { time: '22:00', activity: '門限' },
           { time: '23:00', activity: '消灯' }
         ],
         holiday: [
@@ -94,6 +95,7 @@ const HomeDetailPage = () => {
           { time: '18:00', activity: '帰宅' },
           { time: '19:00', activity: '夕食' },
           { time: '21:00', activity: '入浴・自由時間' },
+          { time: '22:00', activity: '門限' },
           { time: '23:00', activity: '消灯' }
         ]
       },
@@ -205,8 +207,8 @@ const HomeDetailPage = () => {
         name: '鶴田',
         title: 'ホーム長',
         experience: 'スポーツインストラクター兼社会福祉士',
-        photo: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845642/%E4%B8%AD%E5%B6%8B-scaled-e1655458526756-150x150_nyz7pl.jpg',
-        message: '若者たちの無限の可能性を信じて、一緒に大きく飛躍していきましょう！',
+        photo: null,
+        message: '自身の無限の可能性を信じ、様々なことを経験し、一緒に飛躍していきましょう！',
         interviewLink: 'https://smileyflowers.site/leap/'
       },
       entrancePhoto: 'https://res.cloudinary.com/dg3mdcuju/image/upload/v1753845643/%E7%9C%8B%E6%9D%BF-1-1152x1536_vbsiun.jpg',
@@ -216,7 +218,7 @@ const HomeDetailPage = () => {
         '個性を活かした支援プログラム',
         '新しい支援理論の積極的な導入',
         '豊かな自然環境での生活',
-        'スポーツや文化活動を通じた成長支援'
+        'より家庭的な雰囲気での生活'
       ],
       dailySchedule: {
         weekday: [

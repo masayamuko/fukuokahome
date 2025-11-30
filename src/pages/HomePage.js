@@ -61,8 +61,8 @@ const HomePage = () => {
   ];
 
   const stats = [
-    { number: '16', unit: '年', label: '運営実績', description: '2008年設立以来の実績' },
-    { number: '150', unit: '人', label: '支援実績', description: 'これまでに関わった青少年総数' },
+    { number: '16', unit: '年', label: '運営実績', description: '2008年設立' },
+    { number: '158', unit: '人', label: '支援実績', description: '青少年総数 *2025年11月末時点' },
     { number: '5', unit: '施設', label: '自立援助ホーム', description: '福岡市及び福岡県より委託運営' },
     { number: '30', unit: '人', label: '定員数', description: '各ホーム合計定員数' }
   ];
@@ -354,7 +354,7 @@ const HomePage = () => {
                     }}>
                       <p style={{ margin: '0', color: '#555' }}>
                         <strong style={{ color: 'var(--primary-color)' }}>根拠法令：</strong>児童福祉法第6条の3第4項<br />
-                        <strong style={{ color: 'var(--primary-color)' }}>対象年齢：</strong>15歳～20歳（措置延長により22歳まで可能）<br />
+                        <strong style={{ color: 'var(--primary-color)' }}>対象年齢：</strong>15歳以上<br />
                         <strong style={{ color: 'var(--primary-color)' }}>措置権者：</strong>福岡県・福岡市
                       </p>
                     </div>
