@@ -140,6 +140,34 @@ const NewsPage = () => {
     }
   ];
 
+  const annualReports = [
+    {
+      year: '2024年度',
+      description: '2024年度事業報告書等 (PDF形式：2MB)',
+      url: 'https://www.npo-homepage.go.jp/npoportal/document/119300364/hokoku/2024700/2024%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf'
+    },
+    {
+      year: '2023年度',
+      description: '2023年度事業報告書等 (PDF形式：3MB)',
+      url: 'https://www.npo-homepage.go.jp/npoportal/document/119300364/hokoku/2023700/2023%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf'
+    },
+    {
+      year: '2022年度',
+      description: '2022年度事業報告書等 (PDF形式：565KB)',
+      url: 'https://www.npo-homepage.go.jp/npoportal/document/119300364/hokoku/2022700/2022%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf'
+    },
+    {
+      year: '2021年度',
+      description: '2021年度事業報告書等 (PDF形式：147KB)',
+      url: 'https://www.npo-homepage.go.jp/npoportal/document/119300364/hokoku/2021700/2021%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf'
+    },
+    {
+      year: '2020年度',
+      description: '2020年度事業報告書等 (PDF形式：141KB)',
+      url: 'https://www.npo-homepage.go.jp/npoportal/document/119300364/hokoku/2020700/2020%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf'
+    }
+  ];
+
   const getCategoryColor = (category) => {
     const colors = {
       'お知らせ': '#3B82F6',
@@ -417,21 +445,20 @@ const NewsPage = () => {
         <div className="container">
           <h2 className="section-title">年次報告書</h2>
           <div className="grid grid-3">
-            <div className="card">
-              <h3>令和5年度 年次報告書</h3>
-              <p>2023年度の活動実績と財務状況をまとめた報告書です。</p>
-              <button className="btn btn-secondary">PDFダウンロード</button>
-            </div>
-            <div className="card">
-              <h3>令和4年度 年次報告書</h3>
-              <p>2022年度の活動実績と財務状況をまとめた報告書です。</p>
-              <button className="btn btn-secondary">PDFダウンロード</button>
-            </div>
-            <div className="card">
-              <h3>令和3年度 年次報告書</h3>
-              <p>2021年度の活動実績と財務状況をまとめた報告書です。</p>
-              <button className="btn btn-secondary">PDFダウンロード</button>
-            </div>
+            {annualReports.map((report, index) => (
+              <div className="card" key={index}>
+                <h3>{report.year}</h3>
+                <p>{report.description}</p>
+                <a
+                  className="btn btn-secondary"
+                  href={report.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  PDFダウンロード
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
