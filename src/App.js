@@ -8,7 +8,6 @@ import HomePage from './pages/HomePage';
 import HomesPage from './pages/HomesPage';
 import HomeDetailPage from './pages/HomeDetailPage';
 import JobsPage from './pages/JobsPage';
-import DonationPage from './pages/DonationPage';
 import NewsPage from './pages/NewsPage';
 import ContactPage from './pages/ContactPage';
 import StoryPage from './pages/StoryPage';
@@ -29,7 +28,7 @@ function App() {
               <Route path="/homes" element={<HomesPage />} />
               <Route path="/homes/:homeId" element={<HomeDetailPage />} />
               <Route path="/jobs" element={<JobsPage />} />
-              <Route path="/donation" element={<DonationPage />} />
+              {/* <Route path="/donation" element={<DonationPage />} /> 寄付ページは非公開中 */}
               <Route path="/news" element={<NewsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/story" element={<StoryPage />} />

@@ -38,7 +38,7 @@ const Footer = () => {
           <div className="footer-section">
             <h4>支援・参加</h4>
             <ul>
-              <li><Link to="/donation">寄付について</Link></li>
+              {/* <li><Link to="/donation">寄付について</Link></li> 非公開期間のため一時停止 */}
               <li><Link to="/jobs">求人情報</Link></li>
               <li><Link to="/contact">お問い合わせ</Link></li>
             </ul>

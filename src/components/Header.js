@@ -10,7 +10,7 @@ const Header = () => {
     { name: 'TOP', path: '/' },
     { name: '運営ホーム', path: '/homes' },
     { name: '求人情報', path: '/jobs' },
-    { name: '寄付・支援', path: '/donation' },
+    // { name: '寄付・支援', path: '/donation' }, // 非公開期間のため一時的に非表示
     { name: 'お知らせ', path: '/news' },
     { name: 'お問合せ', path: '/contact' }
   ];

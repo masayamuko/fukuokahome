@@ -547,7 +547,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* CTAセクション */}
+      {/* CTAセクション（寄付ページ非公開のため一時的に非表示）
       <section style={{
         background: 'white',
         padding: '100px 0',
@@ -659,6 +659,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      */}
     </div>
   );
 };
