@@ -474,20 +474,15 @@ const NewsPage = () => {
                 <div className="media-content">
                   <h4>西日本新聞</h4>
                   <p>「自立援助ホームの役割と現状」特集記事にて当法人の取り組みが紹介されました。</p>
-                </div>
-              </div>
-              <div className="media-item">
-                <div className="media-date">2024.09.30</div>
-                <div className="media-content">
-                  <h4>NHK福岡</h4>
-                  <p>夕方のニュース番組で青少年支援の現場として取材を受けました。</p>
-                </div>
-              </div>
-              <div className="media-item">
-                <div className="media-date">2024.07.10</div>
-                <div className="media-content">
-                  <h4>福岡市政だより</h4>
-                  <p>「地域で支える青少年の自立」をテーマに活動内容が紹介されました。</p>
+                  <a
+                    href="https://www.nishinippon.co.jp/item/927988/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary"
+                    style={{ marginTop: '0.8rem' }}
+                  >
+                    掲載記事を読む
+                  </a>
                 </div>
               </div>
             </div>
