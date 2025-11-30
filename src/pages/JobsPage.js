@@ -374,183 +374,184 @@ const JobsPage = () => {
         </div>
       </section>
 
-      {/* スタッフの声（将来再利用用にコメントアウト）
-      <section className="section" style={{ background: 'linear-gradient(135deg, #f0f8ff 0%, #e8f4f8 100%)', padding: '4rem 0' }}>
-        <div className="container">
-          <h2 className="section-title">スタッフの声</h2>
-          <p style={{ textAlign: 'center', fontSize: '1.1rem', color: '#666', marginBottom: '3rem' }}>
-            実際に働くスタッフの生の声をお聞きください
-          </p>
+      {/* スタッフの声（将来再利用用に非表示） */}
+      {false && (
+        <section className="section" style={{ background: 'linear-gradient(135deg, #f0f8ff 0%, #e8f4f8 100%)', padding: '4rem 0' }}>
+          <div className="container">
+            <h2 className="section-title">スタッフの声</h2>
+            <p style={{ textAlign: 'center', fontSize: '1.1rem', color: '#666', marginBottom: '3rem' }}>
+              実際に働くスタッフの生の声をお聞きください
+            </p>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '2rem',
-            maxWidth: '1000px',
-            margin: '0 auto'
-          }}>
-            {(() => {
-              const staffVoices = [
-                {
-                  initial: 'A.S',
-                  career: '社会福祉士・3年目',
-                  voice: '成長を見守れる、やりがいのある職場です',
-                  color: '#4f46e5'
-                },
-                {
-                  initial: 'M.T',
-                  career: '保育士・1年目',
-                  voice: '温かい雰囲気で、安心して働ける職場です',
-                  color: '#059669'
-                },
-                {
-                  initial: 'K.Y',
-                  career: '精神保健福祉士・5年目',
-                  voice: '一人ひとりに寄り添える、深いやりがいがある仕事です',
-                  color: '#dc2626'
-                },
-                {
-                  initial: 'H.N',
-                  career: '教員免許・2年目',
-                  voice: 'チームワークが良く、学び合える職場です',
-                  color: '#7c3aed'
-                },
-                {
-                  initial: 'R.I',
-                  career: '社会福祉士・4年目',
-                  voice: '未経験でも丁寧に教えてもらえる、成長できる職場です',
-                  color: '#ea580c'
-                },
-                {
-                  initial: 'Y.K',
-                  career: '宿直専門・6年目',
-                  voice: '夜勤も安心、サポート体制が整った職場です',
-                  color: '#0891b2'
-                },
-                {
-                  initial: 'S.M',
-                  career: '保育士・3年目',
-                  voice: '子どもたちの笑顔が何よりの励みになる仕事です',
-                  color: '#be185d'
-                },
-                {
-                  initial: 'T.F',
-                  career: '社会福祉士・7年目',
-                  voice: '長く続けられる、働きやすい職場です',
-                  color: '#166534'
-                }
-              ];
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gap: '2rem',
+              maxWidth: '1000px',
+              margin: '0 auto'
+            }}>
+              {(() => {
+                const staffVoices = [
+                  {
+                    initial: 'A.S',
+                    career: '社会福祉士・3年目',
+                    voice: '成長を見守れる、やりがいのある職場です',
+                    color: '#4f46e5'
+                  },
+                  {
+                    initial: 'M.T',
+                    career: '保育士・1年目',
+                    voice: '温かい雰囲気で、安心して働ける職場です',
+                    color: '#059669'
+                  },
+                  {
+                    initial: 'K.Y',
+                    career: '精神保健福祉士・5年目',
+                    voice: '一人ひとりに寄り添える、深いやりがいがある仕事です',
+                    color: '#dc2626'
+                  },
+                  {
+                    initial: 'H.N',
+                    career: '教員免許・2年目',
+                    voice: 'チームワークが良く、学び合える職場です',
+                    color: '#7c3aed'
+                  },
+                  {
+                    initial: 'R.I',
+                    career: '社会福祉士・4年目',
+                    voice: '未経験でも丁寧に教えてもらえる、成長できる職場です',
+                    color: '#ea580c'
+                  },
+                  {
+                    initial: 'Y.K',
+                    career: '宿直専門・6年目',
+                    voice: '夜勤も安心、サポート体制が整った職場です',
+                    color: '#0891b2'
+                  },
+                  {
+                    initial: 'S.M',
+                    career: '保育士・3年目',
+                    voice: '子どもたちの笑顔が何よりの励みになる仕事です',
+                    color: '#be185d'
+                  },
+                  {
+                    initial: 'T.F',
+                    career: '社会福祉士・7年目',
+                    voice: '長く続けられる、働きやすい職場です',
+                    color: '#166534'
+                  }
+                ];
 
-              return staffVoices.map((staff, index) => (
-                <div
-                  key={index}
-                  className="staff-voice-item"
-                  style={{
-                    position: 'relative',
-                    textAlign: 'center',
-                    cursor: 'pointer',
-                    transition: 'transform 0.3s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-5px)';
-                    e.currentTarget.querySelector('.voice-bubble').style.opacity = '1';
-                    e.currentTarget.querySelector('.voice-bubble').style.transform = 'translateY(-10px) scale(1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.querySelector('.voice-bubble').style.opacity = '0';
-                    e.currentTarget.querySelector('.voice-bubble').style.transform = 'translateY(0) scale(0.8)';
-                  }}
-                >
-                  {/* 吹き出し */}
+                return staffVoices.map((staff, index) => (
                   <div
-                    className="voice-bubble"
+                    key={index}
+                    className="staff-voice-item"
                     style={{
-                      position: 'absolute',
-                      bottom: '100%',
-                      left: '50%',
-                      transform: 'translateX(-50%) translateY(0) scale(0.8)',
-                      background: 'white',
-                      padding: '1rem',
-                      borderRadius: '12px',
-                      boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
-                      minWidth: '200px',
-                      maxWidth: '250px',
-                      marginBottom: '15px',
-                      opacity: '0',
-                      transition: 'all 0.3s ease',
-                      zIndex: '10',
-                      border: `2px solid ${staff.color}`
+                      position: 'relative',
+                      textAlign: 'center',
+                      cursor: 'pointer',
+                      transition: 'transform 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-5px)';
+                      e.currentTarget.querySelector('.voice-bubble').style.opacity = '1';
+                      e.currentTarget.querySelector('.voice-bubble').style.transform = 'translateY(-10px) scale(1)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.querySelector('.voice-bubble').style.opacity = '0';
+                      e.currentTarget.querySelector('.voice-bubble').style.transform = 'translateY(0) scale(0.8)';
                     }}
                   >
+                    {/* 吹き出し */}
+                    <div
+                      className="voice-bubble"
+                      style={{
+                        position: 'absolute',
+                        bottom: '100%',
+                        left: '50%',
+                        transform: 'translateX(-50%) translateY(0) scale(0.8)',
+                        background: 'white',
+                        padding: '1rem',
+                        borderRadius: '12px',
+                        boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
+                        minWidth: '200px',
+                        maxWidth: '250px',
+                        marginBottom: '15px',
+                        opacity: '0',
+                        transition: 'all 0.3s ease',
+                        zIndex: '10',
+                        border: `2px solid ${staff.color}`
+                      }}
+                    >
+                      <p style={{
+                        margin: '0',
+                        fontSize: '0.9rem',
+                        fontWeight: '600',
+                        color: '#333',
+                        lineHeight: '1.4'
+                      }}>
+                        「{staff.voice}」
+                      </p>
+                      {/* 吹き出しの矢印 */}
+                      <div style={{
+                        position: 'absolute',
+                        top: '100%',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: '0',
+                        height: '0',
+                        borderLeft: '8px solid transparent',
+                        borderRight: '8px solid transparent',
+                        borderTop: `8px solid ${staff.color}`
+                      }}></div>
+                    </div>
+
+                    {/* スタッフアイコン */}
+                    <div style={{
+                      width: '80px',
+                      height: '80px',
+                      borderRadius: '50%',
+                      background: staff.color,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      margin: '0 auto 1rem',
+                      color: 'white',
+                      fontSize: '1.2rem',
+                      fontWeight: '700',
+                      boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+                      border: '3px solid white'
+                    }}>
+                      {staff.initial}
+                    </div>
+
+                    {/* 経歴 */}
                     <p style={{
                       margin: '0',
-                      fontSize: '0.9rem',
-                      fontWeight: '600',
-                      color: '#333',
-                      lineHeight: '1.4'
+                      fontSize: '0.85rem',
+                      color: '#666',
+                      fontWeight: '500'
                     }}>
-                      「{staff.voice}」
+                      {staff.career}
                     </p>
-                    {/* 吹き出しの矢印 */}
-                    <div style={{
-                      position: 'absolute',
-                      top: '100%',
-                      left: '50%',
-                      transform: 'translateX(-50%)',
-                      width: '0',
-                      height: '0',
-                      borderLeft: '8px solid transparent',
-                      borderRight: '8px solid transparent',
-                      borderTop: `8px solid ${staff.color}`
-                    }}></div>
                   </div>
+                ));
+              })()}
+            </div>
 
-                  {/* スタッフアイコン */}
-                  <div style={{
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '50%',
-                    background: staff.color,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 1rem',
-                    color: 'white',
-                    fontSize: '1.2rem',
-                    fontWeight: '700',
-                    boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
-                    border: '3px solid white'
-                  }}>
-                    {staff.initial}
-                  </div>
-
-                  {/* 経歴 */}
-                  <p style={{
-                    margin: '0',
-                    fontSize: '0.85rem',
-                    color: '#666',
-                    fontWeight: '500'
-                  }}>
-                    {staff.career}
-                  </p>
-                </div>
-              ));
-            })()}
+            <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+              <p style={{
+                fontSize: '0.9rem',
+                color: '#888',
+                fontStyle: 'italic'
+              }}>
+                ※アイコンにマウスを合わせると、スタッフの声が表示されます
+              </p>
+            </div>
           </div>
-
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <p style={{
-              fontSize: '0.9rem',
-              color: '#888',
-              fontStyle: 'italic'
-            }}>
-              ※アイコンにマウスを合わせると、スタッフの声が表示されます
-            </p>
-          </div>
-        </div>
-      </section>
-      */}
+        </section>
+      )}
 
       {/* 職場紹介 */}
       <section className="section" style={{ background: 'var(--light-gray)' }}>
