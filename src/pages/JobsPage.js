@@ -257,7 +257,36 @@ const JobsPage = () => {
         <div className="container">
           <h2 className="section-title">求人情報</h2>
           <div className="jobs-list">
-            {jobs.map((job) => (
+            <div style={{
+              textAlign: 'center',
+              padding: '6rem 2rem',
+              background: '#f9fafb',
+              borderRadius: '16px',
+              border: '2px dashed #cbd5e1',
+              margin: '2rem auto',
+              maxWidth: '800px'
+            }}>
+              <h3 style={{
+                fontSize: '1.5rem',
+                color: '#374151',
+                marginBottom: '1.5rem',
+                fontWeight: '700'
+              }}>
+                現在、募集を行っている求人はございません
+              </h3>
+              <p style={{
+                fontSize: '1.1rem',
+                color: '#6b7280',
+                lineHeight: '1.8',
+                marginBottom: 0
+              }}>
+                定員に達したため、現在募集を停止しております。<br />
+                募集を再開する際は、本ページにてご案内いたします。
+              </p>
+            </div>
+
+            {/* 一時的に非表示（再開時は true に変更） */}
+            {false && jobs.map((job) => (
               <div key={job.id} className="job-card-enhanced">
                 <div className="job-card-image">
                   {job.image && <img src={job.image} alt={`${job.title}勤務地の外観`} />}
