@@ -209,8 +209,8 @@ const HomesPage = () => {
               </div>
               <div className="sodachinoki-jigyo-card-body">
                 <div style={{ fontSize: '0.8rem', letterSpacing: '0.1em', color: '#F39800', fontWeight: 600, marginBottom: '0.4rem' }}>アフターケア事業</div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#333', marginBottom: '0.75rem', lineHeight: 1.4 }}>聞く・会う・社会につなぐ</h3>
-                <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '1rem' }}>NPO法人そだちの樹（2012年〜）が運営してきたサイト内容を、青少年の自立を支える福岡の会（SJFK）が継承する形でアーカイブしています。施設の先生・里親さん、10代20代の若者、地域のみなさまへ、それぞれのご案内ページをご覧いただけます。</p>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#333', marginBottom: '0.75rem', lineHeight: 1.4 }}>そだちの樹</h3>
+                <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '1rem' }}>「聞く・会う・社会につなぐ」を大切に、NPO法人そだちの樹が2012年から続けてきた取り組みを、当会が継承する形でアーカイブしています。</p>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#07913A', fontWeight: 600, fontSize: '0.95rem' }}>
                   そだちの樹のページへ
                   <span aria-hidden="true">→</span>
