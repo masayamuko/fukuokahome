@@ -81,13 +81,6 @@ const ICON_LEAF = (
   </svg>
 );
 
-const ICON_ARROW = (
-  <svg className="sodachinoki-h2-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
-    <path d="M3 10h13" strokeLinecap="round" />
-    <path d="M11 5l5 5-5 5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
 const ICON_PEOPLE = (
   <svg className="sodachinoki-h2-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <circle cx="7" cy="7" r="2.5" />

@@ -3016,3 +3016,30 @@ html { scroll-behavior: smooth; }
   box-shadow: none;
   border-radius: 0;
 }
+
+/* ============================================ */
+/* business-jump-btn 矢印アニメ（クリック誘導） */
+/* ============================================ */
+.business-jump-btn span[aria-hidden="true"]:last-child {
+  display: inline-block;
+  transition: transform 0.25s ease;
+  animation: business-jump-arrow-bounce 1.8s ease-in-out infinite;
+}
+.business-jump-btn:hover span[aria-hidden="true"]:last-child,
+.business-jump-btn:focus-visible span[aria-hidden="true"]:last-child {
+  animation: none;
+  transform: translateY(6px) scale(1.15);
+}
+@keyframes business-jump-arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .business-jump-btn span[aria-hidden="true"]:last-child {
+    animation: none;
+  }
+  .business-jump-btn:hover span[aria-hidden="true"]:last-child,
+  .business-jump-btn:focus-visible span[aria-hidden="true"]:last-child {
+    transform: none;
+  }
+}
