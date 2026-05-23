@@ -2555,14 +2555,16 @@ main {
   transform: translateY(0);
 }
 
-/* prefers-reduced-motion 対応 */
+/* prefers-reduced-motion 対応 (sodachinoki-page スコープに限定) */
 @media (prefers-reduced-motion: reduce) {
   .sodachinoki-fade-in {
     opacity: 1;
     transform: none;
     transition: none;
   }
-  *, *::before, *::after {
+  .sodachinoki-page *,
+  .sodachinoki-page *::before,
+  .sodachinoki-page *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
@@ -2967,7 +2969,6 @@ html { scroll-behavior: smooth; }
 /* 白い余白を削除する wrap modifier */
 .sodachinoki-wrap--flush {
   padding-bottom: 0 !important;
-  overflow: hidden;
 }
 .sodachinoki-wrap--flush > *:last-child {
   margin-bottom: 0;
@@ -3041,5 +3042,21 @@ html { scroll-behavior: smooth; }
   .business-jump-btn:hover span[aria-hidden="true"]:last-child,
   .business-jump-btn:focus-visible span[aria-hidden="true"]:last-child {
     transform: none;
+  }
+}
+
+
+/* ============================================ */
+/* /homes そだちの樹カード モバイル1カラム対応 */
+/* ============================================ */
+@media (max-width: 600px) {
+  .sodachinoki-jigyo-card {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 1.5rem !important;
+  }
+  .sodachinoki-jigyo-card-figure {
+    max-width: 180px;
+    margin: 0 auto;
   }
 }

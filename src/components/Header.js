@@ -13,6 +13,7 @@ const Header = () => {
       name: '私たちの事業',
       path: '/homes',
       children: [
+        { name: '事業一覧（私たちの事業）', path: '/homes' },
         { name: 'かんらん舎', path: '/homes/kanransya' },
         { name: '結ホーム', path: '/homes/yui' },
         { name: 'TIES', path: '/homes/ties' },
@@ -70,6 +71,11 @@ const Header = () => {
                   <li
                     key={item.path}
                     className={`nav-item nav-item--has-submenu ${isSubOpen ? 'is-open' : ''}`}
+                    onMouseLeave={() => {
+                      if (!window.matchMedia('(max-width: 768px)').matches) {
+                        setOpenSubmenu(null);
+                      }
+                    }}
                   >
                     <Link
                       to={item.path}
@@ -80,6 +86,22 @@ const Header = () => {
                           setOpenSubmenu(isSubOpen ? null : item.path);
                         } else {
                           handleNavClick();
+                        }
+                      }}
+                      onFocus={() => {
+                        if (!window.matchMedia('(max-width: 768px)').matches) {
+                          setOpenSubmenu(item.path);
+                        }
+                      }}
+                      onMouseEnter={() => {
+                        if (!window.matchMedia('(max-width: 768px)').matches) {
+                          setOpenSubmenu(item.path);
+                        }
+                      }}
+                      onBlur={(e) => {
+                        if (!window.matchMedia('(max-width: 768px)').matches &&
+                            !e.currentTarget.parentElement.contains(e.relatedTarget)) {
+                          setOpenSubmenu(null);
                         }
                       }}
                       aria-haspopup="true"
