@@ -169,7 +169,12 @@ const SodachinokiPage = () => {
         <div className="sodachinoki-keyphrase">そだちの樹</div>
         <DividerWave />
 
-        {/* 1. ヒーロー（ロゴ入り、ナビは外部に移動） */}
+        {/* 0b. ロゴ（キーフレーズ直下・ヒーロー上） */}
+        <div className="sodachinoki-top-logo">
+          <img src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1779514626/%E6%A8%B9_ml234j.png" alt="そだちの樹 ロゴ" />
+        </div>
+
+        {/* 1. ヒーロー（ロゴは上部へ移動、高さは維持） */}
         {topContent.hero && (
           <section
             className="sodachinoki-hero-block sodachinoki-hero-block--with-logo"
@@ -189,9 +194,6 @@ const SodachinokiPage = () => {
                   {topContent.hero.supportTargets}
                 </p>
               )}
-            </div>
-            <div className="sodachinoki-hero-logo">
-              <img src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1779514626/%E6%A8%B9_ml234j.png" alt="そだちの樹 ロゴ" />
             </div>
           </section>
         )}
