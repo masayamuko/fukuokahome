@@ -75,15 +75,20 @@ const HomesPage = () => {
       {/* ページヘッダー */}
       <section className="page-header">
         <div className="container">
-          <h1>自立援助ホーム</h1>
-          <p>家庭の事情により家族と暮らせない、児童養護施設等を退所した、<br />そんな15歳以上の青少年が生活し、自立に向けた支援を受ける施設です。</p>
+          <h1>私たちの事業</h1>
+          <p>青少年の自立を支える福岡の会は、2つの事業に取り組んでいます。<br />「児童自立生活援助事業」（自立援助ホームの運営）と、「施設退所児童等自立支援促進事業」（そだちの樹のアフターケア事業）です。</p>
         </div>
       </section>
 
 
-      {/* ホーム一覧 */}
-      <section className="section" style={{ background: 'white', padding: '4rem 0' }}>
+      {/* 児童自立生活援助事業（自立援助ホーム一覧） */}
+      <section id="jido-jiritsu-seikatsu-enjo" className="section" style={{ background: 'white', padding: '4rem 0' }}>
         <div className="container">
+          <div className="business-section-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div className="business-eyebrow" style={{ fontSize: '0.85rem', letterSpacing: '0.15em', color: '#07913A', fontWeight: 600, marginBottom: '0.5rem' }}>事業 01</div>
+            <h2 className="section-title" style={{ marginBottom: '0.75rem' }}>児童自立生活援助事業</h2>
+            <p style={{ color: '#666', maxWidth: '720px', margin: '0 auto', lineHeight: 1.8 }}>家庭の事情により家族と暮らせない、児童養護施設等を退所した、そんな15歳以上の青少年が生活し、自立に向けた支援を受ける「自立援助ホーム」を5ホーム運営しています。</p>
+          </div>
           <div className="homes-grid">
             {homes.map((home) => (
               <div key={home.id} className="home-card-detailed">
@@ -166,6 +171,34 @@ const HomesPage = () => {
                 NPO法人ポータルサイト
               </a>
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 施設退所児童等自立支援促進事業（そだちの樹のアフターケア事業） */}
+      <section id="sodachinoki" className="section" style={{ background: 'linear-gradient(180deg, #FDF9F0 0%, #FFFCF5 100%)', padding: '5rem 0', borderTop: '1px solid rgba(7,145,58,0.08)' }}>
+        <div className="container">
+          <div className="business-section-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <div className="business-eyebrow" style={{ fontSize: '0.85rem', letterSpacing: '0.15em', color: '#07913A', fontWeight: 600, marginBottom: '0.5rem' }}>事業 02</div>
+            <h2 className="section-title" style={{ marginBottom: '0.75rem' }}>施設退所児童等自立支援促進事業</h2>
+            <p style={{ color: '#666', maxWidth: '720px', margin: '0 auto', lineHeight: 1.8 }}>福岡県から委託を受けて運営している、社会的養護を経験した方への退所後の伴走支援事業です。NPO法人そだちの樹から事業を継承し、住まいや仕事の確保、生活全般の支援を行っています。</p>
+          </div>
+
+          <div className="sodachinoki-card-wrap" style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <Link to="/sodachinoki" className="sodachinoki-jigyo-card" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 220px) 1fr', gap: '2rem', alignItems: 'center', background: '#fff', borderRadius: '16px', padding: '2rem', textDecoration: 'none', color: 'inherit', boxShadow: '0 8px 28px rgba(0,0,0,0.08)', transition: 'transform 0.25s ease, box-shadow 0.25s ease', borderLeft: '4px solid #07913A' }}>
+              <div className="sodachinoki-jigyo-card-figure" style={{ aspectRatio: '1 / 1', borderRadius: '12px', overflow: 'hidden', background: 'linear-gradient(135deg, #07913A 0%, #0aa848 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '1.4rem', fontWeight: 700, letterSpacing: '0.1em' }}>
+                そだちの樹
+              </div>
+              <div className="sodachinoki-jigyo-card-body">
+                <div style={{ fontSize: '0.8rem', letterSpacing: '0.1em', color: '#F39800', fontWeight: 600, marginBottom: '0.4rem' }}>アフターケア事業</div>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#333', marginBottom: '0.75rem', lineHeight: 1.4 }}>聞く・会う・社会につなぐ</h3>
+                <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '1rem' }}>NPO法人そだちの樹（2012年〜）が運営してきたサイト内容を、青少年の自立を支える福岡の会（SJFK）が継承する形でアーカイブしています。施設の先生・里親さん、10代20代の若者、地域のみなさまへ、それぞれのご案内ページをご覧いただけます。</p>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#07913A', fontWeight: 600, fontSize: '0.95rem' }}>
+                  そだちの樹のページへ
+                  <span aria-hidden="true">→</span>
+                </span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

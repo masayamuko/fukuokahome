@@ -136,3 +136,113 @@
     transform: rotate(-45deg) translate(7px, -6px);
   }
 }
+/* ============================================ */
+/* 私たちの事業 ドロップダウン (preview/sodachinoki-integration) */
+/* ============================================ */
+.nav-item--has-submenu {
+  position: relative;
+}
+.nav-link--parent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.nav-link-caret {
+  font-size: 0.6rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  opacity: 0.75;
+}
+.nav-item--has-submenu:hover .nav-link-caret,
+.nav-item--has-submenu.is-open .nav-link-caret {
+  transform: rotate(180deg);
+}
+
+/* PC: hover で表示 */
+.nav-submenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 200px;
+  background: var(--white, #fff);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 100;
+}
+.nav-item--has-submenu:hover .nav-submenu,
+.nav-item--has-submenu:focus-within .nav-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-submenu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: var(--white, #fff);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  transform-origin: center;
+  transform: translateX(-50%) rotate(45deg);
+}
+.nav-submenu-item {
+  margin: 0;
+}
+.nav-submenu-link {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+.nav-submenu-link:hover,
+.nav-submenu-link.active {
+  background: rgba(7, 145, 58, 0.08);
+  color: var(--primary-color);
+}
+
+/* モバイル: タップで展開 */
+@media (max-width: 768px) {
+  .nav-link--parent {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-submenu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 0;
+    margin: 0.5rem 0 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 0.3s ease;
+    border-radius: 6px;
+  }
+  .nav-submenu::before {
+    display: none;
+  }
+  .nav-item--has-submenu.is-open .nav-submenu {
+    max-height: 500px;
+  }
+  .nav-submenu-link {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.92rem;
+  }
+}

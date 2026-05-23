@@ -21,6 +21,7 @@ const Footer = () => {
               <li><a href="/#basic-info">概要</a></li>
               <li><a href="/#history">沿革</a></li>
               <li><Link to="/news">活動報告</Link></li>
+              <li><Link to="/sodachinoki">そだちの樹アーカイブ</Link></li>
             </ul>
           </div>
 

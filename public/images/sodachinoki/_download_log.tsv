@@ -1,0 +1,106 @@
+url	local_name	status	size	message
+https://sodachinoki.org/about/images/apple-touch-icon-precomposed.png	about__apple-touch-icon-precomposed.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/about/images/favicon.ico	about__favicon.ico	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/about/images/ogp_img.png	about__ogp_img.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/action/images/apple-touch-icon-precomposed.png	action__apple-touch-icon-precomposed.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/action/images/favicon.ico	action__favicon.ico	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/action/images/ogp_img.png	action__ogp_img.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/contact/images/apple-touch-icon-precomposed.png	contact__apple-touch-icon-precomposed.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/contact/images/favicon.ico	contact__favicon.ico	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/contact/images/ogp_img.png	contact__ogp_img.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/for-citizen/images/apple-touch-icon-precomposed.png	for-citizen__apple-touch-icon-precomposed.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/for-citizen/images/favicon.ico	for-citizen__favicon.ico	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/for-citizen/images/ogp_img.png	for-citizen__ogp_img.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/for-shisetsu/images/apple-touch-icon-precomposed.png	for-shisetsu__apple-touch-icon-precomposed.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/for-shisetsu/images/favicon.ico	for-shisetsu__favicon.ico	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/for-shisetsu/images/ogp_img.png	for-shisetsu__ogp_img.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/for-wakamono/images/apple-touch-icon-precomposed.png	for-wakamono__apple-touch-icon-precomposed.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/for-wakamono/images/favicon.ico	for-wakamono__favicon.ico	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/for-wakamono/images/ogp_img.png	for-wakamono__ogp_img.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/images/apple-touch-icon-precomposed.png	root__apple-touch-icon-precomposed.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/images/favicon.ico	root__favicon.ico	OK	1150	
+https://sodachinoki.org/images/ogp_img.png	root__ogp_img.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/kokoline/images/apple-touch-icon-precomposed.png	kokoline__apple-touch-icon-precomposed.png	FAILED	0	retry:all attempts failed
+
+https://sodachinoki.org/kokoline/images/favicon.ico	kokoline__favicon.ico	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/kokoline/images/ogp_img.png	kokoline__ogp_img.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/support/images/apple-touch-icon-precomposed.png	support__apple-touch-icon-precomposed.png	FAILED	0	retry:all attempts failed
+https://sodachinoki.org/support/images/favicon.ico	support__favicon.ico	FAILED	0	retry:all attempts failed
+
+https://sodachinoki.org/support/images/ogp_img.png	support__ogp_img.png	FAILED	0	retry:all attempts failed
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/arrow01.png	_common__arrow01.png	OK	269	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/arrow02.png	_common__arrow02.png	OK	289	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/arrow03.png	_common__arrow03.png	OK	519	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/arrow04.png	_common__arrow04.png	OK	244	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/arrow05.png	_common__arrow05.png	OK	417	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/bg01.jpg	_common__bg01.jpg	OK	1671	retry:ts-20220905015851
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/bg02.jpg	_common__bg02.jpg	OK	1836	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/bg03.jpg	_common__bg03.jpg	OK	1243	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/bg04.jpg	_common__bg04.jpg	OK	1521	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/flow01.jpg	_common__flow01.jpg	OK	6701	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/footer-bg01.png	_common__footer-bg01.png	OK	48681	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/footer-bg02.png	_common__footer-bg02.png	OK	16625	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/footer-logo01.png	_common__footer-logo01.png	OK	7658	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/footer-logo02.png	_common__footer-logo02.png	OK	3075	retry:wildcard-redirect
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/footer-tel.png	_common__footer-tel.png	OK	2736	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/gotop.png	_common__gotop.png	OK	1239	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/header-logo.png	_common__header-logo.png	OK	7658	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/header-tel.png	_common__header-tel.png	OK	2295	retry:wildcard-redirect
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/icon_check.png	_common__icon_check.png	OK	365	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/logo_kokoline.png	_common__logo_kokoline.png	OK	2332	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/_common/page-bg01.jpg	_common__page-bg01.jpg	OK	7876	retry:wildcard-redirect
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/action/ph01.gif	action__ph01.gif	OK	2351	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/action/ph02.gif	action__ph02.gif	OK	1806	retry:wildcard-redirect
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/action/ph03.gif	action__ph03.gif	OK	2366	retry:wildcard-redirect
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/generation/geteration.png	generation__geteration.png	OK	7280	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/generation/icon_tel.png	generation__icon_tel.png	OK	1013	retry:wildcard-redirect
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/generation/kikiline.png	generation__kikiline.png	OK	1660	retry:wildcard-redirect
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/generation/syokudou.png	generation__syokudou.png	OK	1458	retry:wildcard-redirect
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/btn_plus.png	kokoline-images_common__btn_plus.png	OK	1084	retry:wildcard-redirect
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/btn_tel01.png	kokoline-images_common__btn_tel01.png	OK	19275	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/btn_tel02.png	kokoline-images_common__btn_tel02.png	OK	3569	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/icn_dot_black.png	kokoline-images_common__icn_dot_black.png	OK	1247	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/icn_dot_orange.png	kokoline-images_common__icn_dot_orange.png	OK	537	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/icn_mail.png	kokoline-images_common__icn_mail.png	OK	606	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/icn_tw.png	kokoline-images_common__icn_tw.png	OK	953	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/icon_checked.png	kokoline-images_common__icon_checked.png	OK	1289	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/img_tel.png	kokoline-images_common__img_tel.png	OK	19285	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/line01.png	kokoline-images_common__line01.png	OK	1173	retry:wildcard-redirect
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/line_dot.gif	kokoline-images_common__line_dot.gif	OK	1205	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/logo_sodachi.png	kokoline-images_common__logo_sodachi.png	OK	11421	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/common/toplogo.png	kokoline-images_common__toplogo.png	OK	8086	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/girl02.png	kokoline-images_top__girl02.png	OK	33392	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/icn_fuki01.png	kokoline-images_top__icn_fuki01.png	OK	4944	retry:wildcard-redirect
+
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/img_boy.png	kokoline-images_top__img_boy.png	OK	9129	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/img_fuki01.png	kokoline-images_top__img_fuki01.png	OK	2507	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/img_fuki02.png	kokoline-images_top__img_fuki02.png	OK	2487	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/img_girl01.png	kokoline-images_top__img_girl01.png	OK	36875	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/kokoline_bg01.jpg	kokoline-images_top__kokoline_bg01.jpg	OK	3421	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/main01.jpg	kokoline-images_top__main01.jpg	OK	84024	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/name01.jpg	kokoline-images_top__name01.jpg	OK	7099	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/name02.jpg	kokoline-images_top__name02.jpg	OK	7606	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/nayami01.jpg	kokoline-images_top__nayami01.jpg	OK	46785	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/ph01.jpg	kokoline-images_top__ph01.jpg	OK	12995	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/ph02.jpg	kokoline-images_top__ph02.jpg	OK	14670	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/sttl01.png	kokoline-images_top__sttl01.png	OK	2524	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/sttl02.gif	kokoline-images_top__sttl02.gif	OK	3607	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/kokoline-images/top/sttl02.jpg	kokoline-images_top__sttl02.jpg	OK	2144	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/parents/hello.png	parents__hello.png	OK	16434	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/top/bg01.jpg	top__bg01.jpg	OK	136009	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/top/bg02.jpg	top__bg02.jpg	OK	52691	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/top/check.png	top__check.png	OK	284	
+https://sodachinoki.org/wp/wp-content/themes/sodachinoki/images/top/heading01.png	top__heading01.png	OK	2731	
+https://sodachinoki.org/wp/wp-content/uploads/2017/01/e1f287bf78641594267a3420306e5704.png	uploads_2017_01__e1f287bf78641594267a3420306e5704.png	OK	54315	

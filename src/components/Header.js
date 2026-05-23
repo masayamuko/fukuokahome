@@ -4,22 +4,39 @@ import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState(null);
   const location = useLocation();
 
   const navigation = [
     { name: 'TOP', path: '/' },
-    { name: '運営ホーム', path: '/homes' },
+    {
+      name: '私たちの事業',
+      path: '/homes',
+      children: [
+        { name: 'かんらん舎', path: '/homes/kanransya' },
+        { name: '結ホーム', path: '/homes/yui' },
+        { name: 'TIES', path: '/homes/ties' },
+        { name: 'LEAP', path: '/homes/leap' },
+        { name: 'スイッチ', path: '/homes/switch' },
+        { name: 'そだちの樹', path: '/sodachinoki' },
+      ],
+    },
     { name: '求人情報', path: '/jobs' },
-    // { name: '寄付・支援', path: '/donation' }, // 非公開期間のため一時的に非表示
     { name: 'お知らせ', path: '/news' },
-    { name: 'お問合せ', path: '/contact' }
+    { name: 'お問合せ', path: '/contact' },
   ];
 
   const isActive = (path) => {
-    if (path === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(path);
+    if (path === '/') return location.pathname === '/';
+    return location.pathname === path || location.pathname.startsWith(path + '/');
+  };
+
+  const isChildActive = (item) =>
+    item.children && item.children.some((c) => isActive(c.path));
+
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+    setOpenSubmenu(null);
   };
 
   return (
@@ -29,24 +46,68 @@ const Header = () => {
           <Link to="/" className="logo">
             <h1>特定非営利活動法人<br />青少年の自立を支える福岡の会</h1>
           </Link>
-          
+
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <ul className="nav-list">
-              {navigation.map((item) => (
-                <li key={item.path} className="nav-item">
-                  <Link 
-                    to={item.path} 
-                    className={`nav-link ${isActive(item.path) ? 'active' : ''}`}
-                    onClick={() => setIsMenuOpen(false)}
+              {navigation.map((item) => {
+                const hasChildren = Array.isArray(item.children) && item.children.length > 0;
+                const active = isActive(item.path) || isChildActive(item);
+                if (!hasChildren) {
+                  return (
+                    <li key={item.path} className="nav-item">
+                      <Link
+                        to={item.path}
+                        className={`nav-link ${active ? 'active' : ''}`}
+                        onClick={handleNavClick}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  );
+                }
+                const isSubOpen = openSubmenu === item.path;
+                return (
+                  <li
+                    key={item.path}
+                    className={`nav-item nav-item--has-submenu ${isSubOpen ? 'is-open' : ''}`}
                   >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+                    <Link
+                      to={item.path}
+                      className={`nav-link nav-link--parent ${active ? 'active' : ''}`}
+                      onClick={(e) => {
+                        if (window.matchMedia('(max-width: 768px)').matches) {
+                          e.preventDefault();
+                          setOpenSubmenu(isSubOpen ? null : item.path);
+                        } else {
+                          handleNavClick();
+                        }
+                      }}
+                      aria-haspopup="true"
+                      aria-expanded={isSubOpen}
+                    >
+                      {item.name}
+                      <span className="nav-link-caret" aria-hidden="true">▾</span>
+                    </Link>
+                    <ul className="nav-submenu">
+                      {item.children.map((child) => (
+                        <li key={child.path} className="nav-submenu-item">
+                          <Link
+                            to={child.path}
+                            className={`nav-submenu-link ${isActive(child.path) ? 'active' : ''}`}
+                            onClick={handleNavClick}
+                          >
+                            {child.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
 
-          <button 
+          <button
             className="menu-toggle"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="メニューを開く"
