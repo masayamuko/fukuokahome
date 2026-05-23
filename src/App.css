@@ -2941,3 +2941,21 @@ main {
   opacity: 1 !important;
   transform: none !important;
 }
+
+/* ============================================ */
+/* 事業ジャンプボタン (HomesPage) */
+/* ============================================ */
+html { scroll-behavior: smooth; }
+#jido-jiritsu-seikatsu-enjo,
+#sodachinoki {
+  scroll-margin-top: 100px;
+}
+.business-jump-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .business-jump-btn { transition: none !important; }
+  .business-jump-btn:hover { transform: none; }
+}

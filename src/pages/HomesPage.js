@@ -76,7 +76,25 @@ const HomesPage = () => {
       <section className="page-header">
         <div className="container">
           <h1>私たちの事業</h1>
-          <p>青少年の自立を支える福岡の会は、2つの事業に取り組んでいます。<br />「児童自立生活援助事業」（自立援助ホームの運営）と、「施設退所児童等自立支援促進事業」（そだちの樹のアフターケア事業）です。</p>
+          <p style={{ marginBottom: '2rem' }}>青少年の自立を支える福岡の会は、2つの事業に取り組んでいます。</p>
+          <div className="business-jump-buttons" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', maxWidth: '720px', margin: '0 auto' }}>
+            <a href="#jido-jiritsu-seikatsu-enjo" className="business-jump-btn" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.2rem 1.5rem', background: '#fff', borderRadius: '12px', textDecoration: 'none', color: '#333', boxShadow: '0 4px 16px rgba(0,0,0,0.08)', borderLeft: '4px solid #07913A', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '50%', background: '#07913A', color: '#fff', fontWeight: 700, fontSize: '1.1rem', flexShrink: 0 }}>①</span>
+              <span style={{ flex: 1, textAlign: 'left' }}>
+                <span style={{ display: 'block', fontWeight: 700, fontSize: '1.05rem', lineHeight: 1.4 }}>児童自立生活援助事業</span>
+                <span style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginTop: '0.2rem' }}>自立援助ホームの運営</span>
+              </span>
+              <span aria-hidden="true" style={{ color: '#07913A', fontSize: '1.2rem', flexShrink: 0 }}>↓</span>
+            </a>
+            <a href="#sodachinoki" className="business-jump-btn" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.2rem 1.5rem', background: '#fff', borderRadius: '12px', textDecoration: 'none', color: '#333', boxShadow: '0 4px 16px rgba(0,0,0,0.08)', borderLeft: '4px solid #F39800', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '50%', background: '#F39800', color: '#fff', fontWeight: 700, fontSize: '1.1rem', flexShrink: 0 }}>②</span>
+              <span style={{ flex: 1, textAlign: 'left' }}>
+                <span style={{ display: 'block', fontWeight: 700, fontSize: '1.05rem', lineHeight: 1.4 }}>施設退所児童等自立支援促進事業</span>
+                <span style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginTop: '0.2rem' }}>そだちの樹のアフターケア事業</span>
+              </span>
+              <span aria-hidden="true" style={{ color: '#F39800', fontSize: '1.2rem', flexShrink: 0 }}>↓</span>
+            </a>
+          </div>
         </div>
       </section>
 
