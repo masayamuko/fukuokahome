@@ -350,13 +350,6 @@ const SodachinokiPage = () => {
         {/* 9. 対象別ナビ（記事内・下） */}
         <InlineNav heading="より詳しく知りたい方は" />
 
-        {/* 10. 最終CTAブロック */}
-        <div className="sodachinoki-final-cta">
-          <p>そだちの樹の活動を継承するSJFKへ</p>
-          <Link to="/contact" className="sodachinoki-cta-button">
-            お問い合わせはこちら
-          </Link>
-        </div>
       </div>
     </div>
   );

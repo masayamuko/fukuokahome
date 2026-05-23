@@ -321,35 +321,18 @@ export const sectionData = {
         type: 'box',
         variant: 'cream',
         title: 'コンセプト「聞く。会う。動く。」',
-        content: [
-          {
-            type: 'paragraph',
-            text:
-              '「ここライン」は、家庭に居場所がない10代・20代の若者を対象として2012年から運営してきた電話・メールによる相談窓口です。社会福祉士や弁護士が、聞いて、会って、動いて、解決することをコンセプトに対応してきました。',
-          },
-          {
-            type: 'paragraph',
-            text:
-              '現在は SJFK（青少年の自立を支える福岡の会）が継承し、各ホームの窓口で相談を受け付けています。',
-          },
-        ],
       },
 
-      // 連絡先
+      // 協力のお願い
+      { type: 'heading', level: 2, text: '協力のお願い' },
+      { type: 'keyphrase', text: 'わたしたちと一緒に、若者を支えてください。' },
+
+      // 連絡先（最後尾に移動）
       { type: 'heading', level: 2, text: '連絡先' },
       {
         type: 'contactInfo',
         phone: '092-791-1673',
         hours: '平日10:00〜18:00',
-      },
-
-      // 協力のお願い CTA
-      { type: 'heading', level: 2, text: '協力のお願い' },
-      { type: 'keyphrase', text: 'わたしたちと一緒に、若者を支えてください。' },
-      {
-        type: 'cta',
-        text: 'お問い合わせ・ご相談はこちらから',
-        href: '/contact',
       },
     ],
   },
