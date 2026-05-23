@@ -204,8 +204,8 @@ const HomesPage = () => {
 
           <div className="sodachinoki-card-wrap" style={{ maxWidth: '900px', margin: '0 auto' }}>
             <Link to="/sodachinoki" className="sodachinoki-jigyo-card" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 220px) 1fr', gap: '2rem', alignItems: 'center', background: '#fff', borderRadius: '16px', padding: '2rem', textDecoration: 'none', color: 'inherit', boxShadow: '0 8px 28px rgba(0,0,0,0.08)', transition: 'transform 0.25s ease, box-shadow 0.25s ease', borderLeft: '4px solid #07913A' }}>
-              <div className="sodachinoki-jigyo-card-figure" style={{ aspectRatio: '1 / 1', borderRadius: '12px', overflow: 'hidden', background: 'linear-gradient(135deg, #07913A 0%, #0aa848 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '1.4rem', fontWeight: 700, letterSpacing: '0.1em' }}>
-                そだちの樹
+              <div className="sodachinoki-jigyo-card-figure" style={{ aspectRatio: '1 / 1', borderRadius: '12px', overflow: 'hidden', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
+                <img src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1779514626/%E6%A8%B9_ml234j.png" alt="そだちの樹 ロゴ" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
               </div>
               <div className="sodachinoki-jigyo-card-body">
                 <div style={{ fontSize: '0.8rem', letterSpacing: '0.1em', color: '#F39800', fontWeight: 600, marginBottom: '0.4rem' }}>アフターケア事業</div>
