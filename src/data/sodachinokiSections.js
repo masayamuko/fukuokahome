@@ -59,7 +59,7 @@ export const sectionData = {
           {
             type: 'box',
             variant: 'green',
-            title: '1. わたしたちを行事に呼んでください',
+            title: 'わたしたちを行事に呼んでください',
             content: [
               {
                 type: 'paragraph',
@@ -72,7 +72,7 @@ export const sectionData = {
           {
             type: 'box',
             variant: 'green',
-            title: '2. ちょっとしたイベントを開かせてください',
+            title: 'ちょっとしたイベントを開かせてください',
             content: [
               {
                 type: 'paragraph',
@@ -155,21 +155,16 @@ export const sectionData = {
         ],
       },
 
-      // 連絡先
+      // 協力のお願い
+      { type: 'heading', level: 2, text: '協力のお願い' },
+      { type: 'keyphrase', text: 'わたしたちと一緒に、若者を支えてください。' },
+
+      // 連絡先（最後尾に移動）
       { type: 'heading', level: 2, text: '連絡先' },
       {
         type: 'contactInfo',
         phone: '092-791-1673',
         hours: '平日10:00〜18:00',
-      },
-
-      // 協力のお願い CTA
-      { type: 'heading', level: 2, text: '協力のお願い' },
-      { type: 'keyphrase', text: 'わたしたちと一緒に、若者を支えてください。' },
-      {
-        type: 'cta',
-        text: 'お問い合わせ・ご相談はこちらから',
-        href: '/contact',
       },
     ],
   },

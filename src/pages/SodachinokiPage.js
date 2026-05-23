@@ -118,9 +118,9 @@ const ACTION_BG_IMAGES = [
 ];
 
 // 記事内に置く大きな対象別3カードナビ
-const InlineNav = ({ heading }) => (
+const InlineNav = ({ heading, variant }) => (
   <section
-    className="sodachinoki-inline-nav"
+    className={`sodachinoki-inline-nav${variant ? ` sodachinoki-inline-nav--${variant}` : ''}`}
     aria-label={heading || '対象別ナビゲーション'}
   >
     {heading && (
@@ -170,11 +170,16 @@ const SodachinokiPage = () => {
 
   return (
     <div className="sodachinoki-page">
-      <div className="sodachinoki-wrap">
-        {/* 1. ヒーロー + 対象別ナビ統合ブロック */}
+      <div className="sodachinoki-wrap sodachinoki-wrap--flush">
+        {/* 0. トップキーフレーズ「そだちの樹」 */}
+        <DividerWave />
+        <div className="sodachinoki-keyphrase">そだちの樹</div>
+        <DividerWave />
+
+        {/* 1. ヒーロー（ロゴ入り、ナビは外部に移動） */}
         {topContent.hero && (
           <section
-            className="sodachinoki-hero-block"
+            className="sodachinoki-hero-block sodachinoki-hero-block--with-logo"
             style={{
               backgroundImage: topContent.hero.image
                 ? `url(${topContent.hero.image})`
@@ -192,11 +197,16 @@ const SodachinokiPage = () => {
                 </p>
               )}
             </div>
-            <InlineNav />
+            <div className="sodachinoki-hero-logo">
+              <img src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1779514626/%E6%A8%B9_ml234j.png" alt="そだちの樹 ロゴ" />
+            </div>
           </section>
         )}
 
-        {/* 2. キーフレーズ（上下に波線セパレータ） */}
+        {/* 1b. 対象別ナビ（ヒーロー外、オレンジ） */}
+        <InlineNav variant="orange" />
+
+        {/* 2. キーフレーズ「聞く・会う・社会につなぐ」 */}
         {topContent.keyphrase && (
           <>
             <DividerWave />
@@ -210,12 +220,9 @@ const SodachinokiPage = () => {
           <section className="sodachinoki-section sodachinoki-section--variant-cream sodachinoki-fade-in">
             <h2 className="sodachinoki-h2">
               {ICON_LEAF}
-              {topContent.about.sectionTitle}
+              {topContent.about.missionTitle || topContent.about.sectionTitle}
             </h2>
 
-            {topContent.about.missionTitle && (
-              <h3 className="sodachinoki-h3">{topContent.about.missionTitle}</h3>
-            )}
             {topContent.about.mission && (
               <p className="sodachinoki-paragraph">
                 {renderMultiline(topContent.about.mission)}
@@ -240,7 +247,6 @@ const SodachinokiPage = () => {
         {topContent.action && (
           <section className="sodachinoki-section sodachinoki-section--variant-plain sodachinoki-fade-in">
             <h2 className="sodachinoki-h2">
-              {ICON_ARROW}
               {topContent.action.sectionTitle}
             </h2>
             {topContent.action.lead && (

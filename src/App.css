@@ -2959,3 +2959,60 @@ html { scroll-behavior: smooth; }
   .business-jump-btn { transition: none !important; }
   .business-jump-btn:hover { transform: none; }
 }
+
+/* ============================================ */
+/* sodachinoki-page 追加スタイル (preview/sodachinoki-integration) */
+/* ============================================ */
+
+/* 白い余白を削除する wrap modifier */
+.sodachinoki-wrap--flush {
+  padding-bottom: 0 !important;
+  overflow: hidden;
+}
+.sodachinoki-wrap--flush > *:last-child {
+  margin-bottom: 0;
+}
+
+/* TOPヒーロー: ロゴを内包するレイアウト */
+.sodachinoki-hero-block--with-logo {
+  min-height: 360px;
+}
+.sodachinoki-hero-block--with-logo .sodachinoki-hero-overlay {
+  padding: 2.5rem 1.5rem 1rem;
+}
+.sodachinoki-hero-logo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem 2.5rem;
+}
+.sodachinoki-hero-logo img {
+  max-width: 240px;
+  max-height: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));
+}
+@media (max-width: 600px) {
+  .sodachinoki-hero-logo img {
+    max-width: 160px;
+    max-height: 110px;
+  }
+}
+
+/* オレンジ版 InlineNav */
+.sodachinoki-inline-nav--orange {
+  background: linear-gradient(135deg, #F39800 0%, #F7941D 100%);
+}
+.sodachinoki-inline-nav--orange .sodachinoki-inline-nav-card-icon {
+  background-color: #F39800 !important;
+}
+
+/* for-shisetsu のヒーロー画像も透過PNGなのでシャドウ・角丸を外して背景に溶け込ませる */
+.sodachinoki-detail-header-figure--for-shisetsu img {
+  box-shadow: none;
+  border-radius: 0;
+}

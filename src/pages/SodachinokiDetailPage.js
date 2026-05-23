@@ -338,7 +338,7 @@ const SodachinokiDetailPage = () => {
 
   return (
     <div className="sodachinoki-page">
-      <div className="sodachinoki-wrap">
+      <div className="sodachinoki-wrap sodachinoki-wrap--flush">
         <Link to="/sodachinoki" className="sodachinoki-nav-back">
           ← そだちの樹アーカイブTOPへ
         </Link>
