@@ -78,21 +78,21 @@ const HomesPage = () => {
           <h1>私たちの事業</h1>
           <p style={{ marginBottom: '2rem' }}>青少年の自立を支える福岡の会は、2つの事業に取り組んでいます。</p>
           <div className="business-jump-buttons" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', maxWidth: '720px', margin: '0 auto' }}>
-            <a href="#jido-jiritsu-seikatsu-enjo" className="business-jump-btn" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.2rem 1.5rem', background: '#fff', borderRadius: '12px', textDecoration: 'none', color: '#333', boxShadow: '0 4px 16px rgba(0,0,0,0.08)', borderLeft: '4px solid #07913A', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }}>
-              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '50%', background: '#07913A', color: '#fff', fontWeight: 700, fontSize: '1.1rem', flexShrink: 0 }}>1</span>
+            <a href="#jido-jiritsu-seikatsu-enjo" className="business-jump-btn" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.2rem 1.5rem', background: '#fff', borderRadius: '12px', textDecoration: 'none', color: '#333', boxShadow: '0 4px 16px rgba(0,0,0,0.08)', borderLeft: '4px solid #E67E50', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '50%', background: '#E67E50', color: '#fff', fontWeight: 700, fontSize: '1.1rem', flexShrink: 0 }}>1</span>
               <span style={{ flex: 1, textAlign: 'left' }}>
                 <span style={{ display: 'block', fontWeight: 700, fontSize: '1.05rem', lineHeight: 1.4 }}>児童自立生活援助事業</span>
                 <span style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginTop: '0.2rem' }}>自立援助ホームの運営</span>
               </span>
-              <span aria-hidden="true" style={{ color: '#07913A', fontSize: '1.2rem', flexShrink: 0 }}>↓</span>
+              <span aria-hidden="true" style={{ color: '#E67E50', fontSize: '1.2rem', flexShrink: 0 }}>↓</span>
             </a>
-            <a href="#sodachinoki" className="business-jump-btn" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.2rem 1.5rem', background: '#fff', borderRadius: '12px', textDecoration: 'none', color: '#333', boxShadow: '0 4px 16px rgba(0,0,0,0.08)', borderLeft: '4px solid #F39800', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }}>
-              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '50%', background: '#F39800', color: '#fff', fontWeight: 700, fontSize: '1.1rem', flexShrink: 0 }}>2</span>
+            <a href="#sodachinoki" className="business-jump-btn" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.2rem 1.5rem', background: '#fff', borderRadius: '12px', textDecoration: 'none', color: '#333', boxShadow: '0 4px 16px rgba(0,0,0,0.08)', borderLeft: '4px solid #07913A', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '50%', background: '#07913A', color: '#fff', fontWeight: 700, fontSize: '1.1rem', flexShrink: 0 }}>2</span>
               <span style={{ flex: 1, textAlign: 'left' }}>
                 <span style={{ display: 'block', fontWeight: 700, fontSize: '1.05rem', lineHeight: 1.4 }}>施設退所児童等自立支援促進事業</span>
                 <span style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginTop: '0.2rem' }}>そだちの樹のアフターケア事業</span>
               </span>
-              <span aria-hidden="true" style={{ color: '#F39800', fontSize: '1.2rem', flexShrink: 0 }}>↓</span>
+              <span aria-hidden="true" style={{ color: '#07913A', fontSize: '1.2rem', flexShrink: 0 }}>↓</span>
             </a>
           </div>
         </div>
@@ -103,8 +103,8 @@ const HomesPage = () => {
       <section id="jido-jiritsu-seikatsu-enjo" className="section" style={{ background: 'white', padding: '4rem 0' }}>
         <div className="container">
           <div className="business-section-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <div className="business-eyebrow" style={{ fontSize: '0.85rem', letterSpacing: '0.15em', color: '#07913A', fontWeight: 600, marginBottom: '0.5rem' }}>事業 01</div>
-            <h2 className="section-title" style={{ marginBottom: '0.75rem' }}>児童自立生活援助事業</h2>
+            <div className="business-eyebrow" style={{ fontSize: '0.85rem', letterSpacing: '0.15em', color: '#E67E50', fontWeight: 600, marginBottom: '0.5rem' }}>児童自立生活援助事業</div>
+            <h2 className="section-title" style={{ marginBottom: '0.75rem', color: '#E67E50' }}>自立援助ホーム</h2>
             <p style={{ color: '#666', maxWidth: '720px', margin: '0 auto', lineHeight: 1.8 }}>家庭の事情により家族と暮らせない、児童養護施設等を退所した、そんな15歳以上の青少年が生活し、自立に向けた支援を受ける「自立援助ホーム」を5ホーム運営しています。</p>
           </div>
           <div className="homes-grid">
@@ -197,8 +197,8 @@ const HomesPage = () => {
       <section id="sodachinoki" className="section" style={{ background: 'linear-gradient(180deg, #FDF9F0 0%, #FFFCF5 100%)', padding: '5rem 0', borderTop: '1px solid rgba(7,145,58,0.08)' }}>
         <div className="container">
           <div className="business-section-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <div className="business-eyebrow" style={{ fontSize: '0.85rem', letterSpacing: '0.15em', color: '#07913A', fontWeight: 600, marginBottom: '0.5rem' }}>事業 02</div>
-            <h2 className="section-title" style={{ marginBottom: '0.75rem' }}>施設退所児童等自立支援促進事業</h2>
+            <div className="business-eyebrow" style={{ fontSize: '0.85rem', letterSpacing: '0.15em', color: '#E67E50', fontWeight: 600, marginBottom: '0.5rem' }}>施設退所児童等自立支援促進事業</div>
+            <h2 className="section-title" style={{ marginBottom: '0.75rem', color: '#E67E50' }}>聞く・会う・社会につなぐ</h2>
             <p style={{ color: '#666', maxWidth: '720px', margin: '0 auto', lineHeight: 1.8 }}>福岡県から委託を受けて運営している、社会的養護を経験した方への退所後の伴走支援事業です。NPO法人そだちの樹から事業を継承し、住まいや仕事の確保、生活全般の支援を行っています。</p>
           </div>
 
@@ -210,7 +210,7 @@ const HomesPage = () => {
               <div className="sodachinoki-jigyo-card-body">
                 <div style={{ fontSize: '0.8rem', letterSpacing: '0.1em', color: '#F39800', fontWeight: 600, marginBottom: '0.4rem' }}>アフターケア事業</div>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#333', marginBottom: '0.75rem', lineHeight: 1.4 }}>そだちの樹</h3>
-                <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '1rem' }}>「聞く・会う・社会につなぐ」を大切に、NPO法人そだちの樹が2012年から続けてきた取り組みを、当会が継承する形でアーカイブしています。</p>
+                <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '1rem' }}>NPO法人そだちの樹が2012年から続けてきた取り組みを、当会が継承し、引き続き実施しています。</p>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#07913A', fontWeight: 600, fontSize: '0.95rem' }}>
                   そだちの樹のページへ
                   <span aria-hidden="true">→</span>
@@ -222,7 +222,7 @@ const HomesPage = () => {
       </section>
 
       {/* 関連情報 区切りセクション（page-header と同スタイルのオレンジ大見出し） */}
-      <section className="page-header" style={{ background: 'var(--accent-color, #F39800)', padding: '40px 0' }}>
+      <section className="page-header" style={{ background: '#E67E50', padding: '40px 0' }}>
         <div className="container">
           <h2 style={{ color: '#fff', fontSize: '2rem', margin: 0, textAlign: 'center', letterSpacing: '0.05em' }}>関連情報</h2>
           <p style={{ color: '#fff', opacity: 0.9, textAlign: 'center', marginTop: '0.5rem', fontSize: '0.95rem' }}>自立援助ホームの背景と入居について</p>
