@@ -258,6 +258,14 @@ const HomePage = () => {
                 <p>福岡市南区に5つ目のホーム「TIES」を開設。新しいつながりを創造する次世代型ホーム。</p>
               </div>
             </div>
+
+            <div className="timeline-item">
+              <div className="timeline-year">2026年</div>
+              <div className="timeline-content">
+                <h3>そだちの樹 事業継承</h3>
+                <p>NPO法人そだちの樹のアフターケア事業（施設退所児童等自立支援促進事業／福岡県委託）を継承。</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
