@@ -348,9 +348,6 @@ const SodachinokiPage = () => {
           </section>
         )}
 
-        {/* 9. 対象別ナビ（記事内・下） */}
-        <InlineNav heading="より詳しく知りたい方は" />
-
       </div>
     </div>
   );

@@ -90,7 +90,7 @@ const HomesPage = () => {
               <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '50%', background: '#07913A', color: '#fff', fontWeight: 700, fontSize: '1.1rem', flexShrink: 0 }}>2</span>
               <span style={{ flex: 1, textAlign: 'left' }}>
                 <span style={{ display: 'block', fontWeight: 700, fontSize: '1.05rem', lineHeight: 1.4 }}>施設退所児童等自立支援促進事業</span>
-                <span style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginTop: '0.2rem' }}>そだちの樹のアフターケア事業</span>
+                <span style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginTop: '0.2rem' }}>親や家族を頼ることができない人たちをサポート</span>
               </span>
               <span aria-hidden="true" style={{ color: '#07913A', fontSize: '1.2rem', flexShrink: 0 }}>↓</span>
             </a>
@@ -208,9 +208,8 @@ const HomesPage = () => {
                 <img src="https://res.cloudinary.com/dg3mdcuju/image/upload/v1779514626/%E6%A8%B9_ml234j.png" alt="そだちの樹 ロゴ" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
               </div>
               <div className="sodachinoki-jigyo-card-body">
-                <div style={{ fontSize: '0.8rem', letterSpacing: '0.1em', color: '#F39800', fontWeight: 600, marginBottom: '0.4rem' }}>アフターケア事業</div>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 700, color: '#333', marginBottom: '0.75rem', lineHeight: 1.4 }}>そだちの樹</h3>
-                <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '1rem' }}>NPO法人そだちの樹が2012年から続けてきた取り組みを、当会が継承し、引き続き実施しています。</p>
+                <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '1rem' }}>NPO法人そだちの樹が2012年から続けてきた取り組みを、引き続き実施しています。</p>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#07913A', fontWeight: 600, fontSize: '0.95rem' }}>
                   そだちの樹のページへ
                   <span aria-hidden="true">→</span>
