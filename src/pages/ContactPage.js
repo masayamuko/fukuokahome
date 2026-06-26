@@ -527,7 +527,7 @@ const ContactPage = () => {
                     boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
                     border: '2px solid #e8ecef'
                   }}>
-                    <iframe
+                    <iframe title={`${home.name} Google Map`}
                       src={mapUrls[home.name]}
                       width="100%"
                       height="250"
