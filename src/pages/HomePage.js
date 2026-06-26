@@ -262,8 +262,8 @@ const HomePage = () => {
             <div className="timeline-item">
               <div className="timeline-year">2026年</div>
               <div className="timeline-content">
-                <h3>そだちの樹 事業継承</h3>
-                <p>NPO法人そだちの樹のアフターケア事業を継承し、社会的養護自立支援拠点事業を福岡県から受託。施設退所後の若者の自立支援に取り組みを広げました。</p>
+                <h3>そだちの樹解説</h3>
+                <p>社会的養護自立支援拠点事業を福岡県から受託。施設退所後等の若者の自立支援に取り組みを広げました。</p>
               </div>
             </div>
           </div>
