@@ -156,7 +156,7 @@ const InlineNav = ({ heading, variant }) => (
 
 const SodachinokiPage = () => {
   useEffect(() => {
-    document.title = 'そだちの樹アーカイブ | 青少年の自立を支える福岡の会';
+    document.title = 'そだちの樹 | 青少年の自立を支える福岡の会';
   }, []);
 
   useFadeInObserver();

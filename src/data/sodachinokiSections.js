@@ -204,7 +204,7 @@ export const sectionData = {
     alt: '一般の方向けイメージ',
     blocks: [
       // みなさまへのお願い
-      { type: 'keyphrase', text: '子どもたちや若者たちを、わたしたちにつないでください。' },
+      { type: 'keyphrase', text: '子どもたちや若者たちを、\nわたしたちにつないでください。' },
 
       // つなぎ方（2項目に修正）
       { type: 'heading', level: 3, text: 'つなぎ方' },

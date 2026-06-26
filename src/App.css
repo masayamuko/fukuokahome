@@ -1688,6 +1688,7 @@ main {
 /* キーフレーズ */
 .sodachinoki-keyphrase {
   text-align: center;
+  white-space: pre-line;
   font-size: 1.9rem;
   color: var(--soda-green);
   font-weight: 700;

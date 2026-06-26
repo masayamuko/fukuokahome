@@ -326,7 +326,7 @@ const SodachinokiDetailPage = () => {
 
   useEffect(() => {
     if (data) {
-      document.title = `${data.title} | そだちの樹アーカイブ`;
+      document.title = `${data.title} | そだちの樹`;
     }
   }, [data]);
 
@@ -340,7 +340,7 @@ const SodachinokiDetailPage = () => {
     <div className="sodachinoki-page">
       <div className="sodachinoki-wrap sodachinoki-wrap--flush">
         <Link to="/sodachinoki" className="sodachinoki-nav-back">
-          ← そだちの樹アーカイブTOPへ
+          ← そだちの樹TOPへ
         </Link>
 
         <header
