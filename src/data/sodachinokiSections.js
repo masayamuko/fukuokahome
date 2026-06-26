@@ -295,7 +295,6 @@ export const topContent = {
   contactInfo: {
     sectionTitle: '連絡先',
     phone: '092-791-1673',
-    fax: '092-791-1674',
     hours: '平日9:30〜18:00',
   },
 };

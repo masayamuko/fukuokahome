@@ -193,13 +193,13 @@ const HomesPage = () => {
         </div>
       </section>
 
-      {/* 施設退所児童等自立支援促進事業（そだちの樹のアフターケア事業） */}
+      {/* 施設退所児童等自立支援促進事業 */}
       <section id="sodachinoki" className="section" style={{ background: 'linear-gradient(180deg, #FDF9F0 0%, #FFFCF5 100%)', padding: '5rem 0', borderTop: '1px solid rgba(7,145,58,0.08)' }}>
         <div className="container">
           <div className="business-section-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div className="business-eyebrow" style={{ fontSize: '0.85rem', letterSpacing: '0.15em', color: '#E67E50', fontWeight: 600, marginBottom: '0.5rem' }}>施設退所児童等自立支援促進事業</div>
             <h2 className="section-title" style={{ marginBottom: '0.75rem', color: '#E67E50' }}>聞く・会う・社会につなぐ</h2>
-            <p style={{ color: '#666', maxWidth: '720px', margin: '0 auto', lineHeight: 1.8 }}>福岡県から委託を受けて運営している、社会的養護を経験した方への退所後の伴走支援事業です。NPO法人そだちの樹から事業を継承し、住まいや仕事の確保、生活全般の支援を行っています。</p>
+            <p style={{ color: '#666', maxWidth: '720px', margin: '0 auto', lineHeight: 1.8 }}>福岡県から委託を受けて運営している、社会的養護を経験した方への退所後の伴走支援事業です。NPO法人そだちの樹が2012年から続けてきた取り組みを引き続き実施し、住まいや仕事の確保、生活全般の支援を行っています。</p>
           </div>
 
           <div className="sodachinoki-card-wrap" style={{ maxWidth: '900px', margin: '0 auto' }}>
