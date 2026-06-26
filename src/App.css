@@ -1564,3 +1564,1534 @@ main {
     text-align: center !important;
   }
 }
+
+
+/* ============================================
+   そだちの樹アーカイブ（元サイト準拠リニューアル）
+   元: sodachinoki.org / カラー: 緑#07913A・オレンジ#F39800・クリーム#FDF9F0
+   ============================================ */
+
+/* ベース */
+.sodachinoki-page {
+  background: #FDF9F0;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+  --soda-green: #07913A;
+  --soda-orange: #F39800;
+  --soda-orange-2: #F7941D;
+  --soda-brown: #8B7C64;
+  --soda-cream: #FDF9F0;
+  --soda-card: #FFFFFF;
+  --soda-card-gray: #EDEBE6;
+  --soda-text: #3a3a3a;
+  --soda-muted: #6a5a4d;
+  color: var(--soda-text);
+  font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+}
+
+/* メインwrap（800px固定・白カード） */
+.sodachinoki-wrap {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--soda-card);
+  box-shadow: 1px 1px 20px rgba(0,0,0,0.15);
+  padding: 2.5rem 2.5rem 3rem;
+  border-radius: 4px;
+}
+
+/* ヒーロー */
+.sodachinoki-hero {
+  position: relative;
+  min-height: 280px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 -1rem 2rem;
+}
+.sodachinoki-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7,145,58,0.65), rgba(7,145,58,0.85));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* ヒーロー + 対象別ナビ 統合ブロック（TOPページ専用） */
+.sodachinoki-hero-block {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0 -1rem 2rem;
+  isolation: isolate;
+}
+.sodachinoki-hero-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7,145,58,0.78) 0%, rgba(7,145,58,0.88) 60%, rgba(7,145,58,0.95) 100%);
+  z-index: 0;
+}
+.sodachinoki-hero-block > .sodachinoki-hero-overlay {
+  position: relative;
+  inset: auto;
+  background: transparent;
+  padding: 3rem 1.5rem 1.5rem;
+  z-index: 1;
+}
+.sodachinoki-hero-block > .sodachinoki-inline-nav {
+  background: transparent;
+  margin: 0;
+  padding: 0 1.5rem 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+.sodachinoki-hero-block > .sodachinoki-inline-nav::before {
+  display: none;
+}
+.sodachinoki-hero-block .sodachinoki-inline-nav-card {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(4px);
+}
+.sodachinoki-hero-title {
+  font-size: 1.75rem;
+  margin: 0 0 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fff;
+}
+.sodachinoki-hero-targets {
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* アーカイブ前書き */
+.sodachinoki-archive-notice {
+  background: #fff8e8;
+  border-left: 4px solid var(--soda-orange);
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--soda-muted);
+}
+
+/* キーフレーズ */
+.sodachinoki-keyphrase {
+  text-align: center;
+  font-size: 1.9rem;
+  color: var(--soda-green);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 2rem 1rem;
+  margin: 2.5rem 0;
+  background: #fff;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.sodachinoki-keyphrase::before,
+.sodachinoki-keyphrase::after {
+  content: '"';
+  position: absolute;
+  font-size: 4rem;
+  color: var(--soda-orange);
+  opacity: 0.4;
+  font-family: serif;
+  line-height: 1;
+}
+.sodachinoki-keyphrase::before {
+  top: 0.5rem;
+  left: 1rem;
+}
+.sodachinoki-keyphrase::after {
+  bottom: -0.5rem;
+  right: 1rem;
+  transform: rotate(180deg);
+}
+
+/* 記事内 対象別ナビゲーション（大きく目立つ版） */
+.sodachinoki-inline-nav {
+  background: linear-gradient(135deg, #07913A 0%, #0aa848 100%);
+  padding: 2rem 1.5rem;
+  margin: 2.5rem -2.5rem;
+  color: #fff;
+  position: relative;
+}
+.sodachinoki-inline-nav::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(180deg, transparent 0%, var(--soda-green) 100%);
+  opacity: 0.3;
+}
+.sodachinoki-inline-nav-heading {
+  text-align: center;
+  font-size: 1.05rem;
+  margin: 0 0 1.25rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: #fff;
+}
+.sodachinoki-inline-nav-heading::before,
+.sodachinoki-inline-nav-heading::after {
+  content: '◆';
+  margin: 0 0.75rem;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.7rem;
+  vertical-align: middle;
+}
+.sodachinoki-inline-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.sodachinoki-inline-nav--cols-2 .sodachinoki-inline-nav-grid {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.sodachinoki-inline-nav-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1rem;
+  text-decoration: none;
+  color: var(--soda-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.sodachinoki-inline-nav-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+.sodachinoki-inline-nav-card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #fff;
+}
+.sodachinoki-inline-nav-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.sodachinoki-inline-nav-card-subtitle {
+  font-size: 0.78rem;
+  color: var(--soda-muted);
+  line-height: 1.5;
+}
+.sodachinoki-inline-nav-card-arrow {
+  font-size: 0.75rem;
+  color: var(--soda-green);
+  font-weight: 600;
+}
+
+/* セクション共通 */
+.sodachinoki-section {
+  margin: 2.5rem 0;
+}
+
+/* セクション背景バリアント（リズム強化） */
+.sodachinoki-section--variant-plain {
+  background: transparent;
+}
+.sodachinoki-section--variant-cream {
+  background: linear-gradient(135deg, #fff9ee, #fef3d8);
+  margin: 2.5rem -2.5rem;
+  padding: 2rem 2.5rem;
+}
+.sodachinoki-section--variant-green {
+  background: #e8f5ec;
+  margin: 2.5rem -2.5rem;
+  padding: 2rem 2.5rem;
+}
+.sodachinoki-section--variant-orange {
+  background: linear-gradient(135deg, #fff5e0, #ffe9c4);
+  margin: 2.5rem -2.5rem;
+  padding: 2rem 2.5rem;
+}
+
+/* h2: 緑帯白抜き（リボン風） */
+.sodachinoki-h2 {
+  display: inline-block;
+  background: var(--soda-green);
+  color: #fff;
+  padding: 0.5rem 1.5rem 0.5rem 2rem;
+  margin: 2rem 0 1.5rem -2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 0 999px 999px 0;
+  letter-spacing: 0.05em;
+  text-align: left;
+  position: relative;
+}
+.sodachinoki-h2--orange { background: var(--soda-orange); }
+.sodachinoki-h2--brown { background: var(--soda-brown); }
+
+.sodachinoki-h3 {
+  font-size: 1.2rem;
+  color: var(--soda-green);
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+  padding-left: 1rem;
+  border-left: 5px solid var(--soda-green);
+}
+.sodachinoki-h4 {
+  font-size: 1rem;
+  color: var(--soda-brown);
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+}
+.sodachinoki-detail-body p,
+.sodachinoki-section p {
+  line-height: 1.9;
+  color: var(--soda-text);
+  margin: 0.75rem 0;
+}
+.sodachinoki-detail-body ul,
+.sodachinoki-detail-body ol,
+.sodachinoki-section ul,
+.sodachinoki-section ol {
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+  line-height: 1.85;
+}
+.sodachinoki-detail-body li,
+.sodachinoki-section li {
+  margin: 0.3rem 0;
+}
+
+/* 番号付きリスト（大きめ装飾） */
+.sodachinoki-numbered-list {
+  list-style: none;
+  counter-reset: soda-num;
+  padding-left: 0;
+}
+.sodachinoki-numbered-list li {
+  counter-increment: soda-num;
+  padding-left: 2.5rem;
+  position: relative;
+  margin: 0.75rem 0;
+}
+.sodachinoki-numbered-list li::before {
+  content: counter(soda-num);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: var(--soda-orange);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* テーブル */
+.sodachinoki-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: var(--soda-card);
+}
+.sodachinoki-table th,
+.sodachinoki-table td {
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--soda-card-gray);
+  text-align: left;
+  font-size: 0.95rem;
+  vertical-align: top;
+}
+.sodachinoki-table th {
+  background: var(--soda-cream);
+  width: 28%;
+  color: var(--soda-green);
+  font-weight: 600;
+}
+.sodachinoki-table tr:nth-child(even) th,
+.sodachinoki-table tr:nth-child(even) td {
+  background: #fafaf2;
+}
+
+/* スタッフ */
+.sodachinoki-staff {
+  background: var(--soda-cream);
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  margin: 0.6rem 0;
+  border-left: 3px solid var(--soda-orange);
+}
+.sodachinoki-staff h4 {
+  margin: 0 0 0.3rem;
+  color: var(--soda-green);
+  font-size: 0.95rem;
+}
+.sodachinoki-staff ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.93rem;
+}
+
+/* todo */
+.sodachinoki-todo {
+  background: #fafaf5;
+  border: 1px dashed #c8c1b5;
+  color: #8a8175;
+  padding: 0.55rem 0.85rem;
+  margin: 0.65rem 0;
+  border-radius: 4px;
+  font-size: 0.83rem;
+  line-height: 1.55;
+}
+
+/* callout */
+.sodachinoki-callout {
+  background: #fff8e8;
+  border-left: 4px solid var(--soda-orange);
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  line-height: 1.75;
+}
+.sodachinoki-callout--warning { background: #fff5e0; border-color: #e69900; }
+.sodachinoki-callout--archive { background: #f5f0eb; border-color: var(--soda-brown); color: var(--soda-brown); }
+.sodachinoki-callout--highlight { background: #e8f5ec; border-color: var(--soda-green); color: var(--soda-green); font-weight: 600; }
+
+/* box */
+.sodachinoki-box {
+  background: var(--soda-cream);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+}
+.sodachinoki-box--cream { background: var(--soda-cream); border-left: 4px solid var(--soda-orange); }
+.sodachinoki-box--gray { background: var(--soda-card-gray); }
+.sodachinoki-box--green { background: #e8f5ec; border-left: 4px solid var(--soda-green); }
+.sodachinoki-box--orange { background: #fff5e0; border-left: 4px solid var(--soda-orange); }
+.sodachinoki-box-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--soda-green);
+  margin-bottom: 0.5rem;
+}
+.sodachinoki-box-title::before {
+  content: '◇';
+  margin-right: 0.5rem;
+  color: var(--soda-orange);
+}
+.sodachinoki-box ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+}
+
+/* 2カラム */
+.sodachinoki-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+.sodachinoki-two-col-left,
+.sodachinoki-two-col-right {
+  background: var(--soda-cream);
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+}
+
+/* CTA */
+.sodachinoki-cta {
+  text-align: center;
+  margin: 2rem 0;
+}
+.sodachinoki-cta-button {
+  display: inline-block;
+  background: var(--soda-orange);
+  color: #fff;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(243,152,0,0.3);
+  transition: background 0.2s, transform 0.2s;
+}
+.sodachinoki-cta-button:hover {
+  background: var(--soda-orange-2);
+  transform: translateY(-2px);
+}
+.sodachinoki-cta-button::after {
+  content: ' →';
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.sodachinoki-cta-button:hover::after {
+  transform: translateX(4px);
+}
+
+/* conceptBadge */
+.sodachinoki-concept-badge {
+  display: inline-block;
+  background: var(--soda-green);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  margin: 0.4rem 0.4rem 0.4rem 0;
+}
+
+/* 連絡先表示 */
+.sodachinoki-contact-info {
+  background: var(--soda-cream);
+  padding: 1.1rem 1.3rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+.sodachinoki-contact-info p {
+  margin: 0.35rem 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.sodachinoki-contact-info strong {
+  font-size: 1.2rem;
+  color: var(--soda-green);
+}
+
+/* 図 */
+.sodachinoki-figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+.sodachinoki-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.sodachinoki-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--soda-muted);
+  margin-top: 0.4rem;
+}
+
+/* 詳細ページ */
+.sodachinoki-nav-back {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--soda-green);
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.sodachinoki-nav-back:hover { text-decoration: underline; }
+
+.sodachinoki-page-title {
+  text-align: center;
+  font-size: 1.85rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: 700;
+}
+
+.sodachinoki-page-lead {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--soda-muted);
+  margin-bottom: 1.5rem;
+}
+
+.sodachinoki-page-hero {
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+.sodachinoki-page-hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* 他ターゲットへのナビ */
+.sodachinoki-other-targets {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px dotted var(--soda-card-gray);
+}
+.sodachinoki-other-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.sodachinoki-other-card {
+  border: 2px solid;
+  background: var(--soda-cream);
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--soda-text);
+  transition: transform 0.2s, background 0.2s;
+}
+.sodachinoki-other-card:hover {
+  transform: translateY(-2px);
+  background: #fff;
+}
+.sodachinoki-other-card-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+.sodachinoki-other-card-subtitle {
+  font-size: 0.8rem;
+  color: var(--soda-muted);
+}
+
+/* アクションエリア（TOP） — 1+2 レイアウトで脱画一化 */
+.sodachinoki-action-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+.sodachinoki-action-card {
+  background: var(--soda-cream);
+  padding: 1rem;
+  border-radius: 6px;
+  border-top: 3px solid var(--soda-green);
+}
+.sodachinoki-action-card:nth-child(1) {
+  grid-row: span 2;
+  background: linear-gradient(135deg, #e8f5ec 0%, #d4ebd9 100%);
+  border-top-width: 5px;
+  padding: 1.5rem;
+}
+.sodachinoki-action-card:nth-child(1) h4 {
+  font-size: 1.15rem;
+}
+.sodachinoki-action-card h4 {
+  font-size: 0.95rem;
+  color: var(--soda-green);
+  margin: 0 0 0.5rem;
+}
+.sodachinoki-action-card ul {
+  font-size: 0.88rem;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.sodachinoki-aftercare-box {
+  background: #e8f5ec;
+  border-left: 4px solid var(--soda-green);
+  padding: 1.25rem 1.5rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+}
+
+.sodachinoki-kokoline-note {
+  text-align: center;
+  color: var(--soda-muted);
+  margin: 1rem 0;
+}
+.sodachinoki-kokoline-note small {
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.sodachinoki-closing {
+  text-align: center;
+  color: var(--soda-muted);
+  margin-top: 3rem;
+  font-size: 0.85rem;
+}
+
+/* レスポンシブ */
+@media (max-width: 767px) {
+  .sodachinoki-wrap {
+    max-width: 100%;
+    margin: 0;
+    padding: 1.5rem 1rem 2rem;
+    box-shadow: none;
+  }
+  .sodachinoki-section--variant-cream,
+  .sodachinoki-section--variant-green,
+  .sodachinoki-section--variant-orange {
+    margin: 2rem -1rem;
+    padding: 1.5rem 1rem;
+  }
+  .sodachinoki-inline-nav {
+    margin: 2rem -1rem;
+    padding: 1.5rem 1rem;
+  }
+  .sodachinoki-inline-nav-grid {
+    grid-template-columns: 1fr;
+  }
+  .sodachinoki-action-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .sodachinoki-action-card:nth-child(1) {
+    grid-row: auto;
+  }
+  .sodachinoki-two-col,
+  .sodachinoki-other-grid {
+    grid-template-columns: 1fr;
+  }
+  .sodachinoki-hero { min-height: 220px; margin: 0 -1rem 1.5rem; }
+  .sodachinoki-hero-title { font-size: 1.3rem; }
+  .sodachinoki-keyphrase { font-size: 1.25rem; padding: 1.5rem 0.75rem; }
+  .sodachinoki-h2 {
+    margin-left: -1rem;
+    padding-left: 1rem;
+    font-size: 1.15rem;
+  }
+  .sodachinoki-page-title { font-size: 1.5rem; }
+  .sodachinoki-table th { width: 35%; font-size: 0.88rem; }
+}
+
+/* 詳細ページ ヘッダー（装飾強化） */
+.sodachinoki-detail-header {
+  position: relative;
+  padding: 2.5rem 0 1.5rem;
+  margin: 0.5rem 0 1.5rem;
+  text-align: center;
+}
+.sodachinoki-detail-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--detail-color, var(--soda-green));
+}
+.sodachinoki-detail-header-eyebrow {
+  display: inline-block;
+  background: var(--detail-color, var(--soda-green));
+  color: #fff;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.85rem;
+  border-radius: 999px;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+}
+.sodachinoki-detail-header-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--detail-color, var(--soda-green));
+  margin: 0 0 0.85rem;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+}
+.sodachinoki-detail-header-lead {
+  font-size: 1.02rem;
+  color: var(--soda-muted);
+  margin: 0 auto 1.5rem;
+  max-width: 600px;
+  line-height: 1.9;
+}
+.sodachinoki-detail-header-figure {
+  margin: 1rem -1rem 0;
+  text-align: center;
+}
+.sodachinoki-detail-header-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+/* 透過PNGイラストはシャドウ・角丸なしで背景に溶け込ませる */
+.sodachinoki-detail-header-figure--for-wakamono img {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* インラインナビの現在ページ強調 */
+.sodachinoki-inline-nav-card.is-current {
+  opacity: 0.85;
+  cursor: default;
+  pointer-events: none;
+  background: #fafaf2;
+}
+.sodachinoki-inline-nav-card.is-current .sodachinoki-inline-nav-card-arrow {
+  color: var(--soda-muted);
+  font-weight: 500;
+}
+
+/* セクション variant 詳細 — wrap padding に合わせて -2.5rem 必要 */
+.sodachinoki-section--variant-cream,
+.sodachinoki-section--variant-green,
+.sodachinoki-section--variant-orange {
+  margin-left: -2.5rem;
+  margin-right: -2.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.sodachinoki-section--variant-cream {
+  background: linear-gradient(135deg, #fff9ee, #fef3d8);
+}
+.sodachinoki-section--variant-green {
+  background: #e8f5ec;
+}
+.sodachinoki-section--variant-orange {
+  background: linear-gradient(135deg, #fff5e0, #ffe9c4);
+}
+.sodachinoki-section--variant-plain {
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 767px) {
+  .sodachinoki-detail-header-title { font-size: 1.45rem; }
+  .sodachinoki-detail-header-lead { font-size: 0.92rem; }
+  .sodachinoki-section--variant-cream,
+  .sodachinoki-section--variant-green,
+  .sodachinoki-section--variant-orange {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ============================================
+   そだちの樹アーカイブ — R2/R3 ブラッシュアップ
+   ============================================ */
+
+/* SVGアイコン inline-nav 用 */
+.sodachinoki-inline-nav-card-icon svg {
+  color: #fff;
+  width: 32px;
+  height: 32px;
+}
+
+/* h2 アイコン */
+.sodachinoki-h2-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+  width: 20px;
+  height: 20px;
+}
+
+/* 波線セパレータ */
+.sodachinoki-divider-wave {
+  display: block;
+  width: 100%;
+  height: 12px;
+  color: var(--soda-orange);
+  margin: 1.5rem 0;
+  opacity: 0.5;
+}
+
+/* 連絡先アイコン付き行 */
+.sodachinoki-contact-line {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.sodachinoki-contact-icon {
+  color: var(--soda-green);
+  flex-shrink: 0;
+}
+
+/* バッジ */
+.sodachinoki-badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.78rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+.sodachinoki-badge--active {
+  background: var(--soda-green);
+  color: #fff;
+}
+.sodachinoki-badge--archive {
+  background: var(--soda-brown);
+  color: #fff;
+}
+
+/* アクションカード背景画像対応 */
+.sodachinoki-action-card--has-bg {
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  position: relative;
+}
+.sodachinoki-action-card--has-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+  border-radius: inherit;
+}
+.sodachinoki-action-card--has-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* detail header leaf */
+.sodachinoki-header-leaf {
+  display: block;
+  margin: 0 auto 0.5rem;
+  color: var(--detail-color, var(--soda-green));
+}
+
+/* 最終CTAブロック */
+.sodachinoki-final-cta {
+  margin: 3rem -2.5rem 0;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(135deg, #fff5e0 0%, #ffe9c4 100%);
+  text-align: center;
+  border-radius: 0;
+}
+.sodachinoki-final-cta p {
+  font-size: 1.05rem;
+  color: var(--soda-text);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+/* 番号付きリストの円番号、より大きく装飾的に */
+.sodachinoki-numbered-list li::before {
+  width: 2.2rem;
+  height: 2.2rem;
+  background: linear-gradient(135deg, var(--soda-orange), #ffa84a);
+  box-shadow: 0 3px 8px rgba(243,152,0,0.3);
+}
+
+/* アフターケアボックスのバッジ位置調整 */
+.sodachinoki-aftercare-box .sodachinoki-badge {
+  margin-bottom: 0.75rem;
+}
+
+/* 6つの安心リストにチェックマーク */
+.sodachinoki-checklist {
+  list-style: none;
+  padding-left: 0;
+}
+.sodachinoki-checklist li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin: 0.5rem 0;
+}
+.sodachinoki-checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: var(--soda-green);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* 対応事例ボックス調整 */
+.sodachinoki-case-box {
+  background: var(--soda-cream);
+  border-left: 3px solid var(--soda-brown);
+  padding: 0.85rem 1.1rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  font-size: 0.93rem;
+  font-style: italic;
+  color: var(--soda-muted);
+}
+
+/* レスポンシブ */
+@media (max-width: 767px) {
+  .sodachinoki-final-cta { margin: 2rem -1rem 0; padding: 2rem 1rem; }
+}
+
+/* ============================================
+   R4: マイクロインタラクション
+   ============================================ */
+
+/* スクロールフェードイン用 */
+.sodachinoki-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.sodachinoki-fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* prefers-reduced-motion 対応 (sodachinoki-page スコープに限定) */
+@media (prefers-reduced-motion: reduce) {
+  .sodachinoki-fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .sodachinoki-page *,
+  .sodachinoki-page *::before,
+  .sodachinoki-page *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* インラインナビカードのホバー強化 */
+.sodachinoki-inline-nav-card {
+  position: relative;
+  overflow: hidden;
+}
+.sodachinoki-inline-nav-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.sodachinoki-inline-nav-card:hover::before {
+  opacity: 1;
+}
+.sodachinoki-inline-nav-card-icon {
+  transition: transform 0.3s ease;
+}
+.sodachinoki-inline-nav-card:hover .sodachinoki-inline-nav-card-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+.sodachinoki-inline-nav-card-arrow {
+  transition: transform 0.3s ease;
+}
+.sodachinoki-inline-nav-card:hover .sodachinoki-inline-nav-card-arrow {
+  transform: translateX(4px);
+}
+
+/* CTA ボタンのリップル風 */
+.sodachinoki-cta-button {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+.sodachinoki-cta-button:hover {
+  box-shadow: 0 8px 24px rgba(243,152,0,0.4);
+  transform: translateY(-3px);
+}
+.sodachinoki-cta-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(243,152,0,0.3);
+}
+
+/* テーブル行のホバー */
+.sodachinoki-table tr {
+  transition: background 0.2s ease;
+}
+.sodachinoki-table tbody tr:hover th,
+.sodachinoki-table tbody tr:hover td {
+  background: #fff5e0;
+}
+
+/* スタッフブロックのホバー */
+.sodachinoki-staff {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.sodachinoki-staff:hover {
+  transform: translateX(4px);
+  box-shadow: -2px 4px 12px rgba(7,145,58,0.1);
+}
+
+/* アクションカードのホバー */
+.sodachinoki-action-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.sodachinoki-action-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* ヒーローのKenBurns効果 */
+@keyframes sodachinoki-kenburns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+.sodachinoki-hero {
+  overflow: hidden;
+}
+.sodachinoki-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  animation: sodachinoki-kenburns 20s ease-out infinite alternate;
+  z-index: 0;
+}
+.sodachinoki-hero-overlay {
+  z-index: 1;
+}
+
+/* キーフレーズの引用符が浮く */
+@keyframes sodachinoki-quote-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+.sodachinoki-keyphrase::before {
+  animation: sodachinoki-quote-float 4s ease-in-out infinite;
+}
+.sodachinoki-keyphrase::after {
+  animation: sodachinoki-quote-float 4s ease-in-out infinite 2s;
+}
+
+/* バッジのパルス（継続中バッジ） */
+@keyframes sodachinoki-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(7,145,58,0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(7,145,58,0); }
+}
+.sodachinoki-badge--active {
+  animation: sodachinoki-pulse 2.5s ease-in-out infinite;
+}
+
+/* ナビ戻るリンクのアニメーション */
+.sodachinoki-nav-back {
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+.sodachinoki-nav-back:hover {
+  transform: translateX(-4px);
+}
+
+/* h2 リボンのhover */
+.sodachinoki-h2 {
+  transition: transform 0.3s ease;
+}
+.sodachinoki-h2:hover {
+  transform: translateX(4px);
+}
+
+/* detail-header の eyebrowが入ってくるアニメ */
+@keyframes sodachinoki-slide-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.sodachinoki-detail-header-eyebrow {
+  animation: sodachinoki-slide-up 0.6s ease-out;
+}
+.sodachinoki-detail-header-title {
+  animation: sodachinoki-slide-up 0.7s ease-out 0.1s backwards;
+}
+.sodachinoki-detail-header-lead {
+  animation: sodachinoki-slide-up 0.8s ease-out 0.2s backwards;
+}
+
+/* === R5: タイポ・余白 統一 === */
+.sodachinoki-page {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 見出しウェイト統一 */
+.sodachinoki-hero-title { font-weight: 700; letter-spacing: 0.02em; line-height: 1.55; }
+.sodachinoki-detail-header-title { font-weight: 800; letter-spacing: 0.04em; }
+.sodachinoki-h2 { font-weight: 700; letter-spacing: 0.06em; line-height: 1.45; }
+.sodachinoki-h3 { font-weight: 600; letter-spacing: 0.03em; }
+.sodachinoki-h4 { font-weight: 600; }
+
+/* 本文の行間統一 */
+.sodachinoki-detail-body p,
+.sodachinoki-section p {
+  line-height: 1.92;
+  letter-spacing: 0.02em;
+}
+.sodachinoki-detail-body li,
+.sodachinoki-section li {
+  line-height: 1.8;
+  letter-spacing: 0.015em;
+}
+
+/* セクション間の余白を均等に */
+.sodachinoki-section {
+  margin: 3rem 0;
+}
+.sodachinoki-section--variant-cream,
+.sodachinoki-section--variant-green,
+.sodachinoki-section--variant-orange {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* todoブロックの存在感を最小限に */
+.sodachinoki-todo {
+  opacity: 0.65;
+  font-size: 0.78rem;
+  background: #faf8f3;
+  border: 1px dashed #d8cfc1;
+  padding: 0.45rem 0.75rem;
+  margin: 0.4rem 0;
+  border-radius: 3px;
+  transition: opacity 0.2s;
+}
+.sodachinoki-todo:hover {
+  opacity: 0.95;
+}
+
+/* アクションカードのレイアウト改善 — 1+2 をやめて 均等3列横並び＋装飾差別化に */
+.sodachinoki-action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.sodachinoki-action-card {
+  background: var(--soda-cream);
+  padding: 1.25rem 1.1rem;
+  border-radius: 8px;
+  border-top: none;
+  border-left: 4px solid var(--soda-green);
+  position: relative;
+}
+.sodachinoki-action-card:nth-child(1) {
+  grid-row: auto;
+  border-left-color: var(--soda-green);
+  background: linear-gradient(135deg, #e8f5ec 0%, #d4ebd9 100%);
+}
+.sodachinoki-action-card:nth-child(2) {
+  border-left-color: var(--soda-orange);
+  background: linear-gradient(135deg, #fff5e0 0%, #ffe9c4 100%);
+}
+.sodachinoki-action-card:nth-child(3) {
+  border-left-color: var(--soda-brown);
+  background: linear-gradient(135deg, #f5f0eb 0%, #ebe0d4 100%);
+}
+.sodachinoki-action-card h4 {
+  font-size: 1rem;
+  color: var(--soda-text);
+  margin: 0 0 0.6rem;
+  font-weight: 700;
+}
+
+/* アクションカードのhasBgオーバーライド解除（背景画像をやめる、装飾過多のため） */
+.sodachinoki-action-card--has-bg::before {
+  display: none;
+}
+.sodachinoki-action-card--has-bg {
+  background-image: none !important;
+}
+
+/* キーフレーズの最終形 */
+.sodachinoki-keyphrase {
+  font-size: 1.7rem;
+  letter-spacing: 0.15em;
+  padding: 2.25rem 2rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fffdf5 100%);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  border-top: 3px solid var(--soda-green);
+  border-bottom: 3px solid var(--soda-green);
+  border-radius: 0;
+}
+
+/* archive-notice の格上げ */
+.sodachinoki-archive-notice {
+  padding: 1.1rem 1.4rem;
+  font-size: 0.93rem;
+  background: linear-gradient(135deg, #fffdf5 0%, #fff8e0 100%);
+  border-left: 4px solid var(--soda-orange);
+  border-right: 1px solid rgba(243,152,0,0.15);
+  border-radius: 4px;
+  position: relative;
+}
+.sodachinoki-archive-notice::before {
+  content: '📂';
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+/* h2 リボンを微調整（影） */
+.sodachinoki-h2 {
+  box-shadow: 0 3px 8px rgba(7,145,58,0.18);
+}
+.sodachinoki-h2--orange {
+  box-shadow: 0 3px 8px rgba(243,152,0,0.18);
+}
+.sodachinoki-h2--brown {
+  box-shadow: 0 3px 8px rgba(139,124,100,0.18);
+}
+
+/* hero タイトル微調整 */
+.sodachinoki-hero-title {
+  font-size: 1.85rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* detail-header titleに影アクセント */
+.sodachinoki-detail-header-title {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+/* inline-nav-card のタイトル統一 */
+.sodachinoki-inline-nav-card-title {
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+.sodachinoki-inline-nav-card-subtitle {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  min-height: 2.4em;
+}
+
+/* inline-nav-card の高さを揃える */
+.sodachinoki-inline-nav-card {
+  min-height: 200px;
+  justify-content: flex-start;
+  padding-top: 1.5rem;
+}
+
+/* CTA ボタン強化 */
+.sodachinoki-cta-button {
+  font-size: 1.05rem;
+  padding: 1rem 2.5rem;
+  letter-spacing: 0.05em;
+}
+
+/* 最終CTAブロック微調整 */
+.sodachinoki-final-cta p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5c4030;
+  margin-bottom: 1.5rem;
+}
+
+/* wrap の余白 */
+.sodachinoki-wrap {
+  padding: 3rem 2.75rem 4rem;
+}
+
+/* contact-info の余白 */
+.sodachinoki-contact-info {
+  padding: 1.5rem 1.75rem;
+}
+
+/* table 余白 */
+.sodachinoki-table th,
+.sodachinoki-table td {
+  padding: 0.8rem 1rem;
+}
+
+/* スタッフブロックの余白 */
+.sodachinoki-staff {
+  padding: 1rem 1.25rem;
+  margin: 0.75rem 0;
+}
+
+/* レスポンシブ追加調整 */
+@media (max-width: 767px) {
+  .sodachinoki-wrap { padding: 1.5rem 1rem 2.5rem; }
+  .sodachinoki-keyphrase { font-size: 1.15rem; padding: 1.5rem 1rem; letter-spacing: 0.08em; }
+  .sodachinoki-action-grid { grid-template-columns: 1fr; }
+  .sodachinoki-inline-nav-card { min-height: auto; padding: 1.25rem 1rem; }
+  .sodachinoki-detail-header-title { font-size: 1.4rem; }
+  .sodachinoki-hero-title { font-size: 1.3rem; }
+}
+
+/* R4 fade-in 緊急無効化 — 本文非表示バグ対策 */
+.sodachinoki-fade-in {
+  opacity: 1 !important;
+  transform: none !important;
+}
+.sodachinoki-fade-in.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ============================================ */
+/* 事業ジャンプボタン (HomesPage) */
+/* ============================================ */
+html { scroll-behavior: smooth; }
+#jido-jiritsu-seikatsu-enjo,
+#sodachinoki {
+  scroll-margin-top: 100px;
+}
+.business-jump-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .business-jump-btn { transition: none !important; }
+  .business-jump-btn:hover { transform: none; }
+}
+
+/* ============================================ */
+/* sodachinoki-page 追加スタイル (preview/sodachinoki-integration) */
+/* ============================================ */
+
+/* 白い余白を削除する wrap modifier */
+.sodachinoki-wrap--flush {
+  padding-bottom: 0 !important;
+}
+.sodachinoki-wrap--flush > *:last-child {
+  margin-bottom: 0;
+}
+
+/* TOPヒーロー: ロゴを内包するレイアウト */
+.sodachinoki-hero-block--with-logo {
+  min-height: 360px;
+}
+.sodachinoki-hero-block--with-logo .sodachinoki-hero-overlay {
+  padding: 2.5rem 1.5rem 1rem;
+}
+.sodachinoki-hero-logo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem 2.5rem;
+}
+.sodachinoki-hero-logo img {
+  max-width: 240px;
+  max-height: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));
+}
+@media (max-width: 600px) {
+  .sodachinoki-hero-logo img {
+    max-width: 160px;
+    max-height: 110px;
+  }
+}
+
+/* オレンジ版 InlineNav */
+.sodachinoki-inline-nav--orange {
+  background: linear-gradient(135deg, #F39800 0%, #F7941D 100%);
+}
+.sodachinoki-inline-nav--orange .sodachinoki-inline-nav-card-icon {
+  background-color: #F39800 !important;
+}
+
+/* for-shisetsu のヒーロー画像も透過PNGなのでシャドウ・角丸を外して背景に溶け込ませる */
+.sodachinoki-detail-header-figure--for-shisetsu img {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* ============================================ */
+/* business-jump-btn 矢印アニメ（クリック誘導） */
+/* ============================================ */
+.business-jump-btn span[aria-hidden="true"]:last-child {
+  display: inline-block;
+  transition: transform 0.25s ease;
+  animation: business-jump-arrow-bounce 1.8s ease-in-out infinite;
+}
+.business-jump-btn:hover span[aria-hidden="true"]:last-child,
+.business-jump-btn:focus-visible span[aria-hidden="true"]:last-child {
+  animation: none;
+  transform: translateY(6px) scale(1.15);
+}
+@keyframes business-jump-arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .business-jump-btn span[aria-hidden="true"]:last-child {
+    animation: none;
+  }
+  .business-jump-btn:hover span[aria-hidden="true"]:last-child,
+  .business-jump-btn:focus-visible span[aria-hidden="true"]:last-child {
+    transform: none;
+  }
+}
+
+
+/* ============================================ */
+/* /homes そだちの樹カード モバイル1カラム対応 */
+/* ============================================ */
+@media (max-width: 600px) {
+  .sodachinoki-jigyo-card {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 1.5rem !important;
+  }
+  .sodachinoki-jigyo-card-figure {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+}
+
+/* ============================================ */
+/* sodachinoki-top-logo (キーフレーズ直下、ヒーロー上) */
+/* ============================================ */
+.sodachinoki-top-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 1.5rem;
+  padding: 0 1rem;
+}
+.sodachinoki-top-logo img {
+  max-width: 220px;
+  max-height: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .sodachinoki-top-logo img {
+    max-width: 160px;
+    max-height: 100px;
+  }
+}
+
+/* ヒーローブロックの中央寄せ（ロゴが外に出てもオーバーレイテキストが縦中央に） */
+.sodachinoki-hero-block--with-logo .sodachinoki-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}

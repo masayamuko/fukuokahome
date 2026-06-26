@@ -13,6 +13,8 @@ import ContactPage from './pages/ContactPage';
 import StoryPage from './pages/StoryPage';
 import AdmissionFlowPage from './pages/AdmissionFlowPage';
 import SocialCareEvolutionPage from './pages/SocialCareEvolutionPage';
+import SodachinokiPage from './pages/SodachinokiPage';
+import SodachinokiDetailPage from './pages/SodachinokiDetailPage';
 import './App.css';
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
             <Route path="/story" element={<StoryPage />} />
             <Route path="/admission-flow" element={<AdmissionFlowPage />} />
             <Route path="/social-care-evolution" element={<SocialCareEvolutionPage />} />
+            <Route path="/sodachinoki" element={<SodachinokiPage />} />
+            <Route path="/sodachinoki/:sectionId" element={<SodachinokiDetailPage />} />
           </Routes>
         </main>
         <Footer />
