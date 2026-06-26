@@ -395,7 +395,7 @@ const NewsPage = () => {
 
             {/* ヘッダー */}
             <div style={{
-              background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%)',
+              background: 'var(--primary-color)',
               padding: '2rem',
               color: 'white'
             }}>
@@ -414,7 +414,8 @@ const NewsPage = () => {
                 fontSize: '1.8rem',
                 fontWeight: '700',
                 marginBottom: '0.5rem',
-                lineHeight: '1.3'
+                lineHeight: '1.3',
+                color: '#fff'
               }}>
                 {selectedArticle.title}
               </h2>
