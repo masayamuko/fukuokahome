@@ -105,7 +105,7 @@ export const sectionData = {
       {
         type: 'contactInfo',
         phone: '092-791-1673',
-        hours: '平日9:30〜18:00',
+        hours: '平日10:00〜17:00',
       },
     ],
   },
@@ -190,7 +190,7 @@ export const sectionData = {
       {
         type: 'contactInfo',
         phone: '092-791-1673',
-        hours: '平日9:30〜18:00',
+        hours: '平日10:00〜17:00',
       },
     ],
   },
@@ -247,7 +247,7 @@ export const sectionData = {
       {
         type: 'contactInfo',
         phone: '092-791-1673',
-        hours: '平日9:30〜18:00',
+        hours: '平日10:00〜17:00',
       },
     ],
   },
@@ -295,7 +295,7 @@ export const topContent = {
   contactInfo: {
     sectionTitle: '連絡先',
     phone: '092-791-1673',
-    hours: '平日9:30〜18:00',
+    hours: '平日10:00〜17:00',
   },
 };
 
