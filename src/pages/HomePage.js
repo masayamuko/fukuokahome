@@ -282,7 +282,7 @@ const HomePage = () => {
             {/* 基本情報カード */}
             <div className="basic-info-card" style={{
               background: 'white',
-              padding: '3rem',
+              padding: 'clamp(1.5rem, 6vw, 3rem)',
               borderRadius: '16px',
               marginBottom: '2.5rem',
               boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
@@ -290,7 +290,7 @@ const HomePage = () => {
               position: 'relative'
             }}>
 
-              <div className="info-summary" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
+              <div className="info-summary" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(400px, 100%), 1fr))', gap: '2rem' }}>
                 <div id="basic-info" className="info-main-card" style={{
                   padding: '2rem',
                   borderRadius: '12px',
@@ -404,7 +404,7 @@ const HomePage = () => {
                 </h3>
               </div>
 
-              <div className="service-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
+              <div className="service-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
                 <div className="service-item" style={{
                   padding: '2rem 1.5rem',
                   background: 'white',
@@ -508,7 +508,7 @@ const HomePage = () => {
               position: 'relative'
             }}>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem', alignItems: 'center' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(350px, 100%), 1fr))', gap: '2rem', alignItems: 'center' }}>
                 <div>
                   <h4 style={{ color: 'var(--primary-color)', fontSize: '1.3rem', fontWeight: '700', margin: '0 0 1.5rem 0' }}>
                     認可・監督・連携機関

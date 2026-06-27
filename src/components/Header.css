@@ -242,6 +242,11 @@
   .nav-item--has-submenu.is-open .nav-submenu {
     max-height: 500px;
   }
+  /* PC用 hover/focus の位置補正 transform(translateX(-50%)) をモバイルでは打ち消す（サブメニュー左ずれ防止） */
+  .nav-item--has-submenu:hover .nav-submenu,
+  .nav-item--has-submenu:focus-within .nav-submenu {
+    transform: none;
+  }
   .nav-submenu-link {
     padding: 0.75rem 1.5rem;
     font-size: 0.92rem;

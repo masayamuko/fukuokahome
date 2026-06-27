@@ -3096,3 +3096,12 @@ html { scroll-behavior: smooth; }
   justify-content: center;
   padding: 2rem 1.5rem;
 }
+
+/* 法人概要セクションのスマホはみ出し防止: grid子要素が内容幅で縮めない既定(min-width:auto)を解除し、長語を折り返す */
+.info-summary > *,
+.service-grid > * {
+  min-width: 0;
+}
+.organization-summary {
+  overflow-wrap: anywhere;
+}
